@@ -619,8 +619,6 @@ watch(genMin, () => {
       >👀 {{ t('Full Share', 'Share w/ names') }}</button>
     </div>
     <div v-if="daily">
-      <div>Generation hint arrows are obscured in daily</div>
-      <div>mosaics to avoid spoiling other players!</div>
       <div>Come back tomorrow for another daily!</div>
     </div>
   </section>

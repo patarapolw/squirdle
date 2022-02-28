@@ -114,16 +114,16 @@ function updateGuess(opts: {
           extraOffset = 9
       }
 
-      const now = new Date()
-      const normMin = (() => {
-        const milli = +now - +new Date(dailyJSON.startingDate)
+      const nowMin = (() => {
+        const now = new Date()
+        const milli = +now
         const sec = milli / 1000
         const min = sec / 60
-        return min - now.getTimezoneOffset() + extraOffset * 60
+        return min + now.getTimezoneOffset() + extraOffset * 60
       })()
 
-      currentDate.value = new Date(normMin * 60 * 1000).toISOString().substring(0, 10)
-      dayNumber.value = Math.floor(normMin / 60 / 24)
+      currentDate.value = new Date(nowMin * 1000 * 60).toISOString().substring(0, 10)
+      dayNumber.value = Math.floor((nowMin * 1000 * 60 - +new Date(dailyJSON.startingDate)) / (1000 * 60 * 60 * 24)) + 1
 
       elligible.value = Object.values(pokedex)
       secretPokemon.value = pokedex[dailyJSON.names[dayNumber.value % dailyJSON.names.length]]

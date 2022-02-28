@@ -614,7 +614,7 @@ watch(genMin, () => {
 
   <section class="alternate-games">
     <router-link v-if="!daily" to="/daily">{{ t('Daily Play', 'Try Squirdle Daily!') }}</router-link>
-    <router-link v-else to="/">{{ t('Free Play') }}</router-link>
+    <router-link v-else to="/free">{{ t('Free Play') }}</router-link>
   </section>
 </template>
 

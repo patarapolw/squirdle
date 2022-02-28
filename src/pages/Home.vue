@@ -226,7 +226,7 @@ function updateGuess(opts: {
                 return '🟩'
             }
 
-            return '🟥'
+            return '⬛'
           }
 
           return `${e('gen')}${e('type1')}${e('type2')}${e('height')}${e('weight')}${withName ? ' ' + g.name[lang.value] : ''}`
@@ -471,17 +471,6 @@ watch(genMin, () => {
         <span v-if="daily">Play again tomorrow.</span>
         <span v-else>Click {{ t('New Game') }} to restart.</span>
       </span>
-
-      <!-- <span class="tooltip">
-        Emoji Key
-        <span class="tooltiptext">
-          <p>🟩: Correct guess</p>
-          <p>🟥: Incorrect Guess</p>
-          <p>🟨: Type in wrong position</p>
-          <p>🔼: Guessed too low</p>
-          <p>🔽: Guessed too high</p>
-        </span>
-      </span>-->
     </div>
     <div v-if="daily">(Updates @ 00:00 {{ timeZone }})</div>
   </section>

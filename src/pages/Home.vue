@@ -229,7 +229,13 @@ function updateGuess(opts: {
   if (isWon.value !== null) {
     const makeCopy = (withName: boolean) => {
       return [
-        [t('Squirdle'), ...(props.daily ? [`${t('Daily')} ${dayNumber.value + 1} -`] : []), `${guesses.value.length}/${guessLimit.value}`].join(' '),
+        [
+          t('Squirdle'),
+          ...(props.daily ? [`${t('Daily')} ${dayNumber.value + 1} -`] : []),
+          `${isWon.value ? guesses.value.length : 'X'}/${guessLimit.value}`
+        ].join(' '),
+        `${location.origin}${props.daily ? '' : '/free'}`,
+        '',
         ...guesses.value.map((g) => {
           function e(k: keyof IPokedexEntry) {
             const { alt } = getImage(g, k)
@@ -248,7 +254,8 @@ function updateGuess(opts: {
           }
 
           return `${e('gen')}${e('type1')}${e('type2')}${e('height')}${e('weight')}${withName ? ' ' + g.name[lang.value] : ''}`
-        })
+        }),
+        ...((withName && !isWon.value) ? [secretPokemon.value?.name[lang.value]] : [])
       ].join('\n')
     }
     shareWithNames.value = makeCopy(true)

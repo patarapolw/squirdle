@@ -593,7 +593,7 @@ watch(genMin, () => {
       <span class="lost" v-else>You lost!</span>
       <span>
         The secret Pokémon was
-        <div class="tooltip">
+        <span class="tooltip">
           <p class="guess">{{ secretPokemon.name[lang] }}</p>
           <div class="tooltiptext">
             <a
@@ -603,7 +603,7 @@ watch(genMin, () => {
             >{{ secretPokemon.name[lang] }}</a>
             <pre>{{ secretPokemon.info() }}</pre>
           </div>
-        </div>!
+        </span>!
       </span>
     </div>
     <div>
@@ -663,11 +663,6 @@ section + section {
 
 [type="submit"] {
   cursor: pointer;
-}
-
-.tooltip {
-  display: inline-block;
-  margin-left: 0.5em;
 }
 
 .attempts {

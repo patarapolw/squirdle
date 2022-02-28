@@ -350,8 +350,8 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
   if (!c0) {
     if (d.type1 === secretPokemon.value.type1) {
       return {
-        src: '/correct.png',
-        alt: 'correct'
+        src: '/wrongpos.png',
+        alt: 'almost'
       }
     } else {
       return {

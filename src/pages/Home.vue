@@ -38,6 +38,7 @@ const shareWithNames = ref('')
 
 interface StorageTyping {
   lastDate: string
+  lastAnswer: string
   guesses: string[]
   genMax: number
   genMin: number
@@ -53,6 +54,17 @@ const storage: {
   lastDate: {
     id() {
       return `[${lang.value}]lastDate`
+    },
+    get() {
+      return localStorage.getItem(this.id())
+    },
+    set(v) {
+      localStorage.setItem(this.id(), v)
+    }
+  },
+  lastAnswer: {
+    id() {
+      return `[${lang.value}]${props.daily ? '[daily]' : ''}lastAnswer`
     },
     get() {
       return localStorage.getItem(this.id())
@@ -151,11 +163,16 @@ function updateGuess(opts: {
         genMax.value = storage.genMax.get() || genMax.value
         elligible.value = Object.values(pokedex).filter((p) => p.gen >= genMin.value && p.gen <= genMax.value)
 
-        const arr = storage.guesses.get()
-        if (arr) {
-          guesses.value = arr.map((v: string) => {
-            return pokedex[v]
-          })
+        const lastAnswer = storage.lastAnswer.get()
+        if (lastAnswer) {
+          secretPokemon.value = pokedex[lastAnswer]
+
+          const arr = storage.guesses.get()
+          if (arr) {
+            guesses.value = arr.map((v: string) => {
+              return pokedex[v]
+            })
+          }
         }
       }
     }
@@ -188,6 +205,7 @@ function updateGuess(opts: {
     isNotFound.value = false
     guesses.value = [...guesses.value, entry]
 
+    storage.lastAnswer.set(secretPokemon.value.name.en)
     storage.lastDate.set(currentDate.value)
     storage.guesses.set(guesses.value.map((g) => g.name.en))
   }
@@ -568,12 +586,17 @@ watch(genMin, () => {
       <span class="lost" v-else>You lost!</span>
       <span>
         The secret Pokémon was
-        <a
-          class="secretpoke"
-          :href="`https://pokemon.fandom.com/wiki/${encodeURIComponent(secretPokemon.name.en)}`"
-          target="_blank"
-          rel="noopener noreferrer"
-        >{{ secretPokemon.name[lang] }}</a>!
+        <div class="tooltip">
+          <p class="guess">{{ secretPokemon.name[lang] }}</p>
+          <div class="tooltiptext">
+            <a
+              :href="`https://pokemon.fandom.com/wiki/${encodeURIComponent(secretPokemon.name.en)}`"
+              target="_blank"
+              rel="noopener noreferrer"
+            >{{ secretPokemon.name[lang] }}</a>
+            <pre>{{ secretPokemon.info() }}</pre>
+          </div>
+        </div>!
       </span>
     </div>
     <div>

@@ -9,9 +9,8 @@ export interface IPokedexEntry {
   type2: string
   height: number
   weight: number
-  mosaic: string
   hints: string[]
-  info: string
+  info(): string
   name: {
     [lang: string]: string
   }
@@ -32,7 +31,7 @@ export function t(s: string, def?: string) {
 }
 
 pokedexData.map((p) => {
-  const ent = {
+  pokedex[p.name] = {
     name: {
       en: p.name,
       ja: p.name_ja,
@@ -44,16 +43,18 @@ pokedexData.map((p) => {
     height: Number(p.height_m),
     weight: Number(p.weight_kg),
     hints: [],
-    info: '',
-    mosaic: ''
+    info() {
+      return [
+        `${t('Gen')}: ${this.gen}`,
+        ...(this.type2
+          ? [
+              `${t('Type')} 1: ${t(this.type1)}`,
+              `${t('Type')} 2: ${t(this.type2)}`
+            ]
+          : [`${t('Type')}: ${t(this.type1)}`]),
+        `${t('Height')}: ${this.height} m`,
+        `${t('Weight')}: ${this.weight} kg`
+      ].join('\n')
+    }
   }
-  ent.info = [
-    `${t('Gen')}: ${ent.gen}`,
-    `${t('Type')} 1: ${ent.type1}`,
-    `${t('Type')} 2: ${ent.type2}`,
-    `${t('Height')}: ${ent.height} m`,
-    `${t('Weight')}: ${ent.weight} kg`
-  ].join('\n')
-
-  pokedex[p.name] = ent
 })

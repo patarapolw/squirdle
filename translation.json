@@ -1,5 +1,9 @@
 {
   "ja": {
+    "Squirdle": "スクアードル",
+    "Share": "シェア",
+    "Full Share": "フルシェア",
+    "New Game": "リスタート",
     "Gen": "世代",
     "Type": "タイプ",
     "Height": "高さ",
@@ -8,6 +12,24 @@
     "Submit": "入力",
     "Daily": "デーリー",
     "Free Play": "フリープレイ",
-    "Daily Play": "デーリープレイ"
+    "Daily Play": "デーリープレイ",
+    "Normal": "ノーマル",
+    "Fire": "ほのお",
+    "Water": "みず",
+    "Grass": "くさ",
+    "Electric": "でんき",
+    "Ice": "こおり",
+    "Fighting": "かくとう",
+    "Poison": "どく",
+    "Ground": "じめん",
+    "Flying": "ひこう",
+    "Psychic": "エスパー",
+    "Bug": "むし",
+    "Rock": "いわ",
+    "Ghost": "ゴースト",
+    "Dark": "あく",
+    "Dragon": "ドラゴン",
+    "Steel": "はがね",
+    "Fairy": "フェアリー"
   }
 }

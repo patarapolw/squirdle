@@ -2,9 +2,9 @@
 import { ref, onMounted, watch, nextTick, onUnmounted } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 import ClipboardJS from 'clipboard'
-import { toKana, toHiragana } from 'wanakana'
+import { toKana, toKatakana } from 'wanakana'
 
-import dailyJSON from '../../daily.json'
+import dailyJSON from '../assets/daily.json'
 import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t } from '../assets'
 
 const props = defineProps<{
@@ -197,6 +197,10 @@ function updateGuess(opts: {
     qGuess.value = ''
   }
 
+  if (guesses.value.length >= guessLimit.value) {
+    isWon.value = false
+  }
+
   const lastGuess = guesses.value[guesses.value.length - 1]
   if (lastGuess) {
     if (secretPokemon.value.name[lang.value] === lastGuess.name[lang.value]) {
@@ -204,14 +208,10 @@ function updateGuess(opts: {
     }
   }
 
-  if (guesses.value.length >= guessLimit.value) {
-    isWon.value = false
-  }
-
   if (isWon.value !== null) {
     const makeCopy = (withName: boolean) => {
       return [
-        ['Squirdle', ...(props.daily ? [`Daily ${dayNumber.value + 1} -`] : []), `${guesses.value.length}/${guessLimit.value}`].join(' '),
+        [t('Squirdle'), ...(props.daily ? [`${t('Daily')} ${dayNumber.value + 1} -`] : []), `${guesses.value.length}/${guessLimit.value}`].join(' '),
         ...guesses.value.map((g) => {
           function e(k: keyof IPokedexEntry) {
             const { alt } = getImage(g, k)
@@ -281,7 +281,7 @@ function ime(ev: Event) {
 
 function normalizeInput(s: string): string {
   if (lang.value === 'ja') {
-    return toHiragana(s).replace(/[a-zA-Z]+$/, '')
+    return toKatakana(s).replace(/[a-zA-Z]+$/, '')
   }
 
   return s.toLocaleLowerCase()
@@ -347,7 +347,14 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
   const c = d[k]
   const c0 = secretPokemon.value[k]
 
-  if (c && c0) {
+  if (!c0) {
+    return {
+      src: '/correct.png',
+      alt: 'correct'
+    }
+  }
+
+  if (c) {
     if (typeof c === 'number' && typeof c0 === 'number') {
       if (c < c0) {
         return {
@@ -391,9 +398,9 @@ onMounted(() => {
   nextTick(() => {
     clipboardJS = new ClipboardJS('.copy-button')
     clipboardJS.on('success', () => {
-      alert('Copied mosaic to clipboard!')
+      alert('Copied to clipboard!')
     }).on('error', (ex) => {
-      console.warn("Copy to clipboard failed. Let Fireblend know!", ex);
+      console.warn("Copy to clipboard failed. Let me (https://github.com/patarapolw) know!", ex);
     })
   })
 })
@@ -424,8 +431,10 @@ watch(genMin, () => {
 </script>
 
 <template>
-  <h2 v-if="!daily">Squirdle</h2>
-  <h2 v-else>Squirdle {{ t('Daily') }} {{ dayNumber + 1 }}</h2>
+  <h2>
+    {{ t('Squirdle') }}
+    <span v-if="daily">{{ t('Daily') }} {{ dayNumber + 1 }}</span>
+  </h2>
 
   <h3>
     A Pokémon Wordle-like, originally by
@@ -446,10 +455,10 @@ watch(genMin, () => {
       <span v-else>
         The game has finished.
         <span v-if="daily">Try again tomorrow.</span>
-        <span v-else>Click New Game to restart.</span>
+        <span v-else>Click {{ t('New Game') }} to restart.</span>
       </span>
 
-      <span class="tooltip">
+      <!-- <span class="tooltip">
         Emoji Key
         <span class="tooltiptext">
           <p>🟩: Correct guess</p>
@@ -458,7 +467,7 @@ watch(genMin, () => {
           <p>🔼: Guessed too low</p>
           <p>🔽: Guessed too high</p>
         </span>
-      </span>
+      </span>-->
     </div>
     <div v-if="daily">(Updates @ 00:00 {{ timeZone }})</div>
   </section>
@@ -502,13 +511,13 @@ watch(genMin, () => {
       <div class="column">
         <div class="tooltip">
           <p class="guess">{{ g.name[lang] }}</p>
-          <pre class="tooltiptext">{{ g.info }}</pre>
+          <pre class="tooltiptext">{{ g.info() }}</pre>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="error" v-if="isNotFound">Pokemon not found!</section>
+  <section class="error" v-if="isNotFound">Pokémon not found!</section>
 
   <section>
     <form
@@ -562,12 +571,12 @@ watch(genMin, () => {
         class="togglec copy-button"
         :data-clipboard-text="shareWithoutNames"
         type="button"
-      >📄 Share</button>
+      >📄 {{ t('Share') }}</button>
       <button
         class="togglec copy-button"
         :data-clipboard-text="shareWithNames"
         type="button"
-      >👀 Share w/names</button>
+      >👀 {{ t('Full Share', 'Share w/ names') }}</button>
     </div>
     <div v-if="daily">
       <div>Generation hint arrows are obscured in daily</div>
@@ -577,11 +586,11 @@ watch(genMin, () => {
   </section>
 
   <section v-if="!daily && guesses.length">
-    <a class="togglec" @click="updateGuess({ isInit: true, isNew: true })">▶️ New Game</a>
+    <a class="togglec" @click="updateGuess({ isInit: true, isNew: true })">▶️ {{ t('New Game') }}</a>
   </section>
 
   <section v-if="!daily">
-    <label for="quantity">Guess Pkmn from gen</label>
+    <label for="quantity">Guess Pokémon from gen</label>
     <input
       class="mg_input"
       type="number"
@@ -620,7 +629,7 @@ section + section {
 
 .tooltip {
   display: inline-block;
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 
 .attempts {
@@ -631,5 +640,10 @@ section + section {
 
 .guess {
   width: 100px;
+}
+
+.mg_input {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 </style>

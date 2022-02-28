@@ -1,6 +1,7 @@
 import { reactive, ref } from 'vue'
 
 import pokedexData from '../../pokedex.csv'
+import translation from '../../translation.json'
 
 export interface IPokedexEntry {
   gen: number
@@ -18,13 +19,17 @@ export interface IPokedexEntry {
 
 export const defaultMinGen = ref(1)
 export const defaultMaxGen = ref(8)
-export const lang = ref('en')
+export const lang = ref('ja')
 
 export const pokedex = reactive(
   {} as {
     [name: string]: IPokedexEntry
   }
 )
+
+export function t(s: string, def?: string) {
+  return (translation as any)[lang.value]?.[s] || def || s
+}
 
 pokedexData.map((p) => {
   const ent = {
@@ -43,11 +48,11 @@ pokedexData.map((p) => {
     mosaic: ''
   }
   ent.info = [
-    `Gen: ${ent.gen}`,
-    `Type 1: ${ent.type1}`,
-    `Type 2: ${ent.type2}`,
-    `Height: ${ent.height} m`,
-    `Weight: ${ent.weight} kg`
+    `${t('Gen')}: ${ent.gen}`,
+    `${t('Type')} 1: ${ent.type1}`,
+    `${t('Type')} 2: ${ent.type2}`,
+    `${t('Height')}: ${ent.height} m`,
+    `${t('Weight')}: ${ent.weight} kg`
   ].join('\n')
 
   pokedex[p.name] = ent

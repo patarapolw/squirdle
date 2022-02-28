@@ -2,9 +2,10 @@
 import { ref, onMounted, watch, nextTick, onUnmounted } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 import ClipboardJS from 'clipboard'
-import fakeDailyCSV from '../../fake-daily.csv'
+import { toKana, toHiragana } from 'wanakana'
 
-import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang } from '../assets'
+import fakeDailyCSV from '../../fake-daily.csv'
+import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t } from '../assets'
 
 const props = defineProps<{
   daily?: boolean
@@ -16,14 +17,20 @@ const genMin = ref(defaultMinGen.value)
 const genMax = ref(defaultMaxGen.value)
 const guesses = ref<IPokedexEntry[]>([])
 const guessLimit = ref(6)
+const timeZone = ref(lang.value === 'ja' ? 'JST' : 'GMT')
 
 const dayNumber = ref(Math.floor((() => {
+  let extraOffset = 0
+  switch (timeZone.value) {
+    case 'JST':
+      extraOffset = 9
+  }
+
   const date = new Date()
-  const offset = date.getTimezoneOffset()
   const milli = +date - +new Date(fakeDailyCSV[0].date)
   const sec = milli / 1000
   const min = sec / 60
-  const normMin = min - offset
+  const normMin = min - date.getTimezoneOffset() + extraOffset * 60
   const hour = normMin / 60
   const day = hour / 24
 
@@ -31,25 +38,30 @@ const dayNumber = ref(Math.floor((() => {
 })()))
 const isNotFound = ref(false)
 const isWon = ref<boolean | null>(null)
+
 const qGuess = ref('')
-const actualGuess = ref('')
+const actualGuess = ref<IPokedexEntry | null>(null)
+
 const autocompleteEl = ref(null)
 const autocompleteFocus = ref(-1)
-const autocompleteList = ref<string[]>([])
+const autocompleteList = ref<IPokedexEntry[]>([])
+const elligible = ref<IPokedexEntry[]>([])
 
-const shareWithoutNames = ref('abd')
-const shareWithNames = ref('sec')
+const shareWithoutNames = ref('')
+const shareWithNames = ref('')
 
 function updateGuess(opts: {
+  entry?: IPokedexEntry
   isInit?: boolean
 }) {
   if (opts.isInit) {
     if (!props.daily) {
-      const elligible = Object.values(pokedex).filter((p) => p.gen >= genMin.value && p.gen <= genMax.value)
-      secretPokemon.value = elligible[Math.floor(Math.random() * elligible.length)]
+      elligible.value = Object.values(pokedex).filter((p) => p.gen >= genMin.value && p.gen <= genMax.value)
+      secretPokemon.value = elligible.value[Math.floor(Math.random() * elligible.value.length)]
     } else {
       secretPokemon.value = pokedex[fakeDailyCSV[dayNumber.value].pokemon]
     }
+
     guesses.value = []
     isWon.value = null
   }
@@ -59,7 +71,7 @@ function updateGuess(opts: {
   if (autocompleteFocus.value >= 0) {
     const v = autocompleteList.value[autocompleteFocus.value]
     if (v) {
-      qGuess.value = v
+      qGuess.value = v.name[lang.value]
       actualGuess.value = v
     }
   }
@@ -70,16 +82,20 @@ function updateGuess(opts: {
     isNotFound.value = false
   }
 
-  if (qGuess.value) {
-    const c = pokedex[actualGuess.value]
-    if (c) {
-      isNotFound.value = false
-      guesses.value = [...guesses.value, c]
-    }
+  let entry = opts.entry
+  if (!entry && actualGuess.value) {
+    entry = actualGuess.value
+  }
+
+  console.log(entry)
+
+  if (entry) {
+    isNotFound.value = false
+    guesses.value = [...guesses.value, entry]
   }
 
   if (isNotFound.value) {
-    actualGuess.value = ''
+    actualGuess.value = null
     qGuess.value = ''
   }
 
@@ -124,7 +140,7 @@ function updateGuess(opts: {
   }
 
   qGuess.value = ''
-  actualGuess.value = ''
+  actualGuess.value = null
   autocompleteList.value = []
 }
 
@@ -155,7 +171,21 @@ function updateGen(n: number, opts: {
   dst.value = n
 }
 
+function ime(ev: Event) {
+  const s = (ev.target as HTMLInputElement).value
+
+  if (lang.value === 'ja') {
+    qGuess.value = toKana(s, { IMEMode: true })
+  } else {
+    qGuess.value = s
+  }
+}
+
 function normalizeInput(s: string): string {
+  if (lang.value === 'ja') {
+    return toHiragana(s).replace(/[a-zA-Z]+$/, '')
+  }
+
   return s.toLocaleLowerCase()
 }
 
@@ -185,8 +215,7 @@ function autocompleteInput(ev: KeyboardEvent) {
       return
     }
 
-    actualGuess.value = normalizeInput(qGuess.value)
-    autocompleteList.value = Object.values(pokedex).filter((p) => normalizeInput(p.name[lang.value]).startsWith(actualGuess.value)).map((p) => p.name[lang.value])
+    autocompleteList.value = elligible.value.filter((p) => normalizeInput(p.name[lang.value]).startsWith(normalizeInput(qGuess.value)))
 
     if (!isDefault && autocompleteList.value.length) {
       if (autocompleteFocus.value < 0) {
@@ -281,14 +310,14 @@ onClickOutside(autocompleteEl, () => {
   autocompleteList.value = []
 })
 
-watch(props, () => {
+watch([props, genMax, genMin], () => {
   updateGuess({ isInit: true })
 })
 </script>
 
 <template>
   <h2 v-if="!daily">Squirdle</h2>
-  <h2 v-else>Squirdle Daily {{ dayNumber }}</h2>
+  <h2 v-else>Squirdle {{ t('Daily') }} {{ dayNumber }}</h2>
 
   <h3>
     A Pokémon Wordle-like, originally by
@@ -316,24 +345,24 @@ watch(props, () => {
         </span>
       </div>
     </div>
-    <div v-if="daily">(Updates @ 00:00 GMT)</div>
+    <div v-if="daily">(Updates @ 00:00 {{ timeZone }})</div>
   </section>
   <section class="guesses" v-if="guesses.length">
     <div class="row row-header">
       <div class="column">
-        <p class="hint">Gen</p>
+        <p class="hint">{{ t('Gen') }}</p>
       </div>
       <div class="column">
-        <p class="hint">Type 1</p>
+        <p class="hint">{{ t('Type') }}1</p>
       </div>
       <div class="column">
-        <p class="hint">Type 2</p>
+        <p class="hint">{{ t('Type') }}2</p>
       </div>
       <div class="column">
-        <p class="hint">Height</p>
+        <p class="hint">{{ t('Height') }}</p>
       </div>
       <div class="column">
-        <p class="hint">Weight</p>
+        <p class="hint">{{ t('Weight') }}</p>
       </div>
     </div>
     <div class="row" v-for="g in guesses" :key="g.name[lang]">
@@ -378,23 +407,24 @@ watch(props, () => {
           class="guess_input"
           type="text"
           name="guess"
-          placeholder="Pokemon Name"
-          v-model="qGuess"
+          :placeholder="t('Pokemon Name')"
+          :value="qGuess"
+          @input="ime"
           @keydown="(ev) => autocompleteInput(ev)"
         />
         <div class="autocomplete autocomplete-items">
           <div
             v-for="(r, i) in autocompleteList"
-            :key="r"
+            :key="i"
             :class="{ 'autocomplete-active': i === autocompleteFocus, 'autocomplete-item': true }"
-            @click="qGuess = r; actualGuess = r; autocompleteList = []"
+            @click="updateGuess({ entry: r })"
           >
-            <strong>{{ r.substring(0, qGuess.length) }}</strong>
-            <span>{{ r.substring(qGuess.length) }}</span>
+            <strong>{{ r.name[lang].substring(0, qGuess.length) }}</strong>
+            <span>{{ r.name[lang].substring(qGuess.length) }}</span>
           </div>
         </div>
       </div>
-      <input class="guess_input" type="submit" value="Submit" @click="handleGuess" />
+      <button class="guess_input" type="submit">{{ t('Submit') }}</button>
     </form>
   </section>
 
@@ -456,8 +486,8 @@ watch(props, () => {
   </section>
 
   <section class="alternate-games">
-    <router-link v-if="!daily" to="/daily">Try Squirdle Daily!</router-link>
-    <router-link v-else to="/">Free Play</router-link>
+    <router-link v-if="!daily" to="/daily">{{ t('Daily Play', 'Try Squirdle Daily!') }}</router-link>
+    <router-link v-else to="/">{{ t('Free Play') }}</router-link>
   </section>
 </template>
 

@@ -2,7 +2,7 @@
 import { ref, onMounted, watch, nextTick, onUnmounted } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 import ClipboardJS from 'clipboard'
-import { toKana, toKatakana } from 'wanakana'
+import { toKatakana } from 'wanakana'
 
 import dailyJSON from '../assets/daily.json'
 import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t } from '../assets'
@@ -11,7 +11,7 @@ const props = defineProps<{
   daily?: boolean
 }>()
 
-const secretPokemon = ref<IPokedexEntry>(null)
+const secretPokemon = ref<IPokedexEntry | null>(null)
 
 const genMin = ref(defaultMinGen.value)
 const genMax = ref(defaultMaxGen.value)
@@ -273,7 +273,7 @@ function ime(ev: Event) {
   const s = (ev.target as HTMLInputElement).value
 
   if (lang.value === 'ja') {
-    qGuess.value = toKana(s, { IMEMode: true })
+    qGuess.value = toKatakana(s, { IMEMode: true })
   } else {
     qGuess.value = s
   }

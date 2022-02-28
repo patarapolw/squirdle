@@ -10,6 +10,8 @@
     "predeploy": "yarn build"
   },
   "dependencies": {
+    "@vueuse/core": "^7.7.0",
+    "clipboard": "^2.0.10",
     "vue": "^3.2.31",
     "vue-router": "^4.0.12"
   },
@@ -20,7 +22,6 @@
     "typescript": "^4.5.5",
     "vite": "^2.8.4",
     "vite-plugin-csv": "^1.0.0",
-    "vite-plugin-yaml": "^1.0.5",
     "vue-tsc": "^0.32.0"
   },
   "importSort": {

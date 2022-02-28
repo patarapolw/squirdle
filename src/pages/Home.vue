@@ -1,39 +1,66 @@
 <script setup lang="ts">
-import { ref, onMounted, watch, nextTick } from 'vue'
+import { ref, onMounted, watch, nextTick, onUnmounted } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 import ClipboardJS from 'clipboard'
+import fakeDailyCSV from '../../fake-daily.csv'
 
-import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen } from '../assets'
+import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang } from '../assets'
 
 const props = defineProps<{
   daily?: boolean
 }>()
 
-const secretPokemon = ref(pokedex.get('squirtle')!)
+const secretPokemon = ref<IPokedexEntry>(null)
 
 const genMin = ref(defaultMinGen.value)
 const genMax = ref(defaultMaxGen.value)
 const guesses = ref<IPokedexEntry[]>([])
 const guessLimit = ref(6)
 
-const dayNumber = ref(0)
+const dayNumber = ref(Math.floor((() => {
+  const date = new Date()
+  const offset = date.getTimezoneOffset()
+  const milli = +date - +new Date(fakeDailyCSV[0].date)
+  const sec = milli / 1000
+  const min = sec / 60
+  const normMin = min - offset
+  const hour = normMin / 60
+  const day = hour / 24
+
+  return day
+})()))
 const isNotFound = ref(false)
 const isWon = ref<boolean | null>(null)
 const qGuess = ref('')
+const actualGuess = ref('')
 const autocompleteEl = ref(null)
 const autocompleteFocus = ref(-1)
 const autocompleteList = ref<string[]>([])
 
-const shareWithoutNames = ref('')
-const shareWithNames = ref('')
+const shareWithoutNames = ref('abd')
+const shareWithNames = ref('sec')
 
-function doGuess(opts: {
+function updateGuess(opts: {
   isInit?: boolean
 }) {
-  if (autocompleteFocus.value > 0) {
+  if (opts.isInit) {
+    if (!props.daily) {
+      const elligible = Object.values(pokedex).filter((p) => p.gen >= genMin.value && p.gen <= genMax.value)
+      secretPokemon.value = elligible[Math.floor(Math.random() * elligible.length)]
+    } else {
+      secretPokemon.value = pokedex[fakeDailyCSV[dayNumber.value].pokemon]
+    }
+    guesses.value = []
+    isWon.value = null
+  }
+
+  if (!secretPokemon.value) return
+
+  if (autocompleteFocus.value >= 0) {
     const v = autocompleteList.value[autocompleteFocus.value]
     if (v) {
       qGuess.value = v
+      actualGuess.value = v
     }
   }
 
@@ -44,7 +71,7 @@ function doGuess(opts: {
   }
 
   if (qGuess.value) {
-    const c = pokedex.get(qGuess.value)
+    const c = pokedex[actualGuess.value]
     if (c) {
       isNotFound.value = false
       guesses.value = [...guesses.value, c]
@@ -52,23 +79,53 @@ function doGuess(opts: {
   }
 
   if (isNotFound.value) {
+    actualGuess.value = ''
     qGuess.value = ''
   }
 
   const lastGuess = guesses.value[guesses.value.length - 1]
   if (lastGuess) {
-    if (secretPokemon.value.name === lastGuess.name) {
+    if (secretPokemon.value.name[lang.value] === lastGuess.name[lang.value]) {
       isWon.value = true
     }
   }
-}
 
-function newGame() {
-  if (!props.daily) {
-    const elligible = [...pokedex.values()].filter((p) => p.gen >= genMin.value && p.gen <= genMax.value)
-    secretPokemon.value = elligible[Math.floor(Math.random() * elligible.length)]
-    guesses.value = []
+  if (guesses.value.length >= guessLimit.value) {
+    isWon.value = false
   }
+
+  if (isWon.value !== null) {
+    const makeCopy = (withName: boolean) => {
+      return [
+        ['Squirdle', ...(props.daily ? [`Daily ${dayNumber.value} -`] : []), `${guesses.value.length}/${guessLimit.value}`].join(' '),
+        ...guesses.value.map((g) => {
+          function e(k: keyof IPokedexEntry) {
+            const { alt } = getImage(g, k)
+            switch (alt) {
+              case 'too high':
+                return '🔼'
+              case 'too low':
+                return '🔽'
+              case 'almost':
+                return '🟨'
+              case 'correct':
+                return '🟩'
+            }
+
+            return '🟥'
+          }
+
+          return `${e('gen')}${e('type1')}${e('type2')}${e('height')}${e('weight')}${withName ? ' ' + g.name[lang.value] : ''}`
+        })
+      ].join('\n')
+    }
+    shareWithNames.value = makeCopy(true)
+    shareWithoutNames.value = makeCopy(false)
+  }
+
+  qGuess.value = ''
+  actualGuess.value = ''
+  autocompleteList.value = []
 }
 
 function updateGen(n: number, opts: {
@@ -98,33 +155,68 @@ function updateGen(n: number, opts: {
   dst.value = n
 }
 
-function autocompleteInput(direction: number) {
-  if (!qGuess.value) {
-    return
-  }
+function normalizeInput(s: string): string {
+  return s.toLocaleLowerCase()
+}
 
-  switch (direction) {
-    case -1:
+function autocompleteInput(ev: KeyboardEvent) {
+  let isDefault = false
+  const { key } = ev
+  switch (key) {
+    case 'ArrowUp':
+      ev.preventDefault()
       autocompleteFocus.value--
-      if (autocompleteFocus.value < 0) {
-        autocompleteFocus.value = 0
-      }
       break
-    case 1:
+    case 'ArrowDown':
+      ev.preventDefault()
       autocompleteFocus.value++
-      if (autocompleteFocus.value >= autocompleteList.value.length) {
-        autocompleteFocus.value = autocompleteList.value.length - 1
-      }
+      break
+    case 'Enter':
+      ev.preventDefault()
       break
     default:
       autocompleteFocus.value = -1
+      isDefault = true
   }
+
+  setTimeout(() => {
+    if (!qGuess.value) {
+      autocompleteList.value = []
+      return
+    }
+
+    actualGuess.value = normalizeInput(qGuess.value)
+    autocompleteList.value = Object.values(pokedex).filter((p) => normalizeInput(p.name[lang.value]).startsWith(actualGuess.value)).map((p) => p.name[lang.value])
+
+    if (!isDefault && autocompleteList.value.length) {
+      if (autocompleteFocus.value < 0) {
+        autocompleteFocus.value = 0
+      }
+
+      if (autocompleteFocus.value >= autocompleteList.value.length) {
+        autocompleteFocus.value = autocompleteList.value.length - 1
+      }
+    }
+
+    if (key === 'Enter') {
+      nextTick(() => {
+        updateGuess({ isInit: false })
+      })
+    }
+  }, 10)
 }
 
 function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
   src: string
   alt: string
 } {
+  if (!secretPokemon.value) {
+    return {
+      src: '/wrong.png',
+      alt: 'wrong'
+    }
+  }
+
   const c = d[k]
   const c0 = secretPokemon.value[k]
 
@@ -160,15 +252,18 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
 
   return {
     src: '/wrong.png',
-    alt: 'wrong'
+    alt: (d.type1 === secretPokemon.value.type2 || d.type2 === secretPokemon.value.type1) ? 'almost' : 'wrong'
   }
 }
 
+let clipboardJS: ClipboardJS
+
 onMounted(() => {
-  doGuess({ isInit: true })
+  updateGuess({ isInit: true })
 
   nextTick(() => {
-    new ClipboardJS('.copy-button').on('success', () => {
+    clipboardJS = new ClipboardJS('.copy-button')
+    clipboardJS.on('success', () => {
       alert('Copied mosaic to clipboard!')
     }).on('error', (ex) => {
       console.warn("Copy to clipboard failed. Let Fireblend know!", ex);
@@ -176,18 +271,24 @@ onMounted(() => {
   })
 })
 
+onUnmounted(() => {
+  if (clipboardJS) {
+    clipboardJS.destroy()
+  }
+})
+
 onClickOutside(autocompleteEl, () => {
   autocompleteList.value = []
 })
 
-watch([props], () => {
-  doGuess({ isInit: true })
+watch(props, () => {
+  updateGuess({ isInit: true })
 })
 </script>
 
 <template>
   <h2 v-if="!daily">Squirdle</h2>
-  <h2 v-else>Squirdle Daily</h2>
+  <h2 v-else>Squirdle Daily {{ dayNumber }}</h2>
 
   <h3>
     A Pokémon Wordle-like, originally by
@@ -217,7 +318,7 @@ watch([props], () => {
     </div>
     <div v-if="daily">(Updates @ 00:00 GMT)</div>
   </section>
-  <section v-if="guesses.length" class="guesses">
+  <section class="guesses" v-if="guesses.length">
     <div class="row row-header">
       <div class="column">
         <p class="hint">Gen</p>
@@ -235,9 +336,7 @@ watch([props], () => {
         <p class="hint">Weight</p>
       </div>
     </div>
-  </section>
-  <section class="guesses" v-for="g in guesses" :key="g.name">
-    <div class="row">
+    <div class="row" v-for="g in guesses" :key="g.name[lang]">
       <div v-for="h in g.hints" :key="h">
         <img class="emoji" :src="h" />
       </div>
@@ -258,8 +357,8 @@ watch([props], () => {
       </div>
       <div class="column">
         <div class="tooltip">
-          <p class="guess">{{ g.name }}</p>
-          <span class="tooltiptext">{{ g.info }}</span>
+          <p class="guess">{{ g.name[lang] }}</p>
+          <pre class="tooltiptext">{{ g.info }}</pre>
         </div>
       </div>
     </div>
@@ -272,32 +371,26 @@ watch([props], () => {
       v-if="isWon === null"
       class="guessform"
       autocomplete="off"
-      @submit.prevent="doGuess({ isInit: false })"
+      @submit.prevent="updateGuess({ isInit: false })"
     >
       <div ref="autocompleteEl" class="autocomplete">
         <input
-          v-model="qGuess"
           class="guess_input"
           type="text"
           name="guess"
           placeholder="Pokemon Name"
-          @input="autocompleteInput(0)"
-          @keypress.down="autocompleteInput(+1)"
-          @keypress.up="autocompleteInput(-1)"
+          v-model="qGuess"
+          @keydown="(ev) => autocompleteInput(ev)"
         />
-        <div class="autocomplete-list">
+        <div class="autocomplete autocomplete-items">
           <div
             v-for="(r, i) in autocompleteList"
             :key="r"
             :class="{ 'autocomplete-active': i === autocompleteFocus, 'autocomplete-item': true }"
+            @click="qGuess = r; actualGuess = r; autocompleteList = []"
           >
             <strong>{{ r.substring(0, qGuess.length) }}</strong>
-            {{ r.substring(qGuess.length) }}
-            <input
-              type="hidden"
-              :value="r"
-              @click="qGuess = r; autocompleteList = []"
-            />
+            <span>{{ r.substring(qGuess.length) }}</span>
           </div>
         </div>
       </div>
@@ -305,42 +398,38 @@ watch([props], () => {
     </form>
   </section>
 
-  <section class="results" v-if="isWon !== null">
+  <section class="results" v-if="!!secretPokemon && isWon !== null">
     <div>
       <span class="won" v-if="isWon">You won!</span>
       <span class="lost" v-else>You lost!</span>
       <span>
         The secret Pokémon was
         <b>
-          <span class="secretpoke">{{ secretPokemon.name }}</span>
+          <span class="secretpoke">{{ secretPokemon.name[lang] }}</span>
         </b>!
       </span>
     </div>
     <div>
       <button
         class="togglec copy-button"
-        data-clipboard-target="#share-without-names"
+        :data-clipboard-text="shareWithoutNames"
         type="button"
       >📄 Share</button>
       <button
         class="togglec copy-button"
-        data-clipboard-target="#share-with-names"
+        :data-clipboard-text="shareWithNames"
         type="button"
       >👀 Share w/names</button>
     </div>
-    <div>Generation hint arrows are obscured in daily</div>
-    <div>mosaics to avoid spoiling other players!</div>
-    <div>Come back tomorrow for another daily!</div>
-    <textarea id="share-without-names" style="display: none;">
-      {{ shareWithoutNames }}
-    </textarea>
-    <textarea id="share-with-names" style="display: none;">
-      {{ shareWithNames }}
-    </textarea>
+    <div v-if="daily">
+      <div>Generation hint arrows are obscured in daily</div>
+      <div>mosaics to avoid spoiling other players!</div>
+      <div>Come back tomorrow for another daily!</div>
+    </div>
   </section>
 
   <section v-if="!daily && guesses.length">
-    <a class="togglec" @click="newGame">▶️ New Game</a>
+    <a class="togglec" @click="updateGuess({ isInit: true })">▶️ New Game</a>
   </section>
 
   <section v-if="!daily">
@@ -375,5 +464,9 @@ watch([props], () => {
 <style scoped>
 section + section {
   margin-top: 1em;
+}
+
+input[type="submit"] {
+  cursor: pointer;
 }
 </style>

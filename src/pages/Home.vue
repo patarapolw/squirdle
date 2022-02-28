@@ -348,9 +348,16 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
   const c0 = secretPokemon.value[k]
 
   if (!c0) {
-    return {
-      src: '/correct.png',
-      alt: 'correct'
+    if (d.type1 === secretPokemon.value.type1) {
+      return {
+        src: '/correct.png',
+        alt: 'correct'
+      }
+    } else {
+      return {
+        src: '/wrong.png',
+        alt: 'wronng'
+      }
     }
   }
 
@@ -384,9 +391,16 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
     }
   }
 
+  if (d.type1 === secretPokemon.value.type2 || d.type2 === secretPokemon.value.type1) {
+    return {
+      src: '/wrongpos.png',
+      alt: 'almost'
+    }
+  }
+
   return {
     src: '/wrong.png',
-    alt: (d.type1 === secretPokemon.value.type2 || d.type2 === secretPokemon.value.type1) ? 'almost' : 'wrong'
+    alt: 'wrong'
   }
 }
 
@@ -454,7 +468,7 @@ watch(genMin, () => {
       </span>
       <span v-else>
         The game has finished.
-        <span v-if="daily">Try again tomorrow.</span>
+        <span v-if="daily">Play again tomorrow.</span>
         <span v-else>Click {{ t('New Game') }} to restart.</span>
       </span>
 

@@ -514,7 +514,14 @@ watch(genMin, () => {
       <div class="column">
         <div class="tooltip">
           <p class="guess">{{ g.name[lang] }}</p>
-          <pre class="tooltiptext">{{ g.info() }}</pre>
+          <div class="tooltiptext">
+            <a
+              :href="`https://pokemon.fandom.com/wiki/${encodeURIComponent(g.name.en)}`"
+              target="_blank"
+              rel="noopener noreferrer"
+            >{{ g.name[lang] }}</a>
+            <pre>{{ g.info() }}</pre>
+          </div>
         </div>
       </div>
     </div>

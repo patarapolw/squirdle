@@ -1,5 +1,6 @@
 {
   "ja": {
+    "Gen": "世代",
     "Type": "タイプ",
     "Height": "高さ",
     "Weight": "重さ",
@@ -7,6 +8,6 @@
     "Submit": "入力",
     "Daily": "デーリー",
     "Free Play": "フリープレイ",
-    "Daily Play": "デーリーゲイム"
+    "Daily Play": "デーリープレイ"
   }
 }

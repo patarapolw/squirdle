@@ -4,7 +4,7 @@ import { onClickOutside } from '@vueuse/core'
 import ClipboardJS from 'clipboard'
 import { toKana, toHiragana } from 'wanakana'
 
-import fakeDailyCSV from '../../fake-daily.csv'
+import dailyJSON from '../../daily.json'
 import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t } from '../assets'
 
 const props = defineProps<{
@@ -19,23 +19,9 @@ const guesses = ref<IPokedexEntry[]>([])
 const guessLimit = ref(6)
 const timeZone = ref(lang.value === 'ja' ? 'JST' : 'GMT')
 
-const dayNumber = ref(Math.floor((() => {
-  let extraOffset = 0
-  switch (timeZone.value) {
-    case 'JST':
-      extraOffset = 9
-  }
+const currentDate = ref(new Date().toISOString().substring(0, 10))
+const dayNumber = ref(0)
 
-  const date = new Date()
-  const milli = +date - +new Date(fakeDailyCSV[0].date)
-  const sec = milli / 1000
-  const min = sec / 60
-  const normMin = min - date.getTimezoneOffset() + extraOffset * 60
-  const hour = normMin / 60
-  const day = hour / 24
-
-  return day
-})()))
 const isNotFound = ref(false)
 const isWon = ref<boolean | null>(null)
 
@@ -50,19 +36,130 @@ const elligible = ref<IPokedexEntry[]>([])
 const shareWithoutNames = ref('')
 const shareWithNames = ref('')
 
+interface StorageTyping {
+  lastDate: string
+  guesses: string[]
+  genMax: number
+  genMin: number
+}
+
+const storage: {
+  [K in keyof StorageTyping]: {
+    id(): string
+    get(): StorageTyping[K] | null
+    set(v: StorageTyping[K]): void
+  }
+} = {
+  lastDate: {
+    id() {
+      return `[${lang.value}]lastDate`
+    },
+    get() {
+      return localStorage.getItem(this.id())
+    },
+    set(v) {
+      localStorage.setItem(this.id(), v)
+    }
+  },
+  guesses: {
+    id() {
+      return `[${lang.value}]${props.daily ? '[daily]' : ''}guesses`
+    },
+    get() {
+      const r = localStorage.getItem(this.id())
+      if (r) {
+        return JSON.parse(r)
+      }
+
+      return null
+    },
+    set(v) {
+      localStorage.setItem(this.id(), JSON.stringify(v))
+    }
+  },
+  genMax: {
+    id() {
+      return `[${lang.value}]genMax`
+    },
+    get() {
+      return Number(localStorage.getItem(this.id())) || null
+    },
+    set(v) {
+      localStorage.setItem(this.id(), v.toString())
+    }
+  },
+  genMin: {
+    id() {
+      return `[${lang.value}]genMin`
+    },
+    get() {
+      return Number(localStorage.getItem(this.id())) || null
+    },
+    set(v) {
+      localStorage.setItem(this.id(), v.toString())
+    }
+  },
+}
+
 function updateGuess(opts: {
   entry?: IPokedexEntry
   isInit?: boolean
+  isNew?: boolean
 }) {
   if (opts.isInit) {
-    if (!props.daily) {
-      elligible.value = Object.values(pokedex).filter((p) => p.gen >= genMin.value && p.gen <= genMax.value)
-      secretPokemon.value = elligible.value[Math.floor(Math.random() * elligible.value.length)]
+    if (props.daily) {
+      let extraOffset = 0
+      switch (timeZone.value) {
+        case 'JST':
+          extraOffset = 9
+      }
+
+      const now = new Date()
+      const normMin = (() => {
+        const milli = +now - +new Date(dailyJSON.startingDate)
+        const sec = milli / 1000
+        const min = sec / 60
+        return min - now.getTimezoneOffset() + extraOffset * 60
+      })()
+
+      currentDate.value = new Date(normMin * 60 * 1000).toISOString().substring(0, 10)
+      dayNumber.value = Math.floor(normMin / 60 / 24)
+
+      elligible.value = Object.values(pokedex)
+      secretPokemon.value = pokedex[dailyJSON.names[dayNumber.value % dailyJSON.names.length]]
+
+      let isNew = true
+      if (currentDate.value === storage.lastDate.get()) {
+        isNew = false
+      }
+
+      if (!isNew) {
+        const arr = storage.guesses.get()
+        if (arr) {
+          guesses.value = arr.map((v: string) => {
+            return pokedex[v]
+          })
+        }
+      }
     } else {
-      secretPokemon.value = pokedex[fakeDailyCSV[dayNumber.value].pokemon]
+      secretPokemon.value = elligible.value[Math.floor(Math.random() * elligible.value.length)]
+
+      if (opts.isNew) {
+        guesses.value = []
+      } else {
+        genMin.value = storage.genMin.get() || genMin.value
+        genMax.value = storage.genMax.get() || genMax.value
+        elligible.value = Object.values(pokedex).filter((p) => p.gen >= genMin.value && p.gen <= genMax.value)
+
+        const arr = storage.guesses.get()
+        if (arr) {
+          guesses.value = arr.map((v: string) => {
+            return pokedex[v]
+          })
+        }
+      }
     }
 
-    guesses.value = []
     isWon.value = null
   }
 
@@ -87,11 +184,12 @@ function updateGuess(opts: {
     entry = actualGuess.value
   }
 
-  console.log(entry)
-
   if (entry) {
     isNotFound.value = false
     guesses.value = [...guesses.value, entry]
+
+    storage.lastDate.set(currentDate.value)
+    storage.guesses.set(guesses.value.map((g) => g.name.en))
   }
 
   if (isNotFound.value) {
@@ -113,7 +211,7 @@ function updateGuess(opts: {
   if (isWon.value !== null) {
     const makeCopy = (withName: boolean) => {
       return [
-        ['Squirdle', ...(props.daily ? [`Daily ${dayNumber.value} -`] : []), `${guesses.value.length}/${guessLimit.value}`].join(' '),
+        ['Squirdle', ...(props.daily ? [`Daily ${dayNumber.value + 1} -`] : []), `${guesses.value.length}/${guessLimit.value}`].join(' '),
         ...guesses.value.map((g) => {
           function e(k: keyof IPokedexEntry) {
             const { alt } = getImage(g, k)
@@ -310,14 +408,24 @@ onClickOutside(autocompleteEl, () => {
   autocompleteList.value = []
 })
 
-watch([props, genMax, genMin], () => {
+watch(props, () => {
+  updateGuess({ isInit: true })
+})
+
+watch(genMax, () => {
+  storage.genMax.set(genMax.value)
+  updateGuess({ isInit: true })
+})
+
+watch(genMin, () => {
+  storage.genMin.set(genMin.value)
   updateGuess({ isInit: true })
 })
 </script>
 
 <template>
   <h2 v-if="!daily">Squirdle</h2>
-  <h2 v-else>Squirdle {{ t('Daily') }} {{ dayNumber }}</h2>
+  <h2 v-else>Squirdle {{ t('Daily') }} {{ dayNumber + 1 }}</h2>
 
   <h3>
     A Pokémon Wordle-like, originally by
@@ -329,12 +437,19 @@ watch([props, genMax, genMin], () => {
   </h3>
   <section>
     <div>
-      I'm thinking of a Pokémon. Guess which! You have
-      <span
-        class="attempts"
-      >{{ guessLimit - guesses.length }}</span> guesses
-      <span v-if="daily">left today</span>.
-      <div class="tooltip">
+      <span v-if="isWon === null">
+        <span>I'm thinking of a Pokémon. Guess which! You have</span>
+        <span class="attempts">{{ guessLimit - guesses.length }}</span>
+        <span v-if="daily">guesses left today.</span>
+        <span v-else>guesses.</span>
+      </span>
+      <span v-else>
+        The game has finished.
+        <span v-if="daily">Try again tomorrow.</span>
+        <span v-else>Click New Game to restart.</span>
+      </span>
+
+      <span class="tooltip">
         Emoji Key
         <span class="tooltiptext">
           <p>🟩: Correct guess</p>
@@ -343,7 +458,7 @@ watch([props, genMax, genMin], () => {
           <p>🔼: Guessed too low</p>
           <p>🔽: Guessed too high</p>
         </span>
-      </div>
+      </span>
     </div>
     <div v-if="daily">(Updates @ 00:00 {{ timeZone }})</div>
   </section>
@@ -434,9 +549,12 @@ watch([props, genMax, genMin], () => {
       <span class="lost" v-else>You lost!</span>
       <span>
         The secret Pokémon was
-        <b>
-          <span class="secretpoke">{{ secretPokemon.name[lang] }}</span>
-        </b>!
+        <a
+          class="secretpoke"
+          :href="`https://pokemon.fandom.com/wiki/${encodeURIComponent(secretPokemon.name.en)}`"
+          target="_blank"
+          rel="noopener noreferrer"
+        >{{ secretPokemon.name[lang] }}</a>!
       </span>
     </div>
     <div>
@@ -459,7 +577,7 @@ watch([props, genMax, genMin], () => {
   </section>
 
   <section v-if="!daily && guesses.length">
-    <a class="togglec" @click="updateGuess({ isInit: true })">▶️ New Game</a>
+    <a class="togglec" @click="updateGuess({ isInit: true, isNew: true })">▶️ New Game</a>
   </section>
 
   <section v-if="!daily">
@@ -496,7 +614,22 @@ section + section {
   margin-top: 1em;
 }
 
-input[type="submit"] {
+[type="submit"] {
   cursor: pointer;
+}
+
+.tooltip {
+  display: inline-block;
+  margin-left: 1em;
+}
+
+.attempts {
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.guess {
+  width: 100px;
 }
 </style>

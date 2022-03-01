@@ -15,16 +15,20 @@
   <link rel="stylesheet" type="text/css" href="/src/style.css">
 
   <meta property="og:type" content="website">
-  <meta property="og:description" content="A Japanese Pokémon Wordle-like, forked from squirdle.fireblend.com">
+  <meta property="og:description" content="A Pokémon Wordle-like, forked from squirdle.fireblend.com">
 
   <title>
-    <%= tr.TITLE %>
+    <%= tr.Squirdle || 'Squirdle' %>
   </title>
 </head>
 
 <body>
   <div id="app"></div>
-  <script>window.LANG = '<%= LANG %>'; window.tr = JSON.parse('<%- JSON.stringify(tr).replace(/\u0027/g, "\\$&") %>')</script>
+  <script>
+    window.LANG = '<%= LANG %>';
+    window.TRANSLATION = JSON.parse('<%- JSON.stringify(tr).replace(/\u0027/g, "\\$&") %>')
+    window.DAILY = JSON.parse('<%- JSON.stringify(daily).replace(/\u0027/g, "\\$&") %>')
+  </script>
   <script type="module" src="/src/main.ts"></script>
 </body>
 

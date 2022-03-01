@@ -4,8 +4,7 @@ import { onClickOutside } from '@vueuse/core'
 import ClipboardJS from 'clipboard'
 import { toKatakana } from 'wanakana'
 
-import dailyJSON from '../assets/daily.json'
-import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t, initPokedex } from '../assets'
+import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t } from '../assets'
 
 const props = defineProps<{
   daily?: boolean
@@ -17,7 +16,12 @@ const genMin = ref(defaultMinGen.value)
 const genMax = ref(defaultMaxGen.value)
 const guesses = ref<IPokedexEntry[]>([])
 const guessLimit = ref(6)
-const timeZone = ref(lang.value === 'ja' ? 'JST' : 'GMT')
+const timeZone = ref(t('TIMEZONE', 'GMT'))
+const timeOffset = ref(t('TIMEOFFSET', 0))
+
+if (timeZone.value === 'GMT') {
+  timeOffset.value = 0
+}
 
 const currentDate = ref(new Date().toISOString().substring(0, 10))
 const dayNumber = ref(0)
@@ -120,21 +124,17 @@ function updateGuess(opts: {
 }) {
   if (opts.isInit) {
     if (props.daily) {
-      let extraOffset = 0
-      switch (timeZone.value) {
-        case 'JST':
-          extraOffset = 9
-      }
-
       const nowMin = (() => {
         const now = new Date()
         const milli = +now
         const sec = milli / 1000
         const min = sec / 60
-        return min + now.getTimezoneOffset() + extraOffset * 60
+        return min + now.getTimezoneOffset() + timeOffset.value * 60
       })()
 
       currentDate.value = new Date(nowMin * 1000 * 60).toISOString().substring(0, 10)
+
+      const dailyJSON = window.DAILY
       dayNumber.value = Math.floor((+new Date(currentDate.value) - +new Date(dailyJSON.startingDate)) / (1000 * 60 * 60 * 24))
 
       elligible.value = Object.values(pokedex)
@@ -230,7 +230,7 @@ function updateGuess(opts: {
     const makeCopy = (withName: boolean) => {
       return [
         [
-          t('TITLE', 'Squirdle'),
+          t('Squirdle'),
           ...(props.daily ? [`${t('Daily')} ${dayNumber.value + 1} -`] : []),
           `${isWon.value ? guesses.value.length : 'X'}/${guessLimit.value}`
         ].join(' '),
@@ -471,7 +471,7 @@ watch(genMin, () => {
 
 <template>
   <h2>
-    {{ t('TITLE', 'Squirdle') }}
+    {{ t('Squirdle') }}
     <span v-if="daily">{{ t('Daily') }} {{ dayNumber + 1 }}</span>
   </h2>
 

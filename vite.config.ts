@@ -1,12 +1,11 @@
+import { readFileSync } from 'fs'
+
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import CSV from 'vite-plugin-csv'
 import { createHtmlPlugin } from 'vite-plugin-html'
 
-// @ts-ignore
-import tr from './translation/ja.json'
-
-const LANG = 'ja'
+const LANG: string = process.env.SQ_LANG || 'ja'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,7 +17,10 @@ export default defineConfig({
       inject: {
         data: {
           LANG,
-          tr
+          tr: LANG === 'en' ? {} : require(`./translation/${LANG}.json`),
+          daily: JSON.parse(
+            readFileSync(`generated/${LANG}/daily.json`, 'utf-8')
+          )
         }
       }
     })

@@ -1,5 +1,7 @@
 {
-  "TITLE": "スクァードル",
+  "TIMEZONE": "JST",
+  "TIMEOFFSET": 9,
+  "Squirdle": "スクァードル",
   "Share": "シェア",
   "Full Share": "フルシェア",
   "New Game": "リスタート",

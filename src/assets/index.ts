@@ -24,7 +24,7 @@ export const pokedex = reactive(
 )
 
 export function t<R = string>(s: string, def?: R): R {
-  return window.tr[s] || def || s
+  return window.TRANSLATION[s] || def || s
 }
 
 export async function initPokedex() {

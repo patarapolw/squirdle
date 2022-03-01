@@ -1,5 +1,3 @@
-import { readFileSync } from 'fs'
-
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import CSV from 'vite-plugin-csv'
@@ -17,10 +15,7 @@ export default defineConfig({
       inject: {
         data: {
           LANG,
-          tr: LANG === 'en' ? {} : require(`./translation/${LANG}.json`),
-          daily: JSON.parse(
-            readFileSync(`generated/${LANG}/daily.json`, 'utf-8')
-          )
+          tr: require(`./translation/${LANG}.json`)
         }
       }
     })

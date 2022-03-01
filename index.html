@@ -25,9 +25,7 @@
 <body>
   <div id="app"></div>
   <script>
-    window.LANG = '<%= LANG %>';
-    window.TRANSLATION = JSON.parse('<%- JSON.stringify(tr).replace(/\u0027/g, "\\$&") %>')
-    window.DAILY = JSON.parse('<%- JSON.stringify(daily).replace(/\u0027/g, "\\$&") %>')
+    window.LANG = '<%= LANG %>'
   </script>
   <script type="module" src="/src/main.ts"></script>
 </body>

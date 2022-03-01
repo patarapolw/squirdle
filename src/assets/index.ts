@@ -16,23 +16,32 @@ export interface IPokedexEntry {
 export const defaultMinGen = ref(1)
 export const defaultMaxGen = ref(8)
 export const lang = ref(window.LANG)
+export const translation = ref<Record<string, any>>({})
+export const dailyJSON = ref<{
+  startingDate: string
+  names: string[]
+}>({
+  startingDate: new Date().toISOString().substring(0, 10),
+  names: []
+})
 
-export const pokedex = reactive(
-  {} as {
-    [name: string]: IPokedexEntry
-  }
-)
+export interface IPokedex {
+  [name: string]: IPokedexEntry
+}
+export const pokedex = ref<IPokedex>({})
 
 export function t<R = string>(s: string, def?: R): R {
-  return window.TRANSLATION[s] || def || s
+  return translation.value[s] || def || s
 }
 
 export async function initPokedex() {
   const pokedexData = await import('../../pokedex.csv').then((r) => r.default)
+  const pk: IPokedex = {}
+
   const gens = pokedexData.map((p) => {
     const gen = Number(p.generation)
 
-    pokedex[p.name] = {
+    pk[p.name] = {
       name: {
         en: p.name,
         ja: p.name_ja,
@@ -58,6 +67,8 @@ export async function initPokedex() {
         ].join('\n')
       }
     }
+
+    pokedex.value = pk
 
     return gen
   })

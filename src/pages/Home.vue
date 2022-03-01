@@ -4,10 +4,11 @@ import { onClickOutside } from '@vueuse/core'
 import ClipboardJS from 'clipboard'
 import { toKatakana } from 'wanakana'
 
-import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t } from '../assets'
+import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t, dailyJSON } from '../assets'
 
 const props = defineProps<{
-  daily?: boolean
+  daily: boolean
+  lang?: string
 }>()
 
 const secretPokemon = ref<IPokedexEntry | null>(null)
@@ -15,14 +16,13 @@ const secretPokemon = ref<IPokedexEntry | null>(null)
 const genMin = ref(defaultMinGen.value)
 const genMax = ref(defaultMaxGen.value)
 const guesses = ref<IPokedexEntry[]>([])
+
 const guessLimit = ref(6)
+
 const timeZone = ref(t('TIMEZONE', 'GMT'))
 const timeOffset = ref(t('TIMEOFFSET', 0))
 
-if (lang.value === 'en') {
-  timeZone.value = 'GMT-10'
-  timeOffset.value = -10
-} else if (timeZone.value === 'GMT') {
+if (timeZone.value === 'GMT') {
   timeOffset.value = 0
 }
 
@@ -136,12 +136,10 @@ function updateGuess(opts: {
       })()
 
       currentDate.value = new Date(nowMin * 1000 * 60).toISOString().substring(0, 10)
-
-      const dailyJSON = window.DAILY
-      dayNumber.value = Math.floor((+new Date(currentDate.value) - +new Date(dailyJSON.startingDate)) / (1000 * 60 * 60 * 24))
+      dayNumber.value = Math.floor((+new Date(currentDate.value) - +new Date(dailyJSON.value.startingDate)) / (1000 * 60 * 60 * 24))
 
       elligible.value = Object.values(pokedex)
-      secretPokemon.value = pokedex[dailyJSON.names[dayNumber.value % dailyJSON.names.length]]
+      secretPokemon.value = pokedex.value[dailyJSON.value.names[dayNumber.value % dailyJSON.value.names.length]]
 
       let isNew = true
       if (currentDate.value === storage.lastDate.get()) {
@@ -152,7 +150,7 @@ function updateGuess(opts: {
         const arr = storage.guesses.get()
         if (arr) {
           guesses.value = arr.map((v: string) => {
-            return pokedex[v]
+            return pokedex.value[v]
           })
         }
       }
@@ -168,12 +166,12 @@ function updateGuess(opts: {
 
         const lastAnswer = storage.lastAnswer.get()
         if (lastAnswer) {
-          secretPokemon.value = pokedex[lastAnswer]
+          secretPokemon.value = pokedex.value[lastAnswer]
 
           const arr = storage.guesses.get()
           if (arr) {
             guesses.value = arr.map((v: string) => {
-              return pokedex[v]
+              return pokedex.value[v]
             })
           }
         }
@@ -237,7 +235,7 @@ function updateGuess(opts: {
           ...(props.daily ? [`${t('Daily')} ${dayNumber.value + 1} -`] : []),
           `${isWon.value ? guesses.value.length : 'X'}/${guessLimit.value}`
         ].join(' '),
-        `${location.origin}${props.daily ? '' : '/free'}`,
+        location.href,
         '',
         ...guesses.value.map((g) => {
           function e(k: keyof IPokedexEntry) {
@@ -435,6 +433,7 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
 let clipboardJS: ClipboardJS
 
 onMounted(() => {
+  document.head.querySelector('title')!.innerText = t('Squirdle')
   updateGuess({ isInit: true })
 
   nextTick(() => {
@@ -468,6 +467,18 @@ watch(genMax, () => {
 
 watch(genMin, () => {
   storage.genMin.set(genMin.value)
+  updateGuess({ isInit: true })
+})
+
+watch(lang, () => {
+  document.head.querySelector('title')!.innerText = t('Squirdle')
+
+  timeZone.value = t('TIMEZONE', 'GMT')
+  timeOffset.value = t('TIMEOFFSET', 0)
+
+  if (timeZone.value === 'GMT') {
+    timeOffset.value = 0
+  }
   updateGuess({ isInit: true })
 })
 </script>

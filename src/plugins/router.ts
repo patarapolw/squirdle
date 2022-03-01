@@ -12,7 +12,7 @@ const translationImport = import.meta.glob('../../translation/*.json')
 const beforeAppEnter: NavigationGuardWithThis<undefined> = (to, _, next) => {
   let lang = rGetLang(to)!
 
-  if (lang.length > 2) {
+  if (lang && lang.length > 2) {
     next({
       path: '/404'
     })
@@ -36,6 +36,7 @@ const beforeAppEnter: NavigationGuardWithThis<undefined> = (to, _, next) => {
       translation.value = t.default
       next()
     })
+    return
   }
 
   next({
@@ -49,7 +50,7 @@ const dailyImport = import.meta.glob('../../generated/*/daily.json')
 const getDaily: NavigationGuardWithThis<undefined> = (to, _, next) => {
   let lang = rGetLang(to)!
 
-  if (lang.length > 2) {
+  if (lang && lang.length > 2) {
     next({
       path: '/404'
     })
@@ -73,6 +74,7 @@ const getDaily: NavigationGuardWithThis<undefined> = (to, _, next) => {
       dailyJSON.value = t.default
       next()
     })
+    return
   }
 
   next({
@@ -116,7 +118,10 @@ export const router = createRouter({
     },
     {
       path: '/404',
-      alias: ['/:pathMatch(.*)*'],
+      component: () => import('../pages/404.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
       component: () => import('../pages/404.vue')
     }
   ]

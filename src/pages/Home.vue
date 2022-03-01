@@ -125,6 +125,11 @@ function updateGuess(opts: {
   isInit?: boolean
   isNew?: boolean
 }) {
+  if (opts.isNew) {
+    guesses.value = []
+    storage.guesses.set([])
+  }
+
   if (opts.isInit) {
     if (props.daily) {
       const nowMin = (() => {
@@ -307,7 +312,7 @@ function ime(ev: Event) {
 
 function normalizeInput(s: string): string {
   if (lang.value === 'ja') {
-    return toKatakana(s).replace(/[a-zA-Z]+$/, '')
+    return toKatakana(s, { IMEMode: true }).replace(/[a-zA-Z]+$/, '')
   }
 
   return s.toLocaleLowerCase()
@@ -462,12 +467,12 @@ watch(props, () => {
 
 watch(genMax, () => {
   storage.genMax.set(genMax.value)
-  updateGuess({ isInit: true })
+  updateGuess({ isInit: true, isNew: true })
 })
 
 watch(genMin, () => {
   storage.genMin.set(genMin.value)
-  updateGuess({ isInit: true })
+  updateGuess({ isInit: true, isNew: true })
 })
 
 watch(lang, () => {

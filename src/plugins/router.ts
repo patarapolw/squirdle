@@ -10,7 +10,19 @@ import { dailyJSON, lang as lang0, translation } from '../assets'
 const translationImport = import.meta.glob('../../translation/*.json')
 
 const beforeAppEnter: NavigationGuardWithThis<undefined> = (to, _, next) => {
-  let lang = rGetLang(to) || lang0.value
+  let lang = rGetLang(to)!
+
+  if (lang.length > 2) {
+    next({
+      path: '/404'
+    })
+    return
+  }
+
+  if (!lang) {
+    lang = lang0.value
+  }
+
   const makeImport = () => `../../translation/${lang}.json`
   if (!makeImport()) {
     lang = window.LANG
@@ -24,16 +36,30 @@ const beforeAppEnter: NavigationGuardWithThis<undefined> = (to, _, next) => {
       translation.value = t.default
       next()
     })
-  } else {
-    alert(`Invalid LANG: ${lang}`)
-    next()
   }
+
+  next({
+    path: '/404',
+    query: { lang }
+  })
 }
 
 const dailyImport = import.meta.glob('../../generated/*/daily.json')
 
 const getDaily: NavigationGuardWithThis<undefined> = (to, _, next) => {
-  let lang = rGetLang(to) || lang0.value
+  let lang = rGetLang(to)!
+
+  if (lang.length > 2) {
+    next({
+      path: '/404'
+    })
+    return
+  }
+
+  if (!lang) {
+    lang = lang0.value
+  }
+
   const makeImport = () => `../../generated/${lang}/daily.json`
   if (!makeImport()) {
     lang = window.LANG
@@ -47,10 +73,12 @@ const getDaily: NavigationGuardWithThis<undefined> = (to, _, next) => {
       dailyJSON.value = t.default
       next()
     })
-  } else {
-    alert(`Invalid for Daily: ${lang}`)
-    next()
   }
+
+  next({
+    path: '/404',
+    query: { lang, daily: 'true' }
+  })
 }
 
 function rGetLang(r: RouteLocationNormalized) {
@@ -85,6 +113,11 @@ export const router = createRouter({
       component: () => import('../pages/Home.vue'),
       props: (r) => ({ daily: false, lang: rGetLang(r) }),
       beforeEnter: beforeAppEnter
+    },
+    {
+      path: '/404',
+      alias: ['/:pathMatch(.*)*'],
+      component: () => import('../pages/404.vue')
     }
   ]
 })

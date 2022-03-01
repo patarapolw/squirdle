@@ -162,7 +162,7 @@ function updateGuess(opts: {
       } else {
         genMin.value = storage.genMin.get() || genMin.value
         genMax.value = storage.genMax.get() || genMax.value
-        elligible.value = Object.values(pokedex).filter((p) => p.gen >= genMin.value && p.gen <= genMax.value)
+        elligible.value = Object.values(pokedex.value).filter((p) => p.gen >= genMin.value && p.gen <= genMax.value)
 
         const lastAnswer = storage.lastAnswer.get()
         if (lastAnswer) {

@@ -1,6 +1,6 @@
 # Squirdle
 
-<https://squirdle-sigma.vercel.app>
+<https://squirdle.polv.cc>
 
 A Pokémon Wordle-like, forked from [squirdle.fireblend.com](http://squirdle.fireblend.com/),
 

@@ -138,7 +138,7 @@ function updateGuess(opts: {
       currentDate.value = new Date(nowMin * 1000 * 60).toISOString().substring(0, 10)
       dayNumber.value = Math.floor((+new Date(currentDate.value) - +new Date(dailyJSON.value.startingDate)) / (1000 * 60 * 60 * 24))
 
-      elligible.value = Object.values(pokedex)
+      elligible.value = Object.values(pokedex.value)
       secretPokemon.value = pokedex.value[dailyJSON.value.names[dayNumber.value % dailyJSON.value.names.length]]
 
       let isNew = true

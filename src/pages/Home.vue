@@ -5,7 +5,7 @@ import ClipboardJS from 'clipboard'
 import { toKatakana } from 'wanakana'
 
 import dailyJSON from '../assets/daily.json'
-import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t } from '../assets'
+import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t, initPokedex } from '../assets'
 
 const props = defineProps<{
   daily?: boolean
@@ -135,7 +135,7 @@ function updateGuess(opts: {
       })()
 
       currentDate.value = new Date(nowMin * 1000 * 60).toISOString().substring(0, 10)
-      dayNumber.value = Math.floor((nowMin * 1000 * 60 - +new Date(dailyJSON.startingDate)) / (1000 * 60 * 60 * 24)) + 1
+      dayNumber.value = Math.floor((+new Date(currentDate.value) - +new Date(dailyJSON.startingDate)) / (1000 * 60 * 60 * 24))
 
       elligible.value = Object.values(pokedex)
       secretPokemon.value = pokedex[dailyJSON.names[dayNumber.value % dailyJSON.names.length]]
@@ -432,7 +432,7 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
 let clipboardJS: ClipboardJS
 
 onMounted(() => {
-  updateGuess({ isInit: true })
+  document.head.querySelector('title')!.innerText = t('Squirdle')
 
   nextTick(() => {
     clipboardJS = new ClipboardJS('.copy-button')
@@ -441,6 +441,9 @@ onMounted(() => {
     }).on('error', (ex) => {
       console.warn("Copy to clipboard failed. Let me (https://github.com/patarapolw) know!", ex);
     })
+  })
+  initPokedex().then(() => {
+    updateGuess({ isInit: true })
   })
 })
 

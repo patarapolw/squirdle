@@ -1,6 +1,5 @@
 import { reactive, ref } from 'vue'
 
-import pokedexData from '../../pokedex.csv'
 import translation from '../../translation.json'
 
 export interface IPokedexEntry {
@@ -26,12 +25,13 @@ export const pokedex = reactive(
   }
 )
 
-export function t(s: string, def?: string) {
+export function t<R = string>(s: string, def?: R): R {
   return (translation as any)[lang.value]?.[s] || def || s
 }
 
-defaultMaxGen.value = Math.max(
-  ...pokedexData.map((p) => {
+export async function initPokedex() {
+  const pokedexData = await import('../../pokedex.csv').then((r) => r.default)
+  const gens = pokedexData.map((p) => {
     const gen = Number(p.generation)
 
     pokedex[p.name] = {
@@ -63,4 +63,6 @@ defaultMaxGen.value = Math.max(
 
     return gen
   })
-)
+
+  defaultMaxGen.value = Math.max(...gens)
+}

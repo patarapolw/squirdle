@@ -230,7 +230,7 @@ function updateGuess(opts: {
     const makeCopy = (withName: boolean) => {
       return [
         [
-          t('Squirdle'),
+          t('TITLE', 'Squirdle'),
           ...(props.daily ? [`${t('Daily')} ${dayNumber.value + 1} -`] : []),
           `${isWon.value ? guesses.value.length : 'X'}/${guessLimit.value}`
         ].join(' '),
@@ -432,7 +432,7 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
 let clipboardJS: ClipboardJS
 
 onMounted(() => {
-  document.head.querySelector('title')!.innerText = t('Squirdle')
+  updateGuess({ isInit: true })
 
   nextTick(() => {
     clipboardJS = new ClipboardJS('.copy-button')
@@ -441,9 +441,6 @@ onMounted(() => {
     }).on('error', (ex) => {
       console.warn("Copy to clipboard failed. Let me (https://github.com/patarapolw) know!", ex);
     })
-  })
-  initPokedex().then(() => {
-    updateGuess({ isInit: true })
   })
 })
 
@@ -474,7 +471,7 @@ watch(genMin, () => {
 
 <template>
   <h2>
-    {{ t('Squirdle') }}
+    {{ t('TITLE', 'Squirdle') }}
     <span v-if="daily">{{ t('Daily') }} {{ dayNumber + 1 }}</span>
   </h2>
 

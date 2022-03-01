@@ -1,6 +1,9 @@
 import { createApp } from 'vue'
 
 import App from './App.vue'
+import { initPokedex } from './assets'
 import { router } from './plugins/router'
 
-createApp(App).use(router).mount('#app')
+initPokedex().then(() => {
+  createApp(App).use(router).mount('#app')
+})

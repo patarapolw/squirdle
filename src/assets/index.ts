@@ -1,7 +1,5 @@
 import { reactive, ref } from 'vue'
 
-import translation from '../../translation.json'
-
 export interface IPokedexEntry {
   gen: number
   type1: string
@@ -17,7 +15,7 @@ export interface IPokedexEntry {
 
 export const defaultMinGen = ref(1)
 export const defaultMaxGen = ref(8)
-export const lang = ref('ja')
+export const lang = ref(window.LANG)
 
 export const pokedex = reactive(
   {} as {
@@ -26,7 +24,7 @@ export const pokedex = reactive(
 )
 
 export function t<R = string>(s: string, def?: R): R {
-  return (translation as any)[lang.value]?.[s] || def || s
+  return window.tr[s] || def || s
 }
 
 export async function initPokedex() {

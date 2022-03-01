@@ -1,4 +1,6 @@
 interface Window {
+  LANG: string
+  tr: Record<string, any>
   clipboardData?: {
     setData?: (title: string, s: string) => void
   }

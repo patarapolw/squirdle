@@ -1,8 +1,8 @@
-# Squirdle
+# スクァードル
 
 <https://ja-squirdle.vercel.app>
 
-A Pokémon Wordle-like, forked from [squirdle.fireblend.com](http://squirdle.fireblend.com/),
+A Japanese Pokémon Wordle-like, forked from [squirdle.fireblend.com](http://squirdle.fireblend.com/),
 
 Featured on [Kotaku](https://kotaku.com/wordle-squirdle-daily-puzzle-word-game-free-browser-1848499480), [GamesRadar](https://www.gamesradar.com/theres-a-pokemon-themed-wordle-called-drumroll-squirdle/), [Forbes](https://www.forbes.com/sites/paultassi/2022/02/09/another-wordle-alternative-squirdle-wants-you-to-guess-that-pokemon/?sh=6a7996747b94), [TechRadar](https://www.techradar.com/sg/news/games-like-wordle-the-best-spinoffs-and-alternatives) and others!
 

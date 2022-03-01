@@ -17,11 +17,14 @@
   <meta property="og:type" content="website">
   <meta property="og:description" content="A Japanese Pokémon Wordle-like, forked from squirdle.fireblend.com">
 
-  <title>Squirdle</title>
+  <title>
+    <%= tr.TITLE %>
+  </title>
 </head>
 
 <body>
   <div id="app"></div>
+  <script>window.LANG = '<%= LANG %>'; window.tr = JSON.parse('<%- JSON.stringify(tr).replace(/\u0027/g, "\\$&") %>')</script>
   <script type="module" src="/src/main.ts"></script>
 </body>
 

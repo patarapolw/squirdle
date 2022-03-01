@@ -1,3 +1,3 @@
 {
-  "rewrites": [{ "source": "/(daily|free)?", "destination": "/index.html" }]
+  "rewrites": [{ "source": "/([a-aA-Z]{2}/)?(daily|free)?", "destination": "/index.html" }]
 }

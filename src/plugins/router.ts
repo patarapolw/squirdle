@@ -1,5 +1,6 @@
 import {
   NavigationGuardWithThis,
+  RouteLocationNormalized,
   createRouter,
   createWebHistory
 } from 'vue-router'
@@ -9,7 +10,7 @@ import { dailyJSON, lang as lang0, translation } from '../assets'
 const translationImport = import.meta.glob('../../translation/*.json')
 
 const beforeAppEnter: NavigationGuardWithThis<undefined> = (to, _, next) => {
-  let lang = to.query.lang?.toString?.() || lang0.value
+  let lang = rGetLang(to) || lang0.value
   const makeImport = () => `../../translation/${lang}.json`
   if (!makeImport()) {
     lang = window.LANG
@@ -32,7 +33,7 @@ const beforeAppEnter: NavigationGuardWithThis<undefined> = (to, _, next) => {
 const dailyImport = import.meta.glob('../../generated/*/daily.json')
 
 const getDaily: NavigationGuardWithThis<undefined> = (to, _, next) => {
-  let lang = to.query.lang?.toString?.() || lang0.value
+  let lang = rGetLang(to) || lang0.value
   const makeImport = () => `../../generated/${lang}/daily.json`
   if (!makeImport()) {
     lang = window.LANG
@@ -52,6 +53,10 @@ const getDaily: NavigationGuardWithThis<undefined> = (to, _, next) => {
   }
 }
 
+function rGetLang(r: RouteLocationNormalized) {
+  return (r.params.lang || r.query.lang)?.toString?.()
+}
+
 export const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -59,13 +64,26 @@ export const router = createRouter({
       path: '/daily',
       alias: ['/'],
       component: () => import('../pages/Home.vue'),
-      props: (r) => ({ daily: true, lang: r.query.lang?.toString?.() }),
+      props: (r) => ({ daily: true, lang: rGetLang(r) }),
       beforeEnter: [beforeAppEnter, getDaily]
     },
     {
       path: '/free',
       component: () => import('../pages/Home.vue'),
-      props: (r) => ({ daily: false, lang: r.query.lang?.toString?.() }),
+      props: (r) => ({ daily: false, lang: rGetLang(r) }),
+      beforeEnter: beforeAppEnter
+    },
+    {
+      path: '/:lang/daily',
+      alias: ['/:lang'],
+      component: () => import('../pages/Home.vue'),
+      props: (r) => ({ daily: true, lang: rGetLang(r) }),
+      beforeEnter: [beforeAppEnter, getDaily]
+    },
+    {
+      path: '/:lang/free',
+      component: () => import('../pages/Home.vue'),
+      props: (r) => ({ daily: false, lang: rGetLang(r) }),
       beforeEnter: beforeAppEnter
     }
   ]

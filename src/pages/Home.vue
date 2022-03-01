@@ -19,7 +19,10 @@ const guessLimit = ref(6)
 const timeZone = ref(t('TIMEZONE', 'GMT'))
 const timeOffset = ref(t('TIMEOFFSET', 0))
 
-if (timeZone.value === 'GMT') {
+if (lang.value === 'en') {
+  timeZone.value = 'GMT-10'
+  timeOffset.value = -10
+} else if (timeZone.value === 'GMT') {
   timeOffset.value = 0
 }
 

@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "scripts": {
-    "generate:daily": "node make-daily.js",
+    "make-daily": "node scripts/make-daily.js",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",

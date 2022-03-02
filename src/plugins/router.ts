@@ -98,13 +98,13 @@ export const router = createRouter({
     {
       path: '/daily',
       alias: ['/'],
-      component: () => import('../pages/Home.vue'),
+      component: () => import('../pages/Game.vue'),
       props: (r) => ({ daily: true, lang: rGetLang(r) }),
       beforeEnter: [beforeAppEnter, getDaily]
     },
     {
       path: '/free',
-      component: () => import('../pages/Home.vue'),
+      component: () => import('../pages/Game.vue'),
       props: (r) => ({ daily: false, lang: rGetLang(r) }),
       beforeEnter: beforeAppEnter
     },
@@ -115,13 +115,13 @@ export const router = createRouter({
     {
       path: '/:lang/daily',
       alias: ['/:lang'],
-      component: () => import('../pages/Home.vue'),
+      component: () => import('../pages/Game.vue'),
       props: (r) => ({ daily: true, lang: rGetLang(r) }),
       beforeEnter: [beforeAppEnter, getDaily]
     },
     {
       path: '/:lang/free',
-      component: () => import('../pages/Home.vue'),
+      component: () => import('../pages/Game.vue'),
       props: (r) => ({ daily: false, lang: rGetLang(r) }),
       beforeEnter: beforeAppEnter
     },

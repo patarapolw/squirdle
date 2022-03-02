@@ -393,14 +393,14 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
 
   if (c) {
     if (typeof c === 'number' && typeof c0 === 'number') {
-      if (c < c0) {
+      if (c < c0 * 0.9) {
         return {
           src: '/up.png',
           alt: 'too low'
         }
       }
 
-      if (c > c0) {
+      if (c > c0 * 1.1) {
         return {
           src: '/down.png',
           alt: 'too high'

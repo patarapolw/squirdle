@@ -34,6 +34,11 @@ const beforeAppEnter: NavigationGuardWithThis<undefined> = (to, _, next) => {
     doImport().then((t) => {
       lang0.value = lang
       translation.value = t.default
+
+      if (lang === 'ja') {
+        import('wanakana').then((r) => (window.wanakana = r))
+      }
+
       next()
     })
     return

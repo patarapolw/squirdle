@@ -1,5 +1,6 @@
 interface Window {
   LANG: string
+  wanakana?: typeof import('wanakana')
   clipboardData?: {
     setData?: (title: string, s: string) => void
   }

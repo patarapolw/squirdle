@@ -2,7 +2,6 @@
 import { ref, onMounted, watch, nextTick, onUnmounted } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 import ClipboardJS from 'clipboard'
-import { toKatakana } from 'wanakana'
 
 import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t, dailyJSON } from '../assets'
 
@@ -303,16 +302,16 @@ function updateGen(n: number, opts: {
 function ime(ev: Event) {
   const s = (ev.target as HTMLInputElement).value
 
-  if (lang.value === 'ja') {
-    qGuess.value = toKatakana(s, { IMEMode: true })
+  if (lang.value === 'ja' && window.wanakana) {
+    qGuess.value = window.wanakana.toKatakana(s, { IMEMode: true })
   } else {
     qGuess.value = s
   }
 }
 
 function normalizeInput(s: string): string {
-  if (lang.value === 'ja') {
-    return toKatakana(s, { IMEMode: true }).replace(/[a-zA-Z]+$/, '')
+  if (lang.value === 'ja' && window.wanakana) {
+    return window.wanakana.toKatakana(s, { IMEMode: true }).replace(/[a-zA-Z]+$/, '')
   }
 
   return s.toLocaleLowerCase()

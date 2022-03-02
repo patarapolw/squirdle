@@ -4,6 +4,7 @@ import { onClickOutside } from '@vueuse/core'
 import ClipboardJS from 'clipboard'
 
 import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t, dailyJSON } from '../assets'
+import { guessLimit } from '../assets/defaults'
 
 const props = defineProps<{
   daily: boolean
@@ -15,8 +16,6 @@ const secretPokemon = ref<IPokedexEntry | null>(null)
 const genMin = ref(defaultMinGen.value)
 const genMax = ref(defaultMaxGen.value)
 const guesses = ref<IPokedexEntry[]>([])
-
-const guessLimit = ref(6)
 
 const timeZone = ref(t('TIMEZONE', 'GMT'))
 const timeOffset = ref(t('TIMEOFFSET', 0))
@@ -220,7 +219,7 @@ function updateGuess(opts: {
     qGuess.value = ''
   }
 
-  if (guesses.value.length >= guessLimit.value) {
+  if (guesses.value.length >= guessLimit) {
     isWon.value = false
   }
 
@@ -237,7 +236,7 @@ function updateGuess(opts: {
         [
           t('Squirdle'),
           ...(props.daily ? [`${t('Daily')} ${dayNumber.value + 1} -`] : []),
-          `${isWon.value ? guesses.value.length : 'X'}/${guessLimit.value}`
+          `${isWon.value ? guesses.value.length : 'X'}/${guessLimit}`
         ].join(' '),
         location.href,
         '',
@@ -492,7 +491,7 @@ const vIntroFree = t('IntroFree').split('{{_AttemptsLeft}}')
 const vIntroEndedDaily = t('IntroEndedDaily')
 const vIntroEndedFree = t('IntroEndedFree').replace('{{NewGame}}', t('NewGame'))
 const vUpdatesAt = t('UpdatesAt').split('{{TIMEZONE}}')
-const vRefLink = t('PokemonRefLink').split(/{{_POKEMON_NAME\[([a-z]+)\]}}/)
+const vRefLink = t('PokemonRefLink').split(/{{_POKEMON_NAME\[([a-z-]+)\]}}/)
 const vAnswerIs = t('AnswerIs').split('{{_POKEMON_NAME_LOCAL}}')
 
 const kGenMin = '{{_GEN_MIN}}'

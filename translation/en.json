@@ -38,7 +38,7 @@
   "IntroDaily": "I'm thinking of a Pokémon. Guess which! You have {{_AttemptsLeft}} guesses left today.",
   "IntroFree": "I'm thinking of a Pokémon. Guess which! You have {{_AttemptsLeft}} guesses left.",
   "IntroEndedDaily": "The game has finished. Play again tomorrow.",
-  "IntroEndedFree": "The game has finished. Click {{New Game}} to restart.",
+  "IntroEndedFree": "The game has finished. Click {{NewGame}} to restart.",
   "UpdatesAt": "(Updates @ 00:00 {{TIMEZONE}})",
   "PokemonRefLink": "https://pokemon.fandom.com/wiki/{{_POKEMON_NAME[en]}}",
   "AnswerIs": "The secret Pokémon was {{_POKEMON_NAME_LOCAL}}!",

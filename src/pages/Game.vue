@@ -490,7 +490,7 @@ const vOriginalCredit = t('OriginalCredit').split('{{_Fireblend}}')
 const vIntroDaily = t('IntroDaily').split('{{_AttemptsLeft}}')
 const vIntroFree = t('IntroFree').split('{{_AttemptsLeft}}')
 const vIntroEndedDaily = t('IntroEndedDaily')
-const vIntroEndedFree = t('IntroEndedFree').replace('{{New Game}}', t('New Game'))
+const vIntroEndedFree = t('IntroEndedFree').replace('{{NewGame}}', t('NewGame'))
 const vUpdatesAt = t('UpdatesAt').split('{{TIMEZONE}}')
 const vRefLink = t('PokemonRefLink').split(/{{_POKEMON_NAME\[([a-z]+)\]}}/)
 const vAnswerIs = t('AnswerIs').split('{{_POKEMON_NAME_LOCAL}}')
@@ -680,7 +680,7 @@ const vGenRange = (() => {
   </section>
 
   <section v-if="!daily && guesses.length">
-    <a class="togglec" @click="updateGuess({ isInit: true, isNew: true })">▶️ {{ t('New Game') }}</a>
+    <a class="togglec" @click="updateGuess({ isInit: true, isNew: true })">▶️ {{ t('NewGame') }}</a>
   </section>
 
   <section v-if="!daily">

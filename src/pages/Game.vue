@@ -443,7 +443,7 @@ onMounted(() => {
   nextTick(() => {
     clipboardJS = new ClipboardJS('.copy-button')
     clipboardJS.on('success', () => {
-      alert('Copied to clipboard!')
+      alert(t('CopySuccess'))
     }).on('error', (ex) => {
       console.warn("Copy to clipboard failed. Let me (https://github.com/patarapolw) know!", ex);
     })
@@ -485,6 +485,33 @@ watch(lang, () => {
   }
   updateGuess({ isInit: true })
 })
+
+const vOriginalCredit = t('OriginalCredit').split('{{_Fireblend}}')
+const vIntroDaily = t('IntroDaily').split('{{_AttemptsLeft}}')
+const vIntroFree = t('IntroFree').split('{{_AttemptsLeft}}')
+const vIntroEndedDaily = t('IntroEndedDaily')
+const vIntroEndedFree = t('IntroEndedFree').replace('{{New Game}}', t('New Game'))
+const vUpdatesAt = t('UpdatesAt').split('{{TIMEZONE}}')
+const vRefLink = t('PokemonRefLink').split(/{{_POKEMON_NAME\[([a-z]+)\]}}/)
+const vAnswerIs = t('AnswerIs').split('{{_POKEMON_NAME_LOCAL}}')
+
+const kGenMin = '{{_GEN_MIN}}'
+const kGenMax = '{{_GEN_MAX}}'
+const vGenRange = (() => {
+  let [k1, k2] = [kGenMin, kGenMax]
+  const v = t('GenRange')
+  let [i1, i2] = [v.indexOf(k1), v.indexOf(k2)]
+
+  if (i1 < 0 || i2 < 0) {
+    return [v, k1, 'to', k2, '']
+  }
+
+  if (i1 > i2) {
+    [k2, k1] = [k1, k2];[i2, i1] = [i1, i2]
+  }
+
+  return [v.substring(0, i1), k1, v.substring(i1 + k1.length, i2), k2, v.substring(i2 + k2.length)]
+})()
 </script>
 
 <template>
@@ -494,28 +521,38 @@ watch(lang, () => {
   </h2>
 
   <h3>
-    A Pokémon Wordle-like, originally by
-    <a
-      href="https://squirdle.fireblend.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >Fireblend</a>
+    <span>{{ vOriginalCredit[0] }}</span>
+    <a href="https://squirdle.fireblend.com/" target="_blank" rel="noopener noreferrer">Fireblend</a>
+    <span>{{ vOriginalCredit[1] }}</span>
   </h3>
   <section>
     <div>
       <span v-if="isWon === null">
-        <span>I'm thinking of a Pokémon. Guess which! You have</span>
-        <span class="attempts">{{ guessLimit - guesses.length }}</span>
-        <span v-if="daily">guesses left today.</span>
-        <span v-else>guesses.</span>
+        <span v-if="daily">
+          <span>{{ vIntroDaily[0] }}</span>
+          <span class="attempts">{{ guessLimit - guesses.length }}</span>
+          <span>{{ vIntroDaily[1] }}</span>
+        </span>
+        <span v-else>
+          <span>{{ vIntroFree[0] }}</span>
+          <span class="attempts">{{ guessLimit - guesses.length }}</span>
+          <span>{{ vIntroFree[1] }}</span>
+        </span>
       </span>
       <span v-else>
-        The game has finished.
-        <span v-if="daily">Play again tomorrow.</span>
-        <span v-else>Click {{ t('New Game') }} to restart.</span>
+        <span v-if="daily">
+          <span>{{ vIntroEndedDaily }}</span>
+        </span>
+        <span v-else>
+          <span>{{ vIntroEndedFree }}</span>
+        </span>
       </span>
     </div>
-    <div v-if="daily">(Updates @ 00:00 {{ timeZone }})</div>
+    <div v-if="daily">
+      <span>{{ vUpdatesAt[0] }}</span>
+      <span>{{ timeZone }}</span>
+      <span>{{ vUpdatesAt[1] }}</span>
+    </div>
   </section>
   <section class="guesses" v-if="guesses.length">
     <div class="row row-header">
@@ -559,7 +596,7 @@ watch(lang, () => {
           <p class="guess">{{ g.name[lang] }}</p>
           <div class="tooltiptext">
             <a
-              :href="`https://pokemon.fandom.com/wiki/${encodeURIComponent(g.name.en)}`"
+              :href="`${vRefLink[0]}${encodeURIComponent(g.name[vRefLink[1]])}${vRefLink[2] || ''}`"
               target="_blank"
               rel="noopener noreferrer"
             >{{ g.name[lang] }}</a>
@@ -570,7 +607,7 @@ watch(lang, () => {
     </div>
   </section>
 
-  <section class="error" v-if="isNotFound">Pokémon not found!</section>
+  <section class="error" v-if="isNotFound">{{ t('PokemonNotFound') }}</section>
 
   <section>
     <form
@@ -584,7 +621,7 @@ watch(lang, () => {
           class="guess_input"
           type="text"
           name="guess"
-          :placeholder="t('Pokemon Name')"
+          :placeholder="t('PokemonInput')"
           :value="qGuess"
           @input="ime"
           @keydown="(ev) => autocompleteInput(ev)"
@@ -607,21 +644,24 @@ watch(lang, () => {
 
   <section class="results" v-if="!!secretPokemon && isWon !== null">
     <div>
-      <span class="won" v-if="isWon">You won!</span>
-      <span class="lost" v-else>You lost!</span>
+      <div style="display: inline-block; margin-right: 0.5em">
+        <span class="won" v-if="isWon">{{ t('IsWin') }}</span>
+        <span class="lost" v-else>{{ t('IsLose') }}</span>
+      </div>
       <span>
-        The secret Pokémon was
+        {{ vAnswerIs[0] }}
         <span class="tooltip">
-          <p class="guess">{{ secretPokemon.name[lang] }}</p>
+          <p class="guess-answer">{{ secretPokemon.name[lang] }}</p>
           <div class="tooltiptext">
             <a
-              :href="`https://pokemon.fandom.com/wiki/${encodeURIComponent(secretPokemon.name.en)}`"
+              :href="`${vRefLink[0]}${encodeURIComponent(secretPokemon.name[vRefLink[1]])}${vRefLink[2] || ''}`"
               target="_blank"
               rel="noopener noreferrer"
             >{{ secretPokemon.name[lang] }}</a>
             <pre>{{ secretPokemon.info() }}</pre>
           </div>
-        </span>!
+        </span>
+        {{ vAnswerIs[1] }}
       </span>
     </div>
     <div>
@@ -634,11 +674,9 @@ watch(lang, () => {
         class="togglec copy-button"
         :data-clipboard-text="shareWithNames"
         type="button"
-      >👀 {{ t('Full Share', 'Share w/ names') }}</button>
+      >👀 {{ t('FullShare') }}</button>
     </div>
-    <div v-if="daily">
-      <div>Come back tomorrow for another daily!</div>
-    </div>
+    <div v-if="daily">{{ t('ComeBackTomorrow') }}</div>
   </section>
 
   <section v-if="!daily && guesses.length">
@@ -646,31 +684,34 @@ watch(lang, () => {
   </section>
 
   <section v-if="!daily">
-    <label for="quantity">Guess Pokémon from gen</label>
-    <input
-      class="mg_input"
-      type="number"
-      name="mingen"
-      :min="defaultMinGen"
-      :max="defaultMaxGen"
-      :value="genMin"
-      @input="(ev) => updateGen(Number((ev.target as any).value), { isMax: false })"
-    />
-    <label for="quantity">to</label>
-    <input
-      class="mg_input"
-      type="number"
-      name="maxgen"
-      :min="defaultMinGen"
-      :max="defaultMaxGen"
-      :value="genMax"
-      @input="(ev) => updateGen(Number((ev.target as any).value), { isMax: true })"
-    />
+    <span v-for="(v, i) in vGenRange" :key="i">
+      <input
+        v-if="v === kGenMin"
+        class="mg_input"
+        type="number"
+        name="mingen"
+        :min="defaultMinGen"
+        :max="defaultMaxGen"
+        :value="genMin"
+        @input="(ev) => updateGen(Number((ev.target as any).value), { isMax: false })"
+      />
+      <input
+        v-else-if="v === kGenMax"
+        class="mg_input"
+        type="number"
+        name="maxgen"
+        :min="defaultMinGen"
+        :max="defaultMaxGen"
+        :value="genMax"
+        @input="(ev) => updateGen(Number((ev.target as any).value), { isMax: true })"
+      />
+      <label v-else>{{ v }}</label>
+    </span>
   </section>
 
   <section class="alternate-games">
-    <router-link v-if="!daily" to="/daily">{{ t('Daily Play', 'Try Squirdle Daily!') }}</router-link>
-    <router-link v-else to="/free">{{ t('Free Play') }}</router-link>
+    <router-link v-if="!daily" to="/daily">{{ t('DailyPlay') }}</router-link>
+    <router-link v-else to="/free">{{ t('FreePlay') }}</router-link>
   </section>
 </template>
 
@@ -681,12 +722,6 @@ section + section {
 
 [type="submit"] {
   cursor: pointer;
-}
-
-.attempts {
-  display: inline-block;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
 }
 
 .guess {

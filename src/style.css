@@ -45,7 +45,8 @@ a {
   font-weight: bold;
 }
 
-.guess {
+.guess,
+.guess-answer {
   color: palevioletred;
   font-size: 15px;
   text-decoration-line: underline;

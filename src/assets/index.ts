@@ -1,4 +1,6 @@
-import { reactive, ref } from 'vue'
+import { ref } from 'vue'
+
+import enTrans from '../../translation/en.json'
 
 export interface IPokedexEntry {
   gen: number
@@ -31,7 +33,7 @@ export interface IPokedex {
 export const pokedex = ref<IPokedex>({})
 
 export function t<R = string>(s: string, def?: R): R {
-  return translation.value[s] || def || s
+  return translation.value[s] || (enTrans as any)[s] || def || s
 }
 
 export async function initPokedex() {

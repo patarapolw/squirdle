@@ -522,8 +522,13 @@ const vGenRange = (() => {
 
   <h3>
     <span>{{ vOriginalCredit[0] }}</span>
-    <a href="https://squirdle.fireblend.com/" target="_blank" rel="noopener noreferrer">Fireblend</a>
-    <span>{{ vOriginalCredit[1] }}</span>
+    <a
+      v-if="vOriginalCredit[1] !== undefined"
+      href="https://squirdle.fireblend.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >Fireblend</a>
+    <span v-if="vOriginalCredit[1] !== undefined">{{ vOriginalCredit[1] }}</span>
   </h3>
   <section>
     <div>
@@ -550,8 +555,8 @@ const vGenRange = (() => {
     </div>
     <div v-if="daily">
       <span>{{ vUpdatesAt[0] }}</span>
-      <span>{{ timeZone }}</span>
-      <span>{{ vUpdatesAt[1] }}</span>
+      <span v-if="vUpdatesAt[1] !== undefined">{{ timeZone }}</span>
+      <span v-if="vUpdatesAt[1] !== undefined">{{ vUpdatesAt[1] }}</span>
     </div>
   </section>
   <section class="guesses" v-if="guesses.length">

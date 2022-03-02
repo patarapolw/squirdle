@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= tr.HTML_LANG || 'en' %>">
 
 <head>
   <meta charset="UTF-8" />
@@ -15,7 +15,8 @@
   <link rel="stylesheet" type="text/css" href="/src/style.css">
 
   <meta property="og:type" content="website">
-  <meta property="og:description" content="A Pokémon Wordle-like, forked from squirdle.fireblend.com">
+  <meta property="og:description"
+    content="<%= tr.HTML_DESCRIPTION || 'A Pokémon Wordle-like, forked from squirdle.fireblend.com' %>">
 
   <title>
     <%= tr.Squirdle || 'Squirdle' %>

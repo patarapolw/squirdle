@@ -1,4 +1,5 @@
 {
+  "HTML_DESCRIPTION": "A Japanese Pokémon Wordle-like, forked from squirdle.fireblend.com",
   "TIMEZONE": "JST",
   "TIMEOFFSET": 9,
   "Squirdle": "スクァードル",

@@ -491,7 +491,7 @@ const vIntroFree = t('IntroFree').split('{{_AttemptsLeft}}')
 const vIntroEndedDaily = t('IntroEndedDaily')
 const vIntroEndedFree = t('IntroEndedFree').replace('{{NewGame}}', t('NewGame'))
 const vUpdatesAt = t('UpdatesAt').split('{{TIMEZONE}}')
-const vRefLink = t('PokemonRefLink').split(/{{_POKEMON_NAME\[([a-z-]+)\]}}/)
+const vRefLink = t('PokemonRefLink').replace('{{_POKEMON_NAME_LOCAL}}', `{{_POKEMON_NAME[${lang.value}]}}`).split(/{{_POKEMON_NAME\[([a-z-]+)\]}}/)
 const vAnswerIs = t('AnswerIs').split('{{_POKEMON_NAME_LOCAL}}')
 
 const kGenMin = '{{_GEN_MIN}}'

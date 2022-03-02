@@ -12,5 +12,5 @@ Pokémon data based on [Mario Tormo Romero's Pokemon dataset](https://www.kaggle
 
 ## Other languages
 
-- Japanese version is at <https://ja-squirdle.vercel.app>. (It is also at <https://squirdle.polv.cc/ja> with different localStorage data.)
-- Korean version can be found at <https://squirdle.polv.cc/ko>
+- Japanese: <https://ja-squirdle.vercel.app>
+- Korean:  <https://ko-squirdle.vercel.app>

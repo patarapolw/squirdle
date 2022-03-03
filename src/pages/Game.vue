@@ -491,7 +491,12 @@ const vIntroFree = t('IntroFree').split('{{_AttemptsLeft}}')
 const vIntroEndedDaily = t('IntroEndedDaily')
 const vIntroEndedFree = t('IntroEndedFree').replace('{{NewGame}}', t('NewGame'))
 const vUpdatesAt = t('UpdatesAt').split('{{TIMEZONE}}')
+
 const vRefLink = t('PokemonRefLink').replace('{{_POKEMON_NAME_LOCAL}}', `{{_POKEMON_NAME[${lang.value}]}}`).split(/{{_POKEMON_NAME\[([a-z-]+)\]}}/)
+function refLink(g: IPokedexEntry) {
+  return `${vRefLink[0]}${encodeURIComponent(g.name[vRefLink[1]].replace(/ [^ ]+ forme?$/i, ''))}${vRefLink[2] || ''}`
+}
+
 const vAnswerIs = t('AnswerIs').split('{{_POKEMON_NAME_LOCAL}}')
 
 const kGenMin = '{{_GEN_MIN}}'
@@ -599,11 +604,7 @@ const vGenRange = (() => {
         <div class="tooltip">
           <p class="guess">{{ g.name[lang] }}</p>
           <div class="tooltiptext">
-            <a
-              :href="`${vRefLink[0]}${encodeURIComponent(g.name[vRefLink[1]].replace(/ [^ ]+ forme?$/i, ''))}${vRefLink[2] || ''}`"
-              target="_blank"
-              rel="noopener noreferrer"
-            >{{ g.name[lang] }}</a>
+            <a :href="refLink(g)" target="_blank" rel="noopener noreferrer">{{ g.name[lang] }}</a>
             <pre>{{ g.info() }}</pre>
           </div>
         </div>
@@ -658,7 +659,7 @@ const vGenRange = (() => {
           <p class="guess-answer">{{ secretPokemon.name[lang] }}</p>
           <div class="tooltiptext">
             <a
-              :href="`${vRefLink[0]}${encodeURIComponent(secretPokemon.name[vRefLink[1]].replace(/ [^ ]+ forme?$/i, ''))}${vRefLink[2] || ''}`"
+              :href="refLink(secretPokemon)"
               target="_blank"
               rel="noopener noreferrer"
             >{{ secretPokemon.name[lang] }}</a>
@@ -724,6 +725,11 @@ section + section {
   margin-top: 1em;
 }
 
+
+section + section {
+  margin-top: 1em;
+}
+
 [type="submit"] {
   cursor: pointer;
 }
@@ -736,4 +742,3 @@ section + section {
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
-</style>

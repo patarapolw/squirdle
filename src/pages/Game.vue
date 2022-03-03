@@ -3,7 +3,7 @@ import { ref, onMounted, watch, nextTick, onUnmounted } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 import ClipboardJS from 'clipboard'
 
-import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t, dailyJSON } from '../assets'
+import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t, dailyJSON, LinkBuilder, linkTemplate } from '../assets'
 import { guessLimit } from '../assets/defaults'
 
 const props = defineProps<{
@@ -492,9 +492,13 @@ const vIntroEndedDaily = t('IntroEndedDaily')
 const vIntroEndedFree = t('IntroEndedFree').replace('{{NewGame}}', t('NewGame'))
 const vUpdatesAt = t('UpdatesAt').split('{{TIMEZONE}}')
 
-const vRefLink = t('PokemonRefLink').replace('{{_POKEMON_NAME_LOCAL}}', `{{_POKEMON_NAME[${lang.value}]}}`).split(/{{_POKEMON_NAME\[([a-z-]+)\]}}/)
+const ln = new LinkBuilder(linkTemplate.value?.template || t('PokemonRefLink'))
 function refLink(g: IPokedexEntry) {
-  return `${vRefLink[0]}${encodeURIComponent(g.name[vRefLink[1]].replace(/ [^ ]+ (forme?|mode)$/i, ''))}${vRefLink[2] || ''}`
+  let name = g.name[ln.lang]
+  if (linkTemplate.value?.alt?.[name]) {
+    name = linkTemplate.value.alt[name]
+  }
+  return ln.make(name)
 }
 
 const vAnswerIs = t('AnswerIs').split('{{_POKEMON_NAME_LOCAL}}')

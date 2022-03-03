@@ -1,15 +1,11 @@
-// @ts-check
+import fs from 'fs'
+import path from 'path'
 
-const fs = require('fs')
-const path = require('path')
-
-/**
- *
- * @param {string} lang
- * @param {string} startingDate
- * @param {string[]} [names]
- */
-function doMakeDaily(lang, startingDate, names) {
+export function doMakeDaily(
+  lang: string,
+  startingDate: string,
+  names?: string[]
+) {
   if (!names) {
     const lines = fs
       .readFileSync('pokedex.csv', 'utf-8')
@@ -68,5 +64,3 @@ if (require.main === module) {
 
   doMakeDaily(SQ_LANG, SQ_STARTDATE)
 }
-
-module.exports = doMakeDaily

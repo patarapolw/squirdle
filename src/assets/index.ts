@@ -1,5 +1,6 @@
 import { ref } from 'vue'
 
+import enRef from '../../translation/en-ref.json'
 import enTrans from '../../translation/en.json'
 
 export interface IPokedexEntry {
@@ -76,4 +77,42 @@ export async function initPokedex() {
   })
 
   defaultMaxGen.value = Math.max(...gens)
+}
+
+export const linkTemplate = ref<{
+  template: string
+  alt: Record<string, string>
+}>(enRef)
+
+export class LinkBuilder {
+  s0: string
+  lang: 'en' | 'ja' | 'ko'
+  s2: string
+
+  constructor(public template: string) {
+    const ss = template.split(/{{_POKEMON_NAME\[([a-z-]+)\]}}/)
+
+    this.s0 = ss[0]
+    this.lang = (ss[1] as any) || 'en'
+    this.s2 = ss[2] || ''
+  }
+
+  make(g: IPokedexEntry | string) {
+    return `${this.s0}${encodeURIComponent(
+      typeof g === 'string' ? g : g.name[this.lang]
+    )}${this.s2}`
+  }
+
+  parse(url: string) {
+    if (url.startsWith(this.s0) && url.endsWith(this.s2)) {
+      const c = url.substring(this.s0.length, url.length - this.s2.length)
+      if (!c) return null
+
+      return {
+        [this.lang]: decodeURIComponent(c)
+      }
+    }
+
+    return null
+  }
 }

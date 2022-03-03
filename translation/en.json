@@ -40,7 +40,6 @@
   "IntroEndedDaily": "The game has finished. Play again tomorrow.",
   "IntroEndedFree": "The game has finished. Click {{NewGame}} to restart.",
   "UpdatesAt": "(Updates @ 00:00 {{TIMEZONE}})",
-  "PokemonRefLink": "https://pokemon.fandom.com/wiki/{{_POKEMON_NAME[en]}}",
   "AnswerIs": "The secret Pokémon was {{_POKEMON_NAME_LOCAL}}!",
   "GenRange": "Guess Pokémon from gen {{_GEN_MIN}} to {{_GEN_MAX}}",
   "PokemonNotFound": "Pokémon not found!",

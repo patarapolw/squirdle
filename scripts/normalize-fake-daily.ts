@@ -1,4 +1,6 @@
-const https = require('https')
+import https from 'https'
+
+import { doMakeDaily } from './make-daily'
 
 https.get(
   'https://raw.githubusercontent.com/Fireblend/squirdle/main/fake-daily.csv',
@@ -17,7 +19,7 @@ https.get(
         .slice(1)
         .map((r) => r.trim().split(','))
 
-      require('./make-daily.js')(
+      doMakeDaily(
         'en',
         fakeDaily[0][0],
         fakeDaily.map((s) => s[1])

@@ -5,11 +5,11 @@ import {
   createWebHistory
 } from 'vue-router'
 
-import { dailyJSON, lang as lang0, translation } from '../assets'
+import { dailyJSON, lang as lang0, linkTemplate, translation } from '../assets'
 
 const translationImport = import.meta.glob('../../translation/*.json')
 
-const beforeAppEnter: NavigationGuardWithThis<undefined> = (to, _, next) => {
+const beforeGameEnter: NavigationGuardWithThis<undefined> = (to, _, next) => {
   let lang = rGetLang(to)!
 
   if (lang && lang.length !== 2) {
@@ -29,11 +29,15 @@ const beforeAppEnter: NavigationGuardWithThis<undefined> = (to, _, next) => {
   }
 
   const doImport = translationImport[makeImport()]
+  const linkTemplateImport =
+    translationImport[`../../translation/${lang}-ref.json`] ||
+    translationImport[`../../translation/en-ref.json`]
   // @ts-ignore
   if (doImport) {
-    doImport().then((t) => {
+    Promise.all([doImport(), linkTemplateImport()]).then(([t, ln]) => {
       lang0.value = lang
       translation.value = t.default
+      linkTemplate.value = ln.default
 
       if (lang === 'ja') {
         import('wanakana').then((r) => (window.wanakana = r))
@@ -100,13 +104,13 @@ export const router = createRouter({
       alias: ['/'],
       component: () => import('../pages/Game.vue'),
       props: (r) => ({ daily: true, lang: rGetLang(r) }),
-      beforeEnter: [beforeAppEnter, getDaily]
+      beforeEnter: [beforeGameEnter, getDaily]
     },
     {
       path: '/free',
       component: () => import('../pages/Game.vue'),
       props: (r) => ({ daily: false, lang: rGetLang(r) }),
-      beforeEnter: beforeAppEnter
+      beforeEnter: beforeGameEnter
     },
     {
       path: '/404',
@@ -117,13 +121,13 @@ export const router = createRouter({
       alias: ['/:lang'],
       component: () => import('../pages/Game.vue'),
       props: (r) => ({ daily: true, lang: rGetLang(r) }),
-      beforeEnter: [beforeAppEnter, getDaily]
+      beforeEnter: [beforeGameEnter, getDaily]
     },
     {
       path: '/:lang/free',
       component: () => import('../pages/Game.vue'),
       props: (r) => ({ daily: false, lang: rGetLang(r) }),
-      beforeEnter: beforeAppEnter
+      beforeEnter: beforeGameEnter
     },
     {
       path: '/:pathMatch(.*)*',

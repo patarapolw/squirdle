@@ -725,7 +725,6 @@ section + section {
   margin-top: 1em;
 }
 
-
 section + section {
   margin-top: 1em;
 }
@@ -742,3 +741,4 @@ section + section {
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
+</style>

@@ -135,7 +135,7 @@ function updateGuess(opts: {
         const milli = +now
         const sec = milli / 1000
         const min = sec / 60
-        return min + now.getTimezoneOffset() + timeOffset.value * 60
+        return min + timeOffset.value * 60
       })()
 
       currentDate.value = new Date(nowMin * 1000 * 60).toISOString().substring(0, 10)

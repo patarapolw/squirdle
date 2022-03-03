@@ -494,7 +494,7 @@ const vUpdatesAt = t('UpdatesAt').split('{{TIMEZONE}}')
 
 const vRefLink = t('PokemonRefLink').replace('{{_POKEMON_NAME_LOCAL}}', `{{_POKEMON_NAME[${lang.value}]}}`).split(/{{_POKEMON_NAME\[([a-z-]+)\]}}/)
 function refLink(g: IPokedexEntry) {
-  return `${vRefLink[0]}${encodeURIComponent(g.name[vRefLink[1]].replace(/ [^ ]+ forme?$/i, ''))}${vRefLink[2] || ''}`
+  return `${vRefLink[0]}${encodeURIComponent(g.name[vRefLink[1]].replace(/ [^ ]+ (forme?|mode)$/i, ''))}${vRefLink[2] || ''}`
 }
 
 const vAnswerIs = t('AnswerIs').split('{{_POKEMON_NAME_LOCAL}}')

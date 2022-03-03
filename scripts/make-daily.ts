@@ -22,11 +22,15 @@ export function doMakeDaily(
     fs.mkdirSync(dstFolder, { recursive: true })
   }
 
+  const d = new Date(startingDate)
+  d.setDate(d.getDate() + names.length)
+
   fs.writeFileSync(
     path.join(dstFolder, 'daily.json'),
     JSON.stringify(
       {
         startingDate,
+        endDate: d.toISOString().substring(0, 10),
         names
       },
       null,
@@ -37,10 +41,10 @@ export function doMakeDaily(
 
 /**
  * Shuffles array in place.
- * @param {Array} a items An array containing the items.
+ * @param a items An array containing the items.
  */
-function shuffle(a) {
-  var j, x, i
+function shuffle<T>(a: T[]) {
+  var j: number, x: T, i: number
   for (i = a.length - 1; i > 0; i--) {
     j = Math.floor(Math.random() * (i + 1))
     x = a[i]

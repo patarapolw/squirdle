@@ -600,7 +600,7 @@ const vGenRange = (() => {
           <p class="guess">{{ g.name[lang] }}</p>
           <div class="tooltiptext">
             <a
-              :href="`${vRefLink[0]}${encodeURIComponent(g.name[vRefLink[1]])}${vRefLink[2] || ''}`"
+              :href="`${vRefLink[0]}${encodeURIComponent(g.name[vRefLink[1]].replace(/ [^ ]+ forme?$/i, ''))}${vRefLink[2] || ''}`"
               target="_blank"
               rel="noopener noreferrer"
             >{{ g.name[lang] }}</a>
@@ -658,7 +658,7 @@ const vGenRange = (() => {
           <p class="guess-answer">{{ secretPokemon.name[lang] }}</p>
           <div class="tooltiptext">
             <a
-              :href="`${vRefLink[0]}${encodeURIComponent(secretPokemon.name[vRefLink[1]])}${vRefLink[2] || ''}`"
+              :href="`${vRefLink[0]}${encodeURIComponent(secretPokemon.name[vRefLink[1]].replace(/ [^ ]+ forme?$/i, ''))}${vRefLink[2] || ''}`"
               target="_blank"
               rel="noopener noreferrer"
             >{{ secretPokemon.name[lang] }}</a>

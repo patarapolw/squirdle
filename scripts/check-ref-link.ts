@@ -83,10 +83,18 @@ class LinkBuilder {
 
 async function checkRef(lang: 'en' | 'ja' | 'ko', cases?: string[]) {
   const filename = `translation/${lang}-ref.json`
-  const ref = JSON.parse(fs.readFileSync(filename, 'utf-8')) as {
+  const cacheFilename = `generated/${lang}/check-ref.json`
+
+  let checkedResult: Record<string, string> = {}
+
+  if (fs.existsSync(cacheFilename)) {
+    checkedResult = JSON.parse(fs.readFileSync(cacheFilename, 'utf-8'))
+  }
+
+  const ref: {
     template: string
     alt?: Record<string, string>
-  }
+  } = JSON.parse(fs.readFileSync(filename, 'utf-8'))
 
   const ln = new LinkBuilder(ref.template)
   let pokedex: IPokedexEntry[]
@@ -102,8 +110,6 @@ async function checkRef(lang: 'en' | 'ja' | 'ko', cases?: string[]) {
   } else {
     pokedex = makePokedex()
   }
-
-  const checkedResult: Record<string, string> = {}
 
   pokedex.map((p) => {
     checkedResult[p.name[lang]] = ''
@@ -183,10 +189,7 @@ async function checkRef(lang: 'en' | 'ja' | 'ko', cases?: string[]) {
   ref.alt = alt
 
   fs.writeFileSync(filename, JSON.stringify(ref, null, 2))
-  fs.writeFileSync(
-    `generated/${lang}/check-ref.json`,
-    JSON.stringify(checkedResult, null, 2)
-  )
+  fs.writeFileSync(cacheFilename, JSON.stringify(checkedResult, null, 2))
 }
 
 if (require.main === module) {

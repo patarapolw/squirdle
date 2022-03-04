@@ -81,7 +81,7 @@ class LinkBuilder {
   }
 }
 
-async function checkRef(lang: 'en' | 'ja' | 'ko') {
+async function checkRef(lang: 'en' | 'ja' | 'ko', cases?: string[]) {
   const filename = `translation/${lang}-ref.json`
   const ref = JSON.parse(fs.readFileSync(filename, 'utf-8')) as {
     template: string
@@ -89,7 +89,20 @@ async function checkRef(lang: 'en' | 'ja' | 'ko') {
   }
 
   const ln = new LinkBuilder(ref.template)
-  const pokedex = makePokedex()
+  let pokedex: IPokedexEntry[]
+  if (cases) {
+    pokedex = cases.map((c) => ({
+      name: {
+        en: '',
+        ja: '',
+        ko: '',
+        [lang]: c
+      }
+    }))
+  } else {
+    pokedex = makePokedex()
+  }
+
   const checkedResult: Record<string, string> = {}
 
   pokedex.map((p) => {
@@ -101,8 +114,8 @@ async function checkRef(lang: 'en' | 'ja' | 'ko') {
   let i = 0
   const { alt = {} } = ref
 
-  for (const g of makePokedex()) {
-    if (!alt[g.name[lang]] && !checkedResult[g.name[lang]]) {
+  for (const g of pokedex) {
+    if (g.name[lang] && !alt[g.name[lang]] && !checkedResult[g.name[lang]]) {
       const u = new URL(ln.make(g))
 
       promises.push(
@@ -177,5 +190,5 @@ async function checkRef(lang: 'en' | 'ja' | 'ko') {
 }
 
 if (require.main === module) {
-  checkRef('ko')
+  checkRef('en')
 }

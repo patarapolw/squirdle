@@ -385,7 +385,7 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
     } else {
       return {
         src: '/wrong.png',
-        alt: 'wronng'
+        alt: 'wrong'
       }
     }
   }
@@ -420,11 +420,22 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
     }
   }
 
-  if (d.type1 === secretPokemon.value.type2 || d.type2 === secretPokemon.value.type1) {
-    return {
-      src: '/wrongpos.png',
-      alt: 'almost'
-    }
+  switch (k) {
+    case 'type1':
+      if (d.type1 === secretPokemon.value.type2) {
+        return {
+          src: '/wrongpos.png',
+          alt: 'almost'
+        }
+      }
+      break
+    case 'type2':
+      if (d.type2 === secretPokemon.value.type1) {
+        return {
+          src: '/wrongpos.png',
+          alt: 'almost'
+        }
+      }
   }
 
   return {

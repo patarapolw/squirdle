@@ -123,11 +123,6 @@ function updateGuess(opts: {
   isInit?: boolean
   isNew?: boolean
 }) {
-  if (opts.isNew) {
-    guesses.value = []
-    storage.guesses.set([])
-  }
-
   if (opts.isInit) {
     if (props.daily) {
       const nowMin = (() => {
@@ -158,8 +153,6 @@ function updateGuess(opts: {
         }
       }
     } else {
-      guesses.value = []
-
       if (opts.isNew) {
         secretPokemon.value = elligible.value[Math.floor(Math.random() * elligible.value.length)]
       } else {
@@ -449,8 +442,8 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
 let clipboardJS: ClipboardJS
 
 onMounted(() => {
-  console.log('The code is open-sourced at https://github.com/patarapolw/squirdle')
-  console.log('Contribution is welcomed, especially for translating - https://github.com/patarapolw/squirdle/pull/3#issuecomment-1056946896')
+  console.info('The code is open-sourced at https://github.com/patarapolw/squirdle')
+  console.info('Contribution is welcomed, especially for translating  UI- https://github.com/patarapolw/squirdle/pull/3#issuecomment-1056946896')
 
   document.head.querySelector('title')!.innerText = t('Squirdle')
   updateGuess({ isInit: true })

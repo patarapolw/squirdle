@@ -3,7 +3,7 @@ import { ref, onMounted, watch, nextTick, onUnmounted } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 import ClipboardJS from 'clipboard'
 
-import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t, dailyJSON, LinkBuilder, linkTemplate } from '../assets'
+import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t, dailyJSON, LinkBuilder, linkTemplate, shuffle } from '../assets'
 import { guessLimit } from '../assets/defaults'
 
 const props = defineProps<{
@@ -141,7 +141,7 @@ function updateGuess(opts: {
       currentDate.value = new Date(nowMin * 1000 * 60).toISOString().substring(0, 10)
       dayNumber.value = Math.floor((+new Date(currentDate.value) - +new Date(dailyJSON.value.startingDate)) / (1000 * 60 * 60 * 24))
 
-      elligible.value = Object.values(pokedex.value)
+      elligible.value = shuffle(Object.values(pokedex.value))
       secretPokemon.value = pokedex.value[dailyJSON.value.names[dayNumber.value % dailyJSON.value.names.length]]
 
       let isNew = true
@@ -158,14 +158,14 @@ function updateGuess(opts: {
         }
       }
     } else {
-      secretPokemon.value = elligible.value[Math.floor(Math.random() * elligible.value.length)]
+      guesses.value = []
 
       if (opts.isNew) {
-        guesses.value = []
+        secretPokemon.value = elligible.value[Math.floor(Math.random() * elligible.value.length)]
       } else {
         genMin.value = storage.genMin.get() || genMin.value
         genMax.value = storage.genMax.get() || genMax.value
-        elligible.value = Object.values(pokedex.value).filter((p) => p.gen >= genMin.value && p.gen <= genMax.value)
+        elligible.value = shuffle(Object.values(pokedex.value).filter((p) => p.gen >= genMin.value && p.gen <= genMax.value))
 
         const lastAnswer = storage.lastAnswer.get()
         if (lastAnswer) {
@@ -177,6 +177,8 @@ function updateGuess(opts: {
               return pokedex.value[v]
             })
           }
+        } else {
+          secretPokemon.value = null
         }
       }
     }
@@ -447,6 +449,9 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
 let clipboardJS: ClipboardJS
 
 onMounted(() => {
+  console.log('The code is open-sourced at https://github.com/patarapolw/squirdle')
+  console.log('Contribution is welcomed, especially for translating - https://github.com/patarapolw/squirdle/pull/3#issuecomment-1056946896')
+
   document.head.querySelector('title')!.innerText = t('Squirdle')
   updateGuess({ isInit: true })
 
@@ -455,7 +460,7 @@ onMounted(() => {
     clipboardJS.on('success', () => {
       alert(t('CopySuccess'))
     }).on('error', (ex) => {
-      console.warn("Copy to clipboard failed. Let me (https://github.com/patarapolw) know!", ex);
+      console.warn("Copy to clipboard failed. Let me (https://github.com/patarapolw/squirdle) know!", ex);
     })
   })
 })

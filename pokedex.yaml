@@ -1,0 +1,12117 @@
+- name:
+    en: Bulbasaur
+    ja: フシギダネ
+    ko: 이상해씨
+  generation: 1
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 0.7
+  weight:
+    kg: 6.9
+- name:
+    en: Ivysaur
+    ja: フシギソウ
+    ko: 이상해풀
+  generation: 1
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 1
+  weight:
+    kg: 13
+- name:
+    en: Venusaur
+    ja: フシギバナ
+    ko: 이상해꽃
+  generation: 1
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 2
+  weight:
+    kg: 100
+- name:
+    en: Mega Venusaur
+    ja: メガフシギバナ
+    ko: 메가이상해꽃
+  generation: 6
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 2.4
+  weight:
+    kg: 155.5
+- name:
+    en: Charmander
+    ja: ヒトカゲ
+    ko: 파이리
+  generation: 1
+  type:
+    - Fire
+  height:
+    m: 0.6
+  weight:
+    kg: 8.5
+- name:
+    en: Charmeleon
+    ja: リザード
+    ko: 리자드
+  generation: 1
+  type:
+    - Fire
+  height:
+    m: 1.1
+  weight:
+    kg: 19
+- name:
+    en: Charizard
+    ja: リザードン
+    ko: 리자몽
+  generation: 1
+  type:
+    - Fire
+    - Flying
+  height:
+    m: 1.7
+  weight:
+    kg: 90.5
+- name:
+    en: Mega Charizard X
+    ja: メガリザードンX
+    ko: 메가리자몽X
+  generation: 6
+  type:
+    - Fire
+    - Dragon
+  height:
+    m: 1.7
+  weight:
+    kg: 110.5
+- name:
+    en: Mega Charizard Y
+    ja: メガリザードンY
+    ko: 메가리자몽Y
+  generation: 6
+  type:
+    - Fire
+    - Flying
+  height:
+    m: 1.7
+  weight:
+    kg: 100.5
+- name:
+    en: Squirtle
+    ja: ゼニガメ
+    ko: 꼬부기
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 0.5
+  weight:
+    kg: 9
+- name:
+    en: Wartortle
+    ja: カメール
+    ko: 어니부기
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 1
+  weight:
+    kg: 22.5
+- name:
+    en: Blastoise
+    ja: カメックス
+    ko: 거북왕
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 1.6
+  weight:
+    kg: 85.5
+- name:
+    en: Mega Blastoise
+    ja: メガカメックス
+    ko: 메가거북왕
+  generation: 6
+  type:
+    - Water
+  height:
+    m: 1.6
+  weight:
+    kg: 101.1
+- name:
+    en: Caterpie
+    ja: キャタピー
+    ko: 캐터피
+  generation: 1
+  type:
+    - Bug
+  height:
+    m: 0.3
+  weight:
+    kg: 2.9
+- name:
+    en: Metapod
+    ja: トランセル
+    ko: 단데기
+  generation: 1
+  type:
+    - Bug
+  height:
+    m: 0.7
+  weight:
+    kg: 9.9
+- name:
+    en: Butterfree
+    ja: バタフリー
+    ko: 버터플
+  generation: 1
+  type:
+    - Bug
+    - Flying
+  height:
+    m: 1.1
+  weight:
+    kg: 32
+- name:
+    en: Weedle
+    ja: ビードル
+    ko: 뿔충이
+  generation: 1
+  type:
+    - Bug
+    - Poison
+  height:
+    m: 0.3
+  weight:
+    kg: 3.2
+- name:
+    en: Kakuna
+    ja: コクーン
+    ko: 딱충이
+  generation: 1
+  type:
+    - Bug
+    - Poison
+  height:
+    m: 0.6
+  weight:
+    kg: 10
+- name:
+    en: Beedrill
+    ja: スピアー
+    ko: 독침붕
+  generation: 1
+  type:
+    - Bug
+    - Poison
+  height:
+    m: 1
+  weight:
+    kg: 29.5
+- name:
+    en: Mega Beedrill
+    ja: メガスピアー
+    ko: 메가독침붕
+  generation: 6
+  type:
+    - Bug
+    - Poison
+  height:
+    m: 1.4
+  weight:
+    kg: 40.5
+- name:
+    en: Pidgey
+    ja: ポッポ
+    ko: 구구
+  generation: 1
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.3
+  weight:
+    kg: 1.8
+- name:
+    en: Pidgeotto
+    ja: ピジョン
+    ko: 피죤
+  generation: 1
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 1.1
+  weight:
+    kg: 30
+- name:
+    en: Pidgeot
+    ja: ピジョット
+    ko: 피죤투
+  generation: 1
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 1.5
+  weight:
+    kg: 39.5
+- name:
+    en: Mega Pidgeot
+    ja: メガピジョット
+    ko: 메가피죤투
+  generation: 6
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 2.2
+  weight:
+    kg: 50.5
+- name:
+    en: Rattata
+    ja: コラッタ
+    ko: 꼬렛
+  generation: 1
+  type:
+    - Normal
+  height:
+    m: 0.3
+  weight:
+    kg: 3.5
+- name:
+    en: Alolan Rattata
+    ja: アローラコラッタ
+    ko: 알로라 꼬렛
+  generation: 7
+  type:
+    - Dark
+    - Normal
+  height:
+    m: 0.3
+  weight:
+    kg: 3.8
+- name:
+    en: Raticate
+    ja: ラッタ
+    ko: 레트라
+  generation: 1
+  type:
+    - Normal
+  height:
+    m: 0.7
+  weight:
+    kg: 18.5
+- name:
+    en: Alolan Raticate
+    ja: アローララッタ
+    ko: 알로라 레트라
+  generation: 7
+  type:
+    - Dark
+    - Normal
+  height:
+    m: 0.7
+  weight:
+    kg: 25.5
+- name:
+    en: Spearow
+    ja: オニスズメ
+    ko: 깨비참
+  generation: 1
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.3
+  weight:
+    kg: 2
+- name:
+    en: Fearow
+    ja: オニドリル
+    ko: 깨비드릴조
+  generation: 1
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 1.2
+  weight:
+    kg: 38
+- name:
+    en: Ekans
+    ja: アーボ
+    ko: 아보
+  generation: 1
+  type:
+    - Poison
+  height:
+    m: 2
+  weight:
+    kg: 6.9
+- name:
+    en: Arbok
+    ja: アーボック
+    ko: 아보크
+  generation: 1
+  type:
+    - Poison
+  height:
+    m: 3.5
+  weight:
+    kg: 65
+- name:
+    en: Pikachu
+    ja: ピカチュウ
+    ko: 피카츄
+  generation: 1
+  type:
+    - Electric
+  height:
+    m: 0.4
+  weight:
+    kg: 6
+- name:
+    en: Raichu
+    ja: ライチュウ
+    ko: 라이츄
+  generation: 1
+  type:
+    - Electric
+  height:
+    m: 0.8
+  weight:
+    kg: 30
+- name:
+    en: Alolan Raichu
+    ja: アローラライチュウ
+    ko: 알로라 라이츄
+  generation: 7
+  type:
+    - Electric
+    - Psychic
+  height:
+    m: 0.7
+  weight:
+    kg: 21
+- name:
+    en: Sandshrew
+    ja: サンド
+    ko: 모래두지
+  generation: 1
+  type:
+    - Ground
+  height:
+    m: 0.6
+  weight:
+    kg: 12
+- name:
+    en: Alolan Sandshrew
+    ja: アローラサンド
+    ko: 알로라 모래두지
+  generation: 7
+  type:
+    - Ice
+    - Steel
+  height:
+    m: 0.7
+  weight:
+    kg: 40
+- name:
+    en: Sandslash
+    ja: サンドパン
+    ko: 고지
+  generation: 1
+  type:
+    - Ground
+  height:
+    m: 1
+  weight:
+    kg: 29.5
+- name:
+    en: Alolan Sandslash
+    ja: アローラサンドパン
+    ko: 알로라 고지
+  generation: 7
+  type:
+    - Ice
+    - Steel
+  height:
+    m: 1.2
+  weight:
+    kg: 55
+- name:
+    en: Nidoran♀
+    ja: ニドラン♀
+    ko: 니드런♀
+  generation: 1
+  type:
+    - Poison
+  height:
+    m: 0.4
+  weight:
+    kg: 7
+- name:
+    en: Nidorina
+    ja: ニドリーナ
+    ko: 니드리나
+  generation: 1
+  type:
+    - Poison
+  height:
+    m: 0.8
+  weight:
+    kg: 20
+- name:
+    en: Nidoqueen
+    ja: ニドクイン
+    ko: 니드퀸
+  generation: 1
+  type:
+    - Poison
+    - Ground
+  height:
+    m: 1.3
+  weight:
+    kg: 60
+- name:
+    en: Nidoran♂
+    ja: ニドラン♂
+    ko: 니드런♂
+  generation: 1
+  type:
+    - Poison
+  height:
+    m: 0.5
+  weight:
+    kg: 9
+- name:
+    en: Nidorino
+    ja: ニドリーノ
+    ko: 니드리노
+  generation: 1
+  type:
+    - Poison
+  height:
+    m: 0.9
+  weight:
+    kg: 19.5
+- name:
+    en: Nidoking
+    ja: ニドキング
+    ko: 니드킹
+  generation: 1
+  type:
+    - Poison
+    - Ground
+  height:
+    m: 1.4
+  weight:
+    kg: 62
+- name:
+    en: Clefairy
+    ja: ピッピ
+    ko: 삐삐
+  generation: 1
+  type:
+    - Fairy
+  height:
+    m: 0.6
+  weight:
+    kg: 7.5
+- name:
+    en: Clefable
+    ja: ピクシー
+    ko: 픽시
+  generation: 1
+  type:
+    - Fairy
+  height:
+    m: 1.3
+  weight:
+    kg: 40
+- name:
+    en: Vulpix
+    ja: ロコン
+    ko: 식스테일
+  generation: 1
+  type:
+    - Fire
+  height:
+    m: 0.6
+  weight:
+    kg: 9.9
+- name:
+    en: Alolan Vulpix
+    ja: アローラロコン
+    ko: 알로라 식스테일
+  generation: 7
+  type:
+    - Ice
+  height:
+    m: 0.6
+  weight:
+    kg: 9.9
+- name:
+    en: Ninetales
+    ja: キュウコン
+    ko: 나인테일
+  generation: 1
+  type:
+    - Fire
+  height:
+    m: 1.1
+  weight:
+    kg: 19.9
+- name:
+    en: Alolan Ninetales
+    ja: アローラキュウコン
+    ko: 알로라 나인테일
+  generation: 7
+  type:
+    - Ice
+    - Fairy
+  height:
+    m: 1.1
+  weight:
+    kg: 19.9
+- name:
+    en: Jigglypuff
+    ja: プリン
+    ko: 푸린
+  generation: 1
+  type:
+    - Normal
+    - Fairy
+  height:
+    m: 0.5
+  weight:
+    kg: 5.5
+- name:
+    en: Wigglytuff
+    ja: プクリン
+    ko: 푸크린
+  generation: 1
+  type:
+    - Normal
+    - Fairy
+  height:
+    m: 1
+  weight:
+    kg: 12
+- name:
+    en: Zubat
+    ja: ズバット
+    ko: 주뱃
+  generation: 1
+  type:
+    - Poison
+    - Flying
+  height:
+    m: 0.8
+  weight:
+    kg: 7.5
+- name:
+    en: Golbat
+    ja: ゴルバット
+    ko: 골뱃
+  generation: 1
+  type:
+    - Poison
+    - Flying
+  height:
+    m: 1.6
+  weight:
+    kg: 55
+- name:
+    en: Oddish
+    ja: ナゾノクサ
+    ko: 뚜벅쵸
+  generation: 1
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 0.5
+  weight:
+    kg: 5.4
+- name:
+    en: Gloom
+    ja: クサイハナ
+    ko: 냄새꼬
+  generation: 1
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 0.8
+  weight:
+    kg: 8.6
+- name:
+    en: Vileplume
+    ja: ラフレシア
+    ko: 라플레시아
+  generation: 1
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 1.2
+  weight:
+    kg: 18.6
+- name:
+    en: Paras
+    ja: パラス
+    ko: 파라스
+  generation: 1
+  type:
+    - Bug
+    - Grass
+  height:
+    m: 0.3
+  weight:
+    kg: 5.4
+- name:
+    en: Parasect
+    ja: パラセクト
+    ko: 파라섹트
+  generation: 1
+  type:
+    - Bug
+    - Grass
+  height:
+    m: 1
+  weight:
+    kg: 29.5
+- name:
+    en: Venonat
+    ja: コンパン
+    ko: 콘팡
+  generation: 1
+  type:
+    - Bug
+    - Poison
+  height:
+    m: 1
+  weight:
+    kg: 30
+- name:
+    en: Venomoth
+    ja: モルフォン
+    ko: 도나리
+  generation: 1
+  type:
+    - Bug
+    - Poison
+  height:
+    m: 1.5
+  weight:
+    kg: 12.5
+- name:
+    en: Diglett
+    ja: ディグダ
+    ko: 디그다
+  generation: 1
+  type:
+    - Ground
+  height:
+    m: 0.2
+  weight:
+    kg: 0.8
+- name:
+    en: Alolan Diglett
+    ja: アローラディグダ
+    ko: 알로라 디그다
+  generation: 7
+  type:
+    - Ground
+    - Steel
+  height:
+    m: 0.2
+  weight:
+    kg: 1
+- name:
+    en: Dugtrio
+    ja: ダグトリオ
+    ko: 닥트리오
+  generation: 1
+  type:
+    - Ground
+  height:
+    m: 0.7
+  weight:
+    kg: 33.3
+- name:
+    en: Alolan Dugtrio
+    ja: アローラダグトリオ
+    ko: 알로라 닥트리오
+  generation: 7
+  type:
+    - Ground
+    - Steel
+  height:
+    m: 0.7
+  weight:
+    kg: 66.6
+- name:
+    en: Meowth
+    ja: ニャース
+    ko: 나옹
+  generation: 1
+  type:
+    - Normal
+  height:
+    m: 0.4
+  weight:
+    kg: 4.2
+- name:
+    en: Alolan Meowth
+    ja: アローラニャース
+    ko: 알로라 나옹
+  generation: 7
+  type:
+    - Dark
+  height:
+    m: 0.4
+  weight:
+    kg: 4.2
+- name:
+    en: Galarian Meowth
+    ja: ガラルニャース
+    ko: 가라르 나옹
+  generation: 8
+  type:
+    - Steel
+  height:
+    m: 0.4
+  weight:
+    kg: 7.5
+- name:
+    en: Persian
+    ja: ペルシアン
+    ko: 페르시온
+  generation: 1
+  type:
+    - Normal
+  height:
+    m: 1
+  weight:
+    kg: 32
+- name:
+    en: Alolan Persian
+    ja: アローラペルシアン
+    ko: 알로라 페르시온
+  generation: 7
+  type:
+    - Dark
+  height:
+    m: 1.1
+  weight:
+    kg: 33
+- name:
+    en: Psyduck
+    ja: コダック
+    ko: 고라파덕
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 0.8
+  weight:
+    kg: 19.6
+- name:
+    en: Golduck
+    ja: ゴルダック
+    ko: 골덕
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 1.7
+  weight:
+    kg: 76.6
+- name:
+    en: Mankey
+    ja: マンキー
+    ko: 망키
+  generation: 1
+  type:
+    - Fighting
+  height:
+    m: 0.5
+  weight:
+    kg: 28
+- name:
+    en: Primeape
+    ja: オコリザル
+    ko: 성원숭
+  generation: 1
+  type:
+    - Fighting
+  height:
+    m: 1
+  weight:
+    kg: 32
+- name:
+    en: Growlithe
+    ja: ガーディ
+    ko: 가디
+  generation: 1
+  type:
+    - Fire
+  height:
+    m: 0.7
+  weight:
+    kg: 19
+- name:
+    en: Hisuian Growlithe
+    ja: ヒスイガーディ
+    ko: 히스이 가디
+  generation: 8
+  type:
+    - Fire
+    - Rock
+  height:
+    m: 0.8
+  weight:
+    kg: 22.7
+- name:
+    en: Arcanine
+    ja: ウインディ
+    ko: 윈디
+  generation: 1
+  type:
+    - Fire
+  height:
+    m: 1.9
+  weight:
+    kg: 155
+- name:
+    en: Hisuian Arcanine
+    ja: ヒスイウインディ
+    ko: 히스이 윈디
+  generation: 8
+  type:
+    - Fire
+    - Rock
+  height:
+    m: 2
+  weight:
+    kg: 168
+- name:
+    en: Poliwag
+    ja: ニョロモ
+    ko: 발챙이
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 0.6
+  weight:
+    kg: 12.4
+- name:
+    en: Poliwhirl
+    ja: ニョロゾ
+    ko: 슈륙챙이
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 1
+  weight:
+    kg: 20
+- name:
+    en: Poliwrath
+    ja: ニョロボン
+    ko: 강챙이
+  generation: 1
+  type:
+    - Water
+    - Fighting
+  height:
+    m: 1.3
+  weight:
+    kg: 54
+- name:
+    en: Abra
+    ja: ケーシィ
+    ko: 캐이시
+  generation: 1
+  type:
+    - Psychic
+  height:
+    m: 0.9
+  weight:
+    kg: 19.5
+- name:
+    en: Kadabra
+    ja: ユンゲラー
+    ko: 윤겔라
+  generation: 1
+  type:
+    - Psychic
+  height:
+    m: 1.3
+  weight:
+    kg: 56.5
+- name:
+    en: Alakazam
+    ja: フーディン
+    ko: 후딘
+  generation: 1
+  type:
+    - Psychic
+  height:
+    m: 1.5
+  weight:
+    kg: 48
+- name:
+    en: Mega Alakazam
+    ja: メガフーディン
+    ko: 메가후딘
+  generation: 6
+  type:
+    - Psychic
+  height:
+    m: 1.2
+  weight:
+    kg: 48
+- name:
+    en: Machop
+    ja: ワンリキー
+    ko: 알통몬
+  generation: 1
+  type:
+    - Fighting
+  height:
+    m: 0.8
+  weight:
+    kg: 19.5
+- name:
+    en: Machoke
+    ja: ゴーリキー
+    ko: 근육몬
+  generation: 1
+  type:
+    - Fighting
+  height:
+    m: 1.5
+  weight:
+    kg: 70.5
+- name:
+    en: Machamp
+    ja: カイリキー
+    ko: 괴력몬
+  generation: 1
+  type:
+    - Fighting
+  height:
+    m: 1.6
+  weight:
+    kg: 130
+- name:
+    en: Bellsprout
+    ja: マダツボミ
+    ko: 모다피
+  generation: 1
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 0.7
+  weight:
+    kg: 4
+- name:
+    en: Weepinbell
+    ja: ウツドン
+    ko: 우츠동
+  generation: 1
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 1
+  weight:
+    kg: 6.4
+- name:
+    en: Victreebel
+    ja: ウツボット
+    ko: 우츠보트
+  generation: 1
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 1.7
+  weight:
+    kg: 15.5
+- name:
+    en: Tentacool
+    ja: メノクラゲ
+    ko: 왕눈해
+  generation: 1
+  type:
+    - Water
+    - Poison
+  height:
+    m: 0.9
+  weight:
+    kg: 45.5
+- name:
+    en: Tentacruel
+    ja: ドククラゲ
+    ko: 독파리
+  generation: 1
+  type:
+    - Water
+    - Poison
+  height:
+    m: 1.6
+  weight:
+    kg: 55
+- name:
+    en: Geodude
+    ja: イシツブテ
+    ko: 꼬마돌
+  generation: 1
+  type:
+    - Rock
+    - Ground
+  height:
+    m: 0.4
+  weight:
+    kg: 20
+- name:
+    en: Alolan Geodude
+    ja: アローライシツブテ
+    ko: 알로라 꼬마돌
+  generation: 7
+  type:
+    - Rock
+    - Electric
+  height:
+    m: 0.4
+  weight:
+    kg: 20.3
+- name:
+    en: Graveler
+    ja: ゴローン
+    ko: 데구리
+  generation: 1
+  type:
+    - Rock
+    - Ground
+  height:
+    m: 1
+  weight:
+    kg: 105
+- name:
+    en: Alolan Graveler
+    ja: アローラゴローン
+    ko: 알로라 데구리
+  generation: 7
+  type:
+    - Rock
+    - Electric
+  height:
+    m: 1
+  weight:
+    kg: 110
+- name:
+    en: Golem
+    ja: ゴローニャ
+    ko: 딱구리
+  generation: 1
+  type:
+    - Rock
+    - Ground
+  height:
+    m: 1.4
+  weight:
+    kg: 300
+- name:
+    en: Alolan Golem
+    ja: アローラゴローニャ
+    ko: 알로라 딱구리
+  generation: 7
+  type:
+    - Rock
+    - Electric
+  height:
+    m: 1.7
+  weight:
+    kg: 316
+- name:
+    en: Ponyta
+    ja: ポニータ
+    ko: 포니타
+  generation: 1
+  type:
+    - Fire
+  height:
+    m: 1
+  weight:
+    kg: 30
+- name:
+    en: Galarian Ponyta
+    ja: ガラルポニータ
+    ko: 가라르 포니타
+  generation: 8
+  type:
+    - Psychic
+  height:
+    m: 0.8
+  weight:
+    kg: 24
+- name:
+    en: Rapidash
+    ja: ギャロップ
+    ko: 날쌩마
+  generation: 1
+  type:
+    - Fire
+  height:
+    m: 1.7
+  weight:
+    kg: 95
+- name:
+    en: Galarian Rapidash
+    ja: ガラルギャロップ
+    ko: 가라르 날쌩마
+  generation: 8
+  type:
+    - Psychic
+    - Fairy
+  height:
+    m: 1.7
+  weight:
+    kg: 80
+- name:
+    en: Slowpoke
+    ja: ヤドン
+    ko: 야돈
+  generation: 1
+  type:
+    - Water
+    - Psychic
+  height:
+    m: 1.2
+  weight:
+    kg: 36
+- name:
+    en: Galarian Slowpoke
+    ja: ガラルヤドン
+    ko: 가라르 야돈
+  generation: 8
+  type:
+    - Psychic
+  height:
+    m: 1.2
+  weight:
+    kg: 36
+- name:
+    en: Slowbro
+    ja: ヤドラン
+    ko: 야도란
+  generation: 1
+  type:
+    - Water
+    - Psychic
+  height:
+    m: 1.6
+  weight:
+    kg: 78.5
+- name:
+    en: Mega Slowbro
+    ja: メガヤドラン
+    ko: 메가야도란
+  generation: 6
+  type:
+    - Water
+    - Psychic
+  height:
+    m: 2
+  weight:
+    kg: 120
+- name:
+    en: Galarian Slowbro
+    ja: ガラルヤドラン
+    ko: 가라르 야도란
+  generation: 8
+  type:
+    - Poison
+    - Psychic
+  height:
+    m: 1.6
+  weight:
+    kg: 70.5
+- name:
+    en: Magnemite
+    ja: コイル
+    ko: 코일
+  generation: 1
+  type:
+    - Electric
+    - Steel
+  height:
+    m: 0.3
+  weight:
+    kg: 6
+- name:
+    en: Magneton
+    ja: レアコイル
+    ko: 레어코일
+  generation: 1
+  type:
+    - Electric
+    - Steel
+  height:
+    m: 1
+  weight:
+    kg: 60
+- name:
+    en: Farfetch'd
+    ja: カモネギ
+    ko: 파오리
+  generation: 1
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.8
+  weight:
+    kg: 15
+- name:
+    en: Galarian Farfetch'd
+    ja: ガラルカモネギ
+    ko: 가라르 파오리
+  generation: 8
+  type:
+    - Fighting
+  height:
+    m: 0.8
+  weight:
+    kg: 42
+- name:
+    en: Doduo
+    ja: ドードー
+    ko: 두두
+  generation: 1
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 1.4
+  weight:
+    kg: 39.2
+- name:
+    en: Dodrio
+    ja: ドードリオ
+    ko: 두트리오
+  generation: 1
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 1.8
+  weight:
+    kg: 85.2
+- name:
+    en: Seel
+    ja: パウワウ
+    ko: 쥬쥬
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 1.1
+  weight:
+    kg: 90
+- name:
+    en: Dewgong
+    ja: ジュゴン
+    ko: 쥬레곤
+  generation: 1
+  type:
+    - Water
+    - Ice
+  height:
+    m: 1.7
+  weight:
+    kg: 120
+- name:
+    en: Grimer
+    ja: ベトベター
+    ko: 질퍽이
+  generation: 1
+  type:
+    - Poison
+  height:
+    m: 0.9
+  weight:
+    kg: 30
+- name:
+    en: Alolan Grimer
+    ja: アローラベトベター
+    ko: 알로라 질퍽이
+  generation: 7
+  type:
+    - Poison
+    - Dark
+  height:
+    m: 0.7
+  weight:
+    kg: 42
+- name:
+    en: Muk
+    ja: ベトベトン
+    ko: 질뻐기
+  generation: 1
+  type:
+    - Poison
+  height:
+    m: 1.2
+  weight:
+    kg: 30
+- name:
+    en: Alolan Muk
+    ja: アローラベトベトン
+    ko: 알로라 질뻐기
+  generation: 7
+  type:
+    - Poison
+    - Dark
+  height:
+    m: 1
+  weight:
+    kg: 52
+- name:
+    en: Shellder
+    ja: シェルダー
+    ko: 셀러
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 0.3
+  weight:
+    kg: 4
+- name:
+    en: Cloyster
+    ja: パルシェン
+    ko: 파르셀
+  generation: 1
+  type:
+    - Water
+    - Ice
+  height:
+    m: 1.5
+  weight:
+    kg: 132.5
+- name:
+    en: Gastly
+    ja: ゴース
+    ko: 고오스
+  generation: 1
+  type:
+    - Ghost
+    - Poison
+  height:
+    m: 1.3
+  weight:
+    kg: 0.1
+- name:
+    en: Haunter
+    ja: ゴースト
+    ko: 고우스트
+  generation: 1
+  type:
+    - Ghost
+    - Poison
+  height:
+    m: 1.6
+  weight:
+    kg: 0.1
+- name:
+    en: Gengar
+    ja: ゲンガー
+    ko: 팬텀
+  generation: 1
+  type:
+    - Ghost
+    - Poison
+  height:
+    m: 1.5
+  weight:
+    kg: 40.5
+- name:
+    en: Mega Gengar
+    ja: メガゲンガー
+    ko: 메가팬텀
+  generation: 6
+  type:
+    - Ghost
+    - Poison
+  height:
+    m: 1.4
+  weight:
+    kg: 40.5
+- name:
+    en: Onix
+    ja: イワーク
+    ko: 롱스톤
+  generation: 1
+  type:
+    - Rock
+    - Ground
+  height:
+    m: 8.8
+  weight:
+    kg: 210
+- name:
+    en: Drowzee
+    ja: スリープ
+    ko: 슬리프
+  generation: 1
+  type:
+    - Psychic
+  height:
+    m: 1
+  weight:
+    kg: 32.4
+- name:
+    en: Hypno
+    ja: スリーパー
+    ko: 슬리퍼
+  generation: 1
+  type:
+    - Psychic
+  height:
+    m: 1.6
+  weight:
+    kg: 75.6
+- name:
+    en: Krabby
+    ja: クラブ
+    ko: 크랩
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 0.4
+  weight:
+    kg: 6.5
+- name:
+    en: Kingler
+    ja: キングラー
+    ko: 킹크랩
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 1.3
+  weight:
+    kg: 60
+- name:
+    en: Voltorb
+    ja: ビリリダマ
+    ko: 찌리리공
+  generation: 1
+  type:
+    - Electric
+  height:
+    m: 0.5
+  weight:
+    kg: 10.4
+- name:
+    en: Hisuian Voltorb
+    ja: ヒスイビリリダマ
+    ko: 히스이 찌리리공
+  generation: 8
+  type:
+    - Electric
+    - Grass
+  height:
+    m: 0.5
+  weight:
+    kg: 13
+- name:
+    en: Electrode
+    ja: マルマイン
+    ko: 붐볼
+  generation: 1
+  type:
+    - Electric
+  height:
+    m: 1.2
+  weight:
+    kg: 66.6
+- name:
+    en: Hisuian Electrode
+    ja: ヒスイマルマイン
+    ko: 히스이 붐볼
+  generation: 8
+  type:
+    - Electric
+    - Grass
+  height:
+    m: 1.2
+  weight:
+    kg: 71
+- name:
+    en: Exeggcute
+    ja: タマタマ
+    ko: 아라리
+  generation: 1
+  type:
+    - Grass
+    - Psychic
+  height:
+    m: 0.4
+  weight:
+    kg: 2.5
+- name:
+    en: Exeggutor
+    ja: ナッシー
+    ko: 나시
+  generation: 1
+  type:
+    - Grass
+    - Psychic
+  height:
+    m: 2
+  weight:
+    kg: 120
+- name:
+    en: Alolan Exeggutor
+    ja: アローラナッシー
+    ko: 알로라 나시
+  generation: 7
+  type:
+    - Grass
+    - Dragon
+  height:
+    m: 10.9
+  weight:
+    kg: 415.6
+- name:
+    en: Cubone
+    ja: カラカラ
+    ko: 탕구리
+  generation: 1
+  type:
+    - Ground
+  height:
+    m: 0.4
+  weight:
+    kg: 6.5
+- name:
+    en: Marowak
+    ja: ガラガラ
+    ko: 텅구리
+  generation: 1
+  type:
+    - Ground
+  height:
+    m: 1
+  weight:
+    kg: 45
+- name:
+    en: Alolan Marowak
+    ja: アローラガラガラ
+    ko: 알로라 텅구리
+  generation: 7
+  type:
+    - Fire
+    - Ghost
+  height:
+    m: 1
+  weight:
+    kg: 34
+- name:
+    en: Hitmonlee
+    ja: サワムラー
+    ko: 시라소몬
+  generation: 1
+  type:
+    - Fighting
+  height:
+    m: 1.5
+  weight:
+    kg: 49.8
+- name:
+    en: Hitmonchan
+    ja: エビワラー
+    ko: 홍수몬
+  generation: 1
+  type:
+    - Fighting
+  height:
+    m: 1.4
+  weight:
+    kg: 50.2
+- name:
+    en: Lickitung
+    ja: ベロリンガ
+    ko: 내루미
+  generation: 1
+  type:
+    - Normal
+  height:
+    m: 1.2
+  weight:
+    kg: 65.5
+- name:
+    en: Koffing
+    ja: ドガース
+    ko: 또가스
+  generation: 1
+  type:
+    - Poison
+  height:
+    m: 0.6
+  weight:
+    kg: 1
+- name:
+    en: Weezing
+    ja: マタドガス
+    ko: 또도가스
+  generation: 1
+  type:
+    - Poison
+  height:
+    m: 1.2
+  weight:
+    kg: 9.5
+- name:
+    en: Galarian Weezing
+    ja: ガラルマタドガス
+    ko: 가라르 또도가스
+  generation: 8
+  type:
+    - Poison
+    - Fairy
+  height:
+    m: 3
+  weight:
+    kg: 16
+- name:
+    en: Rhyhorn
+    ja: サイホーン
+    ko: 뿔카노
+  generation: 1
+  type:
+    - Ground
+    - Rock
+  height:
+    m: 1
+  weight:
+    kg: 115
+- name:
+    en: Rhydon
+    ja: サイドン
+    ko: 코뿌리
+  generation: 1
+  type:
+    - Ground
+    - Rock
+  height:
+    m: 1.9
+  weight:
+    kg: 120
+- name:
+    en: Chansey
+    ja: ラッキー
+    ko: 럭키
+  generation: 1
+  type:
+    - Normal
+  height:
+    m: 1.1
+  weight:
+    kg: 34.6
+- name:
+    en: Tangela
+    ja: モンジャラ
+    ko: 덩쿠리
+  generation: 1
+  type:
+    - Grass
+  height:
+    m: 1
+  weight:
+    kg: 35
+- name:
+    en: Kangaskhan
+    ja: ガルーラ
+    ko: 캥카
+  generation: 1
+  type:
+    - Normal
+  height:
+    m: 2.2
+  weight:
+    kg: 80
+- name:
+    en: Mega Kangaskhan
+    ja: メガガルーラ
+    ko: 메가캥카
+  generation: 6
+  type:
+    - Normal
+  height:
+    m: 2.2
+  weight:
+    kg: 100
+- name:
+    en: Horsea
+    ja: タッツー
+    ko: 쏘드라
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 0.4
+  weight:
+    kg: 8
+- name:
+    en: Seadra
+    ja: シードラ
+    ko: 시드라
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 1.2
+  weight:
+    kg: 25
+- name:
+    en: Goldeen
+    ja: トサキント
+    ko: 콘치
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 0.6
+  weight:
+    kg: 15
+- name:
+    en: Seaking
+    ja: アズマオウ
+    ko: 왕콘치
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 1.3
+  weight:
+    kg: 39
+- name:
+    en: Staryu
+    ja: ヒトデマン
+    ko: 별가사리
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 0.8
+  weight:
+    kg: 34.5
+- name:
+    en: Starmie
+    ja: スターミー
+    ko: 아쿠스타
+  generation: 1
+  type:
+    - Water
+    - Psychic
+  height:
+    m: 1.1
+  weight:
+    kg: 80
+- name:
+    en: Mr. Mime
+    ja: バリヤード
+    ko: 마임맨
+  generation: 1
+  type:
+    - Psychic
+    - Fairy
+  height:
+    m: 1.3
+  weight:
+    kg: 54.5
+- name:
+    en: Galarian Mr. Mime
+    ja: ガラルバリヤード
+    ko: 가라르 마임맨
+  generation: 8
+  type:
+    - Ice
+    - Psychic
+  height:
+    m: 1.4
+  weight:
+    kg: 56.8
+- name:
+    en: Scyther
+    ja: ストライク
+    ko: 스라크
+  generation: 1
+  type:
+    - Bug
+    - Flying
+  height:
+    m: 1.5
+  weight:
+    kg: 56
+- name:
+    en: Jynx
+    ja: ルージュラ
+    ko: 루주라
+  generation: 1
+  type:
+    - Ice
+    - Psychic
+  height:
+    m: 1.4
+  weight:
+    kg: 40.6
+- name:
+    en: Electabuzz
+    ja: エレブー
+    ko: 에레브
+  generation: 1
+  type:
+    - Electric
+  height:
+    m: 1.1
+  weight:
+    kg: 30
+- name:
+    en: Magmar
+    ja: ブーバー
+    ko: 마그마
+  generation: 1
+  type:
+    - Fire
+  height:
+    m: 1.3
+  weight:
+    kg: 44.5
+- name:
+    en: Pinsir
+    ja: カイロス
+    ko: 쁘사이저
+  generation: 1
+  type:
+    - Bug
+  height:
+    m: 1.5
+  weight:
+    kg: 55
+- name:
+    en: Mega Pinsir
+    ja: メガカイロス
+    ko: 메가쁘사이저
+  generation: 6
+  type:
+    - Bug
+    - Flying
+  height:
+    m: 1.7
+  weight:
+    kg: 59
+- name:
+    en: Tauros
+    ja: ケンタロス
+    ko: 켄타로스
+  generation: 1
+  type:
+    - Normal
+  height:
+    m: 1.4
+  weight:
+    kg: 88.4
+- name:
+    en: Magikarp
+    ja: コイキング
+    ko: 잉어킹
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 0.9
+  weight:
+    kg: 10
+- name:
+    en: Gyarados
+    ja: ギャラドス
+    ko: 갸라도스
+  generation: 1
+  type:
+    - Water
+    - Flying
+  height:
+    m: 6.5
+  weight:
+    kg: 235
+- name:
+    en: Mega Gyarados
+    ja: メガギャラドス
+    ko: 메가갸라도스
+  generation: 6
+  type:
+    - Water
+    - Dark
+  height:
+    m: 6.5
+  weight:
+    kg: 305
+- name:
+    en: Lapras
+    ja: ラプラス
+    ko: 라프라스
+  generation: 1
+  type:
+    - Water
+    - Ice
+  height:
+    m: 2.5
+  weight:
+    kg: 220
+- name:
+    en: Ditto
+    ja: メタモン
+    ko: 메타몽
+  generation: 1
+  type:
+    - Normal
+  height:
+    m: 0.3
+  weight:
+    kg: 4
+- name:
+    en: Eevee
+    ja: イーブイ
+    ko: 이브이
+  generation: 1
+  type:
+    - Normal
+  height:
+    m: 0.3
+  weight:
+    kg: 6.5
+- name:
+    en: Vaporeon
+    ja: シャワーズ
+    ko: 샤미드
+  generation: 1
+  type:
+    - Water
+  height:
+    m: 1
+  weight:
+    kg: 29
+- name:
+    en: Jolteon
+    ja: サンダース
+    ko: 쥬피썬더
+  generation: 1
+  type:
+    - Electric
+  height:
+    m: 0.8
+  weight:
+    kg: 24.5
+- name:
+    en: Flareon
+    ja: ブースター
+    ko: 부스터
+  generation: 1
+  type:
+    - Fire
+  height:
+    m: 0.9
+  weight:
+    kg: 25
+- name:
+    en: Porygon
+    ja: ポリゴン
+    ko: 폴리곤
+  generation: 1
+  type:
+    - Normal
+  height:
+    m: 0.8
+  weight:
+    kg: 36.5
+- name:
+    en: Omanyte
+    ja: オムナイト
+    ko: 암나이트
+  generation: 1
+  type:
+    - Rock
+    - Water
+  height:
+    m: 0.4
+  weight:
+    kg: 7.5
+- name:
+    en: Omastar
+    ja: オムスター
+    ko: 암스타
+  generation: 1
+  type:
+    - Rock
+    - Water
+  height:
+    m: 1
+  weight:
+    kg: 35
+- name:
+    en: Kabuto
+    ja: カブト
+    ko: 투구
+  generation: 1
+  type:
+    - Rock
+    - Water
+  height:
+    m: 0.5
+  weight:
+    kg: 11.5
+- name:
+    en: Kabutops
+    ja: カブトプス
+    ko: 투구푸스
+  generation: 1
+  type:
+    - Rock
+    - Water
+  height:
+    m: 1.3
+  weight:
+    kg: 40.5
+- name:
+    en: Aerodactyl
+    ja: プテラ
+    ko: 프테라
+  generation: 1
+  type:
+    - Rock
+    - Flying
+  height:
+    m: 1.8
+  weight:
+    kg: 59
+- name:
+    en: Mega Aerodactyl
+    ja: メガプテラ
+    ko: 메가프테라
+  generation: 6
+  type:
+    - Rock
+    - Flying
+  height:
+    m: 2.1
+  weight:
+    kg: 79
+- name:
+    en: Snorlax
+    ja: カビゴン
+    ko: 잠만보
+  generation: 1
+  type:
+    - Normal
+  height:
+    m: 2.1
+  weight:
+    kg: 460
+- name:
+    en: Articuno
+    ja: フリーザー
+    ko: 프리져
+  generation: 1
+  type:
+    - Ice
+    - Flying
+  height:
+    m: 1.7
+  weight:
+    kg: 55.4
+- name:
+    en: Galarian Articuno
+    ja: ガラルフリーザー
+    ko: 가라르 프리져
+  generation: 8
+  type:
+    - Psychic
+    - Flying
+  height:
+    m: 1.7
+  weight:
+    kg: 50.9
+- name:
+    en: Zapdos
+    ja: サンダー
+    ko: 썬더
+  generation: 1
+  type:
+    - Electric
+    - Flying
+  height:
+    m: 1.6
+  weight:
+    kg: 52.6
+- name:
+    en: Galarian Zapdos
+    ja: ガラルサンダー
+    ko: 가라르 썬더
+  generation: 8
+  type:
+    - Fighting
+    - Flying
+  height:
+    m: 1.6
+  weight:
+    kg: 58.2
+- name:
+    en: Moltres
+    ja: ファイヤー
+    ko: 파이어
+  generation: 1
+  type:
+    - Fire
+    - Flying
+  height:
+    m: 2
+  weight:
+    kg: 60
+- name:
+    en: Galarian Moltres
+    ja: ガラルファイヤー
+    ko: 가라르 파이어
+  generation: 8
+  type:
+    - Dark
+    - Flying
+  height:
+    m: 2
+  weight:
+    kg: 66
+- name:
+    en: Dratini
+    ja: ミニリュウ
+    ko: 미뇽
+  generation: 1
+  type:
+    - Dragon
+  height:
+    m: 1.8
+  weight:
+    kg: 3.3
+- name:
+    en: Dragonair
+    ja: ハクリュー
+    ko: 신뇽
+  generation: 1
+  type:
+    - Dragon
+  height:
+    m: 4
+  weight:
+    kg: 16.5
+- name:
+    en: Dragonite
+    ja: カイリュー
+    ko: 망나뇽
+  generation: 1
+  type:
+    - Dragon
+    - Flying
+  height:
+    m: 2.2
+  weight:
+    kg: 210
+- name:
+    en: Mewtwo
+    ja: ミュウツー
+    ko: 뮤츠
+  generation: 1
+  type:
+    - Psychic
+  height:
+    m: 2
+  weight:
+    kg: 122
+- name:
+    en: Mega Mewtwo X
+    ja: メガミュウツーX
+    ko: 메가뮤츠X
+  generation: 6
+  type:
+    - Psychic
+    - Fighting
+  height:
+    m: 2.3
+  weight:
+    kg: 127
+- name:
+    en: Mega Mewtwo Y
+    ja: メガミュウツーY
+    ko: 메가뮤츠Y
+  generation: 6
+  type:
+    - Psychic
+  height:
+    m: 1.5
+  weight:
+    kg: 33
+- name:
+    en: Mew
+    ja: ミュウ
+    ko: 뮤
+  generation: 1
+  type:
+    - Psychic
+  height:
+    m: 0.4
+  weight:
+    kg: 4
+- name:
+    en: Chikorita
+    ja: チコリータ
+    ko: 치코리타
+  generation: 2
+  type:
+    - Grass
+  height:
+    m: 0.9
+  weight:
+    kg: 6.4
+- name:
+    en: Bayleef
+    ja: ベイリーフ
+    ko: 베이리프
+  generation: 2
+  type:
+    - Grass
+  height:
+    m: 1.2
+  weight:
+    kg: 15.8
+- name:
+    en: Meganium
+    ja: メガニウム
+    ko: 메가니움
+  generation: 2
+  type:
+    - Grass
+  height:
+    m: 1.8
+  weight:
+    kg: 100.5
+- name:
+    en: Cyndaquil
+    ja: ヒノアラシ
+    ko: 브케인
+  generation: 2
+  type:
+    - Fire
+  height:
+    m: 0.5
+  weight:
+    kg: 7.9
+- name:
+    en: Quilava
+    ja: マグマラシ
+    ko: 마그케인
+  generation: 2
+  type:
+    - Fire
+  height:
+    m: 0.9
+  weight:
+    kg: 19
+- name:
+    en: Typhlosion
+    ja: バクフーン
+    ko: 블레이범
+  generation: 2
+  type:
+    - Fire
+  height:
+    m: 1.7
+  weight:
+    kg: 79.5
+- name:
+    en: Hisuian Typhlosion
+    ja: ヒスイバクフーン
+    ko: 히스이 블레이범
+  generation: 8
+  type:
+    - Fire
+    - Ghost
+  height:
+    m: 1.6
+  weight:
+    kg: 69.8
+- name:
+    en: Totodile
+    ja: ワニノコ
+    ko: 리아코
+  generation: 2
+  type:
+    - Water
+  height:
+    m: 0.6
+  weight:
+    kg: 9.5
+- name:
+    en: Croconaw
+    ja: アリゲイツ
+    ko: 엘리게이
+  generation: 2
+  type:
+    - Water
+  height:
+    m: 1.1
+  weight:
+    kg: 25
+- name:
+    en: Feraligatr
+    ja: オーダイル
+    ko: 장크로다일
+  generation: 2
+  type:
+    - Water
+  height:
+    m: 2.3
+  weight:
+    kg: 88.8
+- name:
+    en: Sentret
+    ja: オタチ
+    ko: 꼬리선
+  generation: 2
+  type:
+    - Normal
+  height:
+    m: 0.8
+  weight:
+    kg: 6
+- name:
+    en: Furret
+    ja: オオタチ
+    ko: 다꼬리
+  generation: 2
+  type:
+    - Normal
+  height:
+    m: 1.8
+  weight:
+    kg: 32.5
+- name:
+    en: Hoothoot
+    ja: ホーホー
+    ko: 부우부
+  generation: 2
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.7
+  weight:
+    kg: 21.2
+- name:
+    en: Noctowl
+    ja: ヨルノズク
+    ko: 야부엉
+  generation: 2
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 1.6
+  weight:
+    kg: 40.8
+- name:
+    en: Ledyba
+    ja: レディバ
+    ko: 레디바
+  generation: 2
+  type:
+    - Bug
+    - Flying
+  height:
+    m: 1
+  weight:
+    kg: 10.8
+- name:
+    en: Ledian
+    ja: レディアン
+    ko: 레디안
+  generation: 2
+  type:
+    - Bug
+    - Flying
+  height:
+    m: 1.4
+  weight:
+    kg: 35.6
+- name:
+    en: Spinarak
+    ja: イトマル
+    ko: 페이검
+  generation: 2
+  type:
+    - Bug
+    - Poison
+  height:
+    m: 0.5
+  weight:
+    kg: 8.5
+- name:
+    en: Ariados
+    ja: アリアドス
+    ko: 아리아도스
+  generation: 2
+  type:
+    - Bug
+    - Poison
+  height:
+    m: 1.1
+  weight:
+    kg: 33.5
+- name:
+    en: Crobat
+    ja: クロバット
+    ko: 크로뱃
+  generation: 2
+  type:
+    - Poison
+    - Flying
+  height:
+    m: 1.8
+  weight:
+    kg: 75
+- name:
+    en: Chinchou
+    ja: チョンチー
+    ko: 초라기
+  generation: 2
+  type:
+    - Water
+    - Electric
+  height:
+    m: 0.5
+  weight:
+    kg: 12
+- name:
+    en: Lanturn
+    ja: ランターン
+    ko: 랜턴
+  generation: 2
+  type:
+    - Water
+    - Electric
+  height:
+    m: 1.2
+  weight:
+    kg: 22.5
+- name:
+    en: Pichu
+    ja: ピチュー
+    ko: 피츄
+  generation: 2
+  type:
+    - Electric
+  height:
+    m: 0.3
+  weight:
+    kg: 2
+- name:
+    en: Cleffa
+    ja: ピィ
+    ko: 삐
+  generation: 2
+  type:
+    - Fairy
+  height:
+    m: 0.3
+  weight:
+    kg: 3
+- name:
+    en: Igglybuff
+    ja: ププリン
+    ko: 푸푸린
+  generation: 2
+  type:
+    - Normal
+    - Fairy
+  height:
+    m: 0.3
+  weight:
+    kg: 1
+- name:
+    en: Togepi
+    ja: トゲピー
+    ko: 토게피
+  generation: 2
+  type:
+    - Fairy
+  height:
+    m: 0.3
+  weight:
+    kg: 1.5
+- name:
+    en: Togetic
+    ja: トゲチック
+    ko: 토게틱
+  generation: 2
+  type:
+    - Fairy
+    - Flying
+  height:
+    m: 0.6
+  weight:
+    kg: 3.2
+- name:
+    en: Natu
+    ja: ネイティ
+    ko: 네이티
+  generation: 2
+  type:
+    - Psychic
+    - Flying
+  height:
+    m: 0.2
+  weight:
+    kg: 2
+- name:
+    en: Xatu
+    ja: ネイティオ
+    ko: 네이티오
+  generation: 2
+  type:
+    - Psychic
+    - Flying
+  height:
+    m: 1.5
+  weight:
+    kg: 15
+- name:
+    en: Mareep
+    ja: メリープ
+    ko: 메리프
+  generation: 2
+  type:
+    - Electric
+  height:
+    m: 0.6
+  weight:
+    kg: 7.8
+- name:
+    en: Flaaffy
+    ja: モココ
+    ko: 보송송
+  generation: 2
+  type:
+    - Electric
+  height:
+    m: 0.8
+  weight:
+    kg: 13.3
+- name:
+    en: Ampharos
+    ja: デンリュウ
+    ko: 전룡
+  generation: 2
+  type:
+    - Electric
+  height:
+    m: 1.4
+  weight:
+    kg: 61.5
+- name:
+    en: Mega Ampharos
+    ja: メガデンリュウ
+    ko: 메가전룡
+  generation: 6
+  type:
+    - Electric
+    - Dragon
+  height:
+    m: 1.4
+  weight:
+    kg: 61.5
+- name:
+    en: Bellossom
+    ja: キレイハナ
+    ko: 아르코
+  generation: 2
+  type:
+    - Grass
+  height:
+    m: 0.4
+  weight:
+    kg: 5.8
+- name:
+    en: Marill
+    ja: マリル
+    ko: 마릴
+  generation: 2
+  type:
+    - Water
+    - Fairy
+  height:
+    m: 0.4
+  weight:
+    kg: 8.5
+- name:
+    en: Azumarill
+    ja: マリルリ
+    ko: 마릴리
+  generation: 2
+  type:
+    - Water
+    - Fairy
+  height:
+    m: 0.8
+  weight:
+    kg: 28.5
+- name:
+    en: Sudowoodo
+    ja: ウソッキー
+    ko: 꼬지모
+  generation: 2
+  type:
+    - Rock
+  height:
+    m: 1.2
+  weight:
+    kg: 38
+- name:
+    en: Politoed
+    ja: ニョロトノ
+    ko: 왕구리
+  generation: 2
+  type:
+    - Water
+  height:
+    m: 1.1
+  weight:
+    kg: 33.9
+- name:
+    en: Hoppip
+    ja: ハネッコ
+    ko: 통통코
+  generation: 2
+  type:
+    - Grass
+    - Flying
+  height:
+    m: 0.4
+  weight:
+    kg: 0.5
+- name:
+    en: Skiploom
+    ja: ポポッコ
+    ko: 두코
+  generation: 2
+  type:
+    - Grass
+    - Flying
+  height:
+    m: 0.6
+  weight:
+    kg: 1
+- name:
+    en: Jumpluff
+    ja: ワタッコ
+    ko: 솜솜코
+  generation: 2
+  type:
+    - Grass
+    - Flying
+  height:
+    m: 0.8
+  weight:
+    kg: 3
+- name:
+    en: Aipom
+    ja: エイパム
+    ko: 에이팜
+  generation: 2
+  type:
+    - Normal
+  height:
+    m: 0.8
+  weight:
+    kg: 11.5
+- name:
+    en: Sunkern
+    ja: ヒマナッツ
+    ko: 해너츠
+  generation: 2
+  type:
+    - Grass
+  height:
+    m: 0.3
+  weight:
+    kg: 1.8
+- name:
+    en: Sunflora
+    ja: キマワリ
+    ko: 해루미
+  generation: 2
+  type:
+    - Grass
+  height:
+    m: 0.8
+  weight:
+    kg: 8.5
+- name:
+    en: Yanma
+    ja: ヤンヤンマ
+    ko: 왕자리
+  generation: 2
+  type:
+    - Bug
+    - Flying
+  height:
+    m: 1.2
+  weight:
+    kg: 38
+- name:
+    en: Wooper
+    ja: ウパー
+    ko: 우파
+  generation: 2
+  type:
+    - Water
+    - Ground
+  height:
+    m: 0.4
+  weight:
+    kg: 8.5
+- name:
+    en: Quagsire
+    ja: ヌオー
+    ko: 누오
+  generation: 2
+  type:
+    - Water
+    - Ground
+  height:
+    m: 1.4
+  weight:
+    kg: 75
+- name:
+    en: Espeon
+    ja: エーフィ
+    ko: 에브이
+  generation: 2
+  type:
+    - Psychic
+  height:
+    m: 0.9
+  weight:
+    kg: 26.5
+- name:
+    en: Umbreon
+    ja: ブラッキー
+    ko: 블래키
+  generation: 2
+  type:
+    - Dark
+  height:
+    m: 1
+  weight:
+    kg: 27
+- name:
+    en: Murkrow
+    ja: ヤミカラス
+    ko: 니로우
+  generation: 2
+  type:
+    - Dark
+    - Flying
+  height:
+    m: 0.5
+  weight:
+    kg: 2.1
+- name:
+    en: Slowking
+    ja: ヤドキング
+    ko: 야도킹
+  generation: 2
+  type:
+    - Water
+    - Psychic
+  height:
+    m: 2
+  weight:
+    kg: 79.5
+- name:
+    en: Galarian Slowking
+    ja: ガラルヤドキング
+    ko: 가라르 야도킹
+  generation: 8
+  type:
+    - Poison
+    - Psychic
+  height:
+    m: 1.8
+  weight:
+    kg: 79.5
+- name:
+    en: Misdreavus
+    ja: ムウマ
+    ko: 무우마
+  generation: 2
+  type:
+    - Ghost
+  height:
+    m: 0.7
+  weight:
+    kg: 1
+- name:
+    en: Unown
+    ja: アンノーン
+    ko: 안농
+  generation: 2
+  type:
+    - Psychic
+  height:
+    m: 0.5
+  weight:
+    kg: 5
+- name:
+    en: Wobbuffet
+    ja: ソーナンス
+    ko: 마자용
+  generation: 2
+  type:
+    - Psychic
+  height:
+    m: 1.3
+  weight:
+    kg: 28.5
+- name:
+    en: Girafarig
+    ja: キリンリキ
+    ko: 키링키
+  generation: 2
+  type:
+    - Normal
+    - Psychic
+  height:
+    m: 1.5
+  weight:
+    kg: 41.5
+- name:
+    en: Pineco
+    ja: クヌギダマ
+    ko: 피콘
+  generation: 2
+  type:
+    - Bug
+  height:
+    m: 0.6
+  weight:
+    kg: 7.2
+- name:
+    en: Forretress
+    ja: フォレトス
+    ko: 쏘콘
+  generation: 2
+  type:
+    - Bug
+    - Steel
+  height:
+    m: 1.2
+  weight:
+    kg: 125.8
+- name:
+    en: Dunsparce
+    ja: ノコッチ
+    ko: 노고치
+  generation: 2
+  type:
+    - Normal
+  height:
+    m: 1.5
+  weight:
+    kg: 14
+- name:
+    en: Gligar
+    ja: グライガー
+    ko: 글라이거
+  generation: 2
+  type:
+    - Ground
+    - Flying
+  height:
+    m: 1.1
+  weight:
+    kg: 64.8
+- name:
+    en: Steelix
+    ja: ハガネール
+    ko: 강철톤
+  generation: 2
+  type:
+    - Steel
+    - Ground
+  height:
+    m: 9.2
+  weight:
+    kg: 400
+- name:
+    en: Mega Steelix
+    ja: メガハガネール
+    ko: 메가강철톤
+  generation: 6
+  type:
+    - Steel
+    - Ground
+  height:
+    m: 10.5
+  weight:
+    kg: 740
+- name:
+    en: Snubbull
+    ja: ブルー
+    ko: 블루
+  generation: 2
+  type:
+    - Fairy
+  height:
+    m: 0.6
+  weight:
+    kg: 7.8
+- name:
+    en: Granbull
+    ja: グランブル
+    ko: 그랑블루
+  generation: 2
+  type:
+    - Fairy
+  height:
+    m: 1.4
+  weight:
+    kg: 48.7
+- name:
+    en: Qwilfish
+    ja: ハリーセン
+    ko: 침바루
+  generation: 2
+  type:
+    - Water
+    - Poison
+  height:
+    m: 0.5
+  weight:
+    kg: 3.9
+- name:
+    en: Hisuian Qwilfish
+    ja: ヒスイハリーセン
+    ko: 히스이 침바루
+  generation: 8
+  type:
+    - Dark
+    - Poison
+  height:
+    m: 0.5
+  weight:
+    kg: 3.9
+- name:
+    en: Scizor
+    ja: ハッサム
+    ko: 핫삼
+  generation: 2
+  type:
+    - Bug
+    - Steel
+  height:
+    m: 1.8
+  weight:
+    kg: 118
+- name:
+    en: Mega Scizor
+    ja: メガハッサム
+    ko: 메가핫삼
+  generation: 6
+  type:
+    - Bug
+    - Steel
+  height:
+    m: 2
+  weight:
+    kg: 125
+- name:
+    en: Shuckle
+    ja: ツボツボ
+    ko: 단단지
+  generation: 2
+  type:
+    - Bug
+    - Rock
+  height:
+    m: 0.6
+  weight:
+    kg: 20.5
+- name:
+    en: Heracross
+    ja: ヘラクロス
+    ko: 헤라크로스
+  generation: 2
+  type:
+    - Bug
+    - Fighting
+  height:
+    m: 1.5
+  weight:
+    kg: 54
+- name:
+    en: Mega Heracross
+    ja: メガヘラクロス
+    ko: 메가헤라크로스
+  generation: 6
+  type:
+    - Bug
+    - Fighting
+  height:
+    m: 1.7
+  weight:
+    kg: 62.5
+- name:
+    en: Sneasel
+    ja: ニューラ
+    ko: 포푸니
+  generation: 2
+  type:
+    - Dark
+    - Ice
+  height:
+    m: 0.9
+  weight:
+    kg: 28
+- name:
+    en: Hisuian Sneasel
+    ja: ヒスイニューラ
+    ko: 히스이 포푸니
+  generation: 8
+  type:
+    - Fighting
+    - Poison
+  height:
+    m: 0.9
+  weight:
+    kg: 27
+- name:
+    en: Teddiursa
+    ja: ヒメグマ
+    ko: 깜지곰
+  generation: 2
+  type:
+    - Normal
+  height:
+    m: 0.6
+  weight:
+    kg: 8.8
+- name:
+    en: Ursaring
+    ja: リングマ
+    ko: 링곰
+  generation: 2
+  type:
+    - Normal
+  height:
+    m: 1.8
+  weight:
+    kg: 125.8
+- name:
+    en: Slugma
+    ja: マグマッグ
+    ko: 마그마그
+  generation: 2
+  type:
+    - Fire
+  height:
+    m: 0.7
+  weight:
+    kg: 35
+- name:
+    en: Magcargo
+    ja: マグカルゴ
+    ko: 마그카르고
+  generation: 2
+  type:
+    - Fire
+    - Rock
+  height:
+    m: 0.8
+  weight:
+    kg: 55
+- name:
+    en: Swinub
+    ja: ウリムー
+    ko: 꾸꾸리
+  generation: 2
+  type:
+    - Ice
+    - Ground
+  height:
+    m: 0.4
+  weight:
+    kg: 6.5
+- name:
+    en: Piloswine
+    ja: イノムー
+    ko: 메꾸리
+  generation: 2
+  type:
+    - Ice
+    - Ground
+  height:
+    m: 1.1
+  weight:
+    kg: 55.8
+- name:
+    en: Corsola
+    ja: サニーゴ
+    ko: 코산호
+  generation: 2
+  type:
+    - Water
+    - Rock
+  height:
+    m: 0.6
+  weight:
+    kg: 5
+- name:
+    en: Galarian Corsola
+    ja: ガラルサニーゴ
+    ko: 가라르 코산호
+  generation: 8
+  type:
+    - Ghost
+  height:
+    m: 0.6
+  weight:
+    kg: 0.5
+- name:
+    en: Remoraid
+    ja: テッポウオ
+    ko: 총어
+  generation: 2
+  type:
+    - Water
+  height:
+    m: 0.6
+  weight:
+    kg: 12
+- name:
+    en: Octillery
+    ja: オクタン
+    ko: 대포무노
+  generation: 2
+  type:
+    - Water
+  height:
+    m: 0.9
+  weight:
+    kg: 28.5
+- name:
+    en: Delibird
+    ja: デリバード
+    ko: 딜리버드
+  generation: 2
+  type:
+    - Ice
+    - Flying
+  height:
+    m: 0.9
+  weight:
+    kg: 16
+- name:
+    en: Mantine
+    ja: マンタイン
+    ko: 만타인
+  generation: 2
+  type:
+    - Water
+    - Flying
+  height:
+    m: 2.1
+  weight:
+    kg: 220
+- name:
+    en: Skarmory
+    ja: エアームド
+    ko: 무장조
+  generation: 2
+  type:
+    - Steel
+    - Flying
+  height:
+    m: 1.7
+  weight:
+    kg: 50.5
+- name:
+    en: Houndour
+    ja: デルビル
+    ko: 델빌
+  generation: 2
+  type:
+    - Dark
+    - Fire
+  height:
+    m: 0.6
+  weight:
+    kg: 10.8
+- name:
+    en: Houndoom
+    ja: ヘルガー
+    ko: 헬가
+  generation: 2
+  type:
+    - Dark
+    - Fire
+  height:
+    m: 1.4
+  weight:
+    kg: 35
+- name:
+    en: Mega Houndoom
+    ja: メガヘルガー
+    ko: 메가헬가
+  generation: 6
+  type:
+    - Dark
+    - Fire
+  height:
+    m: 1.9
+  weight:
+    kg: 49.5
+- name:
+    en: Kingdra
+    ja: キングドラ
+    ko: 킹드라
+  generation: 2
+  type:
+    - Water
+    - Dragon
+  height:
+    m: 1.8
+  weight:
+    kg: 152
+- name:
+    en: Phanpy
+    ja: ゴマゾウ
+    ko: 코코리
+  generation: 2
+  type:
+    - Ground
+  height:
+    m: 0.5
+  weight:
+    kg: 33.5
+- name:
+    en: Donphan
+    ja: ドンファン
+    ko: 코리갑
+  generation: 2
+  type:
+    - Ground
+  height:
+    m: 1.1
+  weight:
+    kg: 120
+- name:
+    en: Porygon2
+    ja: ポリゴン2
+    ko: 폴리곤2
+  generation: 2
+  type:
+    - Normal
+  height:
+    m: 0.6
+  weight:
+    kg: 32.5
+- name:
+    en: Stantler
+    ja: オドシシ
+    ko: 노라키
+  generation: 2
+  type:
+    - Normal
+  height:
+    m: 1.4
+  weight:
+    kg: 71.2
+- name:
+    en: Smeargle
+    ja: ドーブル
+    ko: 루브도
+  generation: 2
+  type:
+    - Normal
+  height:
+    m: 1.2
+  weight:
+    kg: 58
+- name:
+    en: Tyrogue
+    ja: バルキー
+    ko: 배루키
+  generation: 2
+  type:
+    - Fighting
+  height:
+    m: 0.7
+  weight:
+    kg: 21
+- name:
+    en: Hitmontop
+    ja: カポエラー
+    ko: 카포에라
+  generation: 2
+  type:
+    - Fighting
+  height:
+    m: 1.4
+  weight:
+    kg: 48
+- name:
+    en: Smoochum
+    ja: ムチュール
+    ko: 뽀뽀라
+  generation: 2
+  type:
+    - Ice
+    - Psychic
+  height:
+    m: 0.4
+  weight:
+    kg: 6
+- name:
+    en: Elekid
+    ja: エレキッド
+    ko: 에레키드
+  generation: 2
+  type:
+    - Electric
+  height:
+    m: 0.6
+  weight:
+    kg: 23.5
+- name:
+    en: Magby
+    ja: ブビィ
+    ko: 마그비
+  generation: 2
+  type:
+    - Fire
+  height:
+    m: 0.7
+  weight:
+    kg: 21.4
+- name:
+    en: Miltank
+    ja: ミルタンク
+    ko: 밀탱크
+  generation: 2
+  type:
+    - Normal
+  height:
+    m: 1.2
+  weight:
+    kg: 75.5
+- name:
+    en: Blissey
+    ja: ハピナス
+    ko: 해피너스
+  generation: 2
+  type:
+    - Normal
+  height:
+    m: 1.5
+  weight:
+    kg: 46.8
+- name:
+    en: Raikou
+    ja: ライコウ
+    ko: 라이코
+  generation: 2
+  type:
+    - Electric
+  height:
+    m: 1.9
+  weight:
+    kg: 178
+- name:
+    en: Entei
+    ja: エンテイ
+    ko: 앤테이
+  generation: 2
+  type:
+    - Fire
+  height:
+    m: 2.1
+  weight:
+    kg: 198
+- name:
+    en: Suicune
+    ja: スイクン
+    ko: 스이쿤
+  generation: 2
+  type:
+    - Water
+  height:
+    m: 2
+  weight:
+    kg: 187
+- name:
+    en: Larvitar
+    ja: ヨーギラス
+    ko: 애버라스
+  generation: 2
+  type:
+    - Rock
+    - Ground
+  height:
+    m: 0.6
+  weight:
+    kg: 72
+- name:
+    en: Pupitar
+    ja: サナギラス
+    ko: 데기라스
+  generation: 2
+  type:
+    - Rock
+    - Ground
+  height:
+    m: 1.2
+  weight:
+    kg: 152
+- name:
+    en: Tyranitar
+    ja: バンギラス
+    ko: 마기라스
+  generation: 2
+  type:
+    - Rock
+    - Dark
+  height:
+    m: 2
+  weight:
+    kg: 202
+- name:
+    en: Mega Tyranitar
+    ja: メガバンギラス
+    ko: 메가마기라스
+  generation: 6
+  type:
+    - Rock
+    - Dark
+  height:
+    m: 2.5
+  weight:
+    kg: 255
+- name:
+    en: Lugia
+    ja: ルギア
+    ko: 루기아
+  generation: 2
+  type:
+    - Psychic
+    - Flying
+  height:
+    m: 5.2
+  weight:
+    kg: 216
+- name:
+    en: Ho-Oh
+    ja: ホウオウ
+    ko: 칠색조
+  generation: 2
+  type:
+    - Fire
+    - Flying
+  height:
+    m: 3.8
+  weight:
+    kg: 199
+- name:
+    en: Celebi
+    ja: セレビィ
+    ko: 세레비
+  generation: 2
+  type:
+    - Psychic
+    - Grass
+  height:
+    m: 0.6
+  weight:
+    kg: 5
+- name:
+    en: Treecko
+    ja: キモリ
+    ko: 나무지기
+  generation: 3
+  type:
+    - Grass
+  height:
+    m: 0.5
+  weight:
+    kg: 5
+- name:
+    en: Grovyle
+    ja: ジュプトル
+    ko: 나무돌이
+  generation: 3
+  type:
+    - Grass
+  height:
+    m: 0.9
+  weight:
+    kg: 21.6
+- name:
+    en: Sceptile
+    ja: ジュカイン
+    ko: 나무킹
+  generation: 3
+  type:
+    - Grass
+  height:
+    m: 1.7
+  weight:
+    kg: 52.2
+- name:
+    en: Mega Sceptile
+    ja: メガジュカイン
+    ko: 메가나무킹
+  generation: 6
+  type:
+    - Grass
+    - Dragon
+  height:
+    m: 1.9
+  weight:
+    kg: 55.2
+- name:
+    en: Torchic
+    ja: アチャモ
+    ko: 아차모
+  generation: 3
+  type:
+    - Fire
+  height:
+    m: 0.4
+  weight:
+    kg: 2.5
+- name:
+    en: Combusken
+    ja: ワカシャモ
+    ko: 영치코
+  generation: 3
+  type:
+    - Fire
+    - Fighting
+  height:
+    m: 0.9
+  weight:
+    kg: 19.5
+- name:
+    en: Blaziken
+    ja: バシャーモ
+    ko: 번치코
+  generation: 3
+  type:
+    - Fire
+    - Fighting
+  height:
+    m: 1.9
+  weight:
+    kg: 52
+- name:
+    en: Mega Blaziken
+    ja: メガバシャーモ
+    ko: 메가번치코
+  generation: 6
+  type:
+    - Fire
+    - Fighting
+  height:
+    m: 1.9
+  weight:
+    kg: 52
+- name:
+    en: Mudkip
+    ja: ミズゴロウ
+    ko: 물짱이
+  generation: 3
+  type:
+    - Water
+  height:
+    m: 0.4
+  weight:
+    kg: 7.6
+- name:
+    en: Marshtomp
+    ja: ヌマクロー
+    ko: 늪짱이
+  generation: 3
+  type:
+    - Water
+    - Ground
+  height:
+    m: 0.7
+  weight:
+    kg: 28
+- name:
+    en: Swampert
+    ja: ラグラージ
+    ko: 대짱이
+  generation: 3
+  type:
+    - Water
+    - Ground
+  height:
+    m: 1.5
+  weight:
+    kg: 81.9
+- name:
+    en: Mega Swampert
+    ja: メガラグラージ
+    ko: 메가대짱이
+  generation: 6
+  type:
+    - Water
+    - Ground
+  height:
+    m: 1.9
+  weight:
+    kg: 102
+- name:
+    en: Poochyena
+    ja: ポチエナ
+    ko: 포챠나
+  generation: 3
+  type:
+    - Dark
+  height:
+    m: 0.5
+  weight:
+    kg: 13.6
+- name:
+    en: Mightyena
+    ja: グラエナ
+    ko: 그라에나
+  generation: 3
+  type:
+    - Dark
+  height:
+    m: 1
+  weight:
+    kg: 37
+- name:
+    en: Zigzagoon
+    ja: ジグザグマ
+    ko: 지그제구리
+  generation: 3
+  type:
+    - Normal
+  height:
+    m: 0.4
+  weight:
+    kg: 17.5
+- name:
+    en: Galarian Zigzagoon
+    ja: ガラルジグザグマ
+    ko: 가라르 지그제구리
+  generation: 8
+  type:
+    - Dark
+    - Normal
+  height:
+    m: 0.4
+  weight:
+    kg: 17.5
+- name:
+    en: Linoone
+    ja: マッスグマ
+    ko: 직구리
+  generation: 3
+  type:
+    - Normal
+  height:
+    m: 0.5
+  weight:
+    kg: 32.5
+- name:
+    en: Galarian Linoone
+    ja: ガラルマッスグマ
+    ko: 가라르 직구리
+  generation: 8
+  type:
+    - Dark
+    - Normal
+  height:
+    m: 0.5
+  weight:
+    kg: 32.5
+- name:
+    en: Wurmple
+    ja: ケムッソ
+    ko: 개무소
+  generation: 3
+  type:
+    - Bug
+  height:
+    m: 0.3
+  weight:
+    kg: 3.6
+- name:
+    en: Silcoon
+    ja: カラサリス
+    ko: 실쿤
+  generation: 3
+  type:
+    - Bug
+  height:
+    m: 0.6
+  weight:
+    kg: 10
+- name:
+    en: Beautifly
+    ja: アゲハント
+    ko: 뷰티플라이
+  generation: 3
+  type:
+    - Bug
+    - Flying
+  height:
+    m: 1
+  weight:
+    kg: 28.4
+- name:
+    en: Cascoon
+    ja: マユルド
+    ko: 카스쿤
+  generation: 3
+  type:
+    - Bug
+  height:
+    m: 0.7
+  weight:
+    kg: 11.5
+- name:
+    en: Dustox
+    ja: ドクケイル
+    ko: 독케일
+  generation: 3
+  type:
+    - Bug
+    - Poison
+  height:
+    m: 1.2
+  weight:
+    kg: 31.6
+- name:
+    en: Lotad
+    ja: ハスボー
+    ko: 연꽃몬
+  generation: 3
+  type:
+    - Water
+    - Grass
+  height:
+    m: 0.5
+  weight:
+    kg: 2.6
+- name:
+    en: Lombre
+    ja: ハスブレロ
+    ko: 로토스
+  generation: 3
+  type:
+    - Water
+    - Grass
+  height:
+    m: 1.2
+  weight:
+    kg: 32.5
+- name:
+    en: Ludicolo
+    ja: ルンパッパ
+    ko: 로파파
+  generation: 3
+  type:
+    - Water
+    - Grass
+  height:
+    m: 1.5
+  weight:
+    kg: 55
+- name:
+    en: Seedot
+    ja: タネボー
+    ko: 도토링
+  generation: 3
+  type:
+    - Grass
+  height:
+    m: 0.5
+  weight:
+    kg: 4
+- name:
+    en: Nuzleaf
+    ja: コノハナ
+    ko: 잎새코
+  generation: 3
+  type:
+    - Grass
+    - Dark
+  height:
+    m: 1
+  weight:
+    kg: 28
+- name:
+    en: Shiftry
+    ja: ダーテング
+    ko: 다탱구
+  generation: 3
+  type:
+    - Grass
+    - Dark
+  height:
+    m: 1.3
+  weight:
+    kg: 59.6
+- name:
+    en: Taillow
+    ja: スバメ
+    ko: 테일로
+  generation: 3
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.3
+  weight:
+    kg: 2.3
+- name:
+    en: Swellow
+    ja: オオスバメ
+    ko: 스왈로
+  generation: 3
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.7
+  weight:
+    kg: 19.8
+- name:
+    en: Wingull
+    ja: キャモメ
+    ko: 갈모매
+  generation: 3
+  type:
+    - Water
+    - Flying
+  height:
+    m: 0.6
+  weight:
+    kg: 9.5
+- name:
+    en: Pelipper
+    ja: ペリッパー
+    ko: 패리퍼
+  generation: 3
+  type:
+    - Water
+    - Flying
+  height:
+    m: 1.2
+  weight:
+    kg: 28
+- name:
+    en: Ralts
+    ja: ラルトス
+    ko: 랄토스
+  generation: 3
+  type:
+    - Psychic
+    - Fairy
+  height:
+    m: 0.4
+  weight:
+    kg: 6.6
+- name:
+    en: Kirlia
+    ja: キルリア
+    ko: 킬리아
+  generation: 3
+  type:
+    - Psychic
+    - Fairy
+  height:
+    m: 0.8
+  weight:
+    kg: 20.2
+- name:
+    en: Gardevoir
+    ja: サーナイト
+    ko: 가디안
+  generation: 3
+  type:
+    - Psychic
+    - Fairy
+  height:
+    m: 1.6
+  weight:
+    kg: 48.4
+- name:
+    en: Mega Gardevoir
+    ja: メガサーナイト
+    ko: 메가가디안
+  generation: 6
+  type:
+    - Psychic
+    - Fairy
+  height:
+    m: 1.6
+  weight:
+    kg: 48.4
+- name:
+    en: Surskit
+    ja: アメタマ
+    ko: 비구술
+  generation: 3
+  type:
+    - Bug
+    - Water
+  height:
+    m: 0.5
+  weight:
+    kg: 1.7
+- name:
+    en: Masquerain
+    ja: アメモース
+    ko: 비나방
+  generation: 3
+  type:
+    - Bug
+    - Flying
+  height:
+    m: 0.8
+  weight:
+    kg: 3.6
+- name:
+    en: Shroomish
+    ja: キノココ
+    ko: 버섯꼬
+  generation: 3
+  type:
+    - Grass
+  height:
+    m: 0.4
+  weight:
+    kg: 4.5
+- name:
+    en: Breloom
+    ja: キノガッサ
+    ko: 버섯모
+  generation: 3
+  type:
+    - Grass
+    - Fighting
+  height:
+    m: 1.2
+  weight:
+    kg: 39.2
+- name:
+    en: Slakoth
+    ja: ナマケロ
+    ko: 게을로
+  generation: 3
+  type:
+    - Normal
+  height:
+    m: 0.8
+  weight:
+    kg: 24
+- name:
+    en: Vigoroth
+    ja: ヤルキモノ
+    ko: 발바로
+  generation: 3
+  type:
+    - Normal
+  height:
+    m: 1.4
+  weight:
+    kg: 46.5
+- name:
+    en: Slaking
+    ja: ケッキング
+    ko: 게을킹
+  generation: 3
+  type:
+    - Normal
+  height:
+    m: 2
+  weight:
+    kg: 130.5
+- name:
+    en: Nincada
+    ja: ツチニン
+    ko: 토중몬
+  generation: 3
+  type:
+    - Bug
+    - Ground
+  height:
+    m: 0.5
+  weight:
+    kg: 5.5
+- name:
+    en: Ninjask
+    ja: テッカニン
+    ko: 아이스크
+  generation: 3
+  type:
+    - Bug
+    - Flying
+  height:
+    m: 0.8
+  weight:
+    kg: 12
+- name:
+    en: Shedinja
+    ja: ヌケニン
+    ko: 껍질몬
+  generation: 3
+  type:
+    - Bug
+    - Ghost
+  height:
+    m: 0.8
+  weight:
+    kg: 1.2
+- name:
+    en: Whismur
+    ja: ゴニョニョ
+    ko: 소곤룡
+  generation: 3
+  type:
+    - Normal
+  height:
+    m: 0.6
+  weight:
+    kg: 16.3
+- name:
+    en: Loudred
+    ja: ドゴーム
+    ko: 노공룡
+  generation: 3
+  type:
+    - Normal
+  height:
+    m: 1
+  weight:
+    kg: 40.5
+- name:
+    en: Exploud
+    ja: バクオング
+    ko: 폭음룡
+  generation: 3
+  type:
+    - Normal
+  height:
+    m: 1.5
+  weight:
+    kg: 84
+- name:
+    en: Makuhita
+    ja: マクノシタ
+    ko: 마크탕
+  generation: 3
+  type:
+    - Fighting
+  height:
+    m: 1
+  weight:
+    kg: 86.4
+- name:
+    en: Hariyama
+    ja: ハリテヤマ
+    ko: 하리뭉
+  generation: 3
+  type:
+    - Fighting
+  height:
+    m: 2.3
+  weight:
+    kg: 253.8
+- name:
+    en: Azurill
+    ja: ルリリ
+    ko: 루리리
+  generation: 3
+  type:
+    - Normal
+    - Fairy
+  height:
+    m: 0.2
+  weight:
+    kg: 2
+- name:
+    en: Nosepass
+    ja: ノズパス
+    ko: 코코파스
+  generation: 3
+  type:
+    - Rock
+  height:
+    m: 1
+  weight:
+    kg: 97
+- name:
+    en: Skitty
+    ja: エネコ
+    ko: 에나비
+  generation: 3
+  type:
+    - Normal
+  height:
+    m: 0.6
+  weight:
+    kg: 11
+- name:
+    en: Delcatty
+    ja: エネコロロ
+    ko: 델케티
+  generation: 3
+  type:
+    - Normal
+  height:
+    m: 1.1
+  weight:
+    kg: 32.6
+- name:
+    en: Sableye
+    ja: ヤミラミ
+    ko: 깜까미
+  generation: 3
+  type:
+    - Dark
+    - Ghost
+  height:
+    m: 0.5
+  weight:
+    kg: 11
+- name:
+    en: Mega Sableye
+    ja: メガヤミラミ
+    ko: 메가깜까미
+  generation: 6
+  type:
+    - Dark
+    - Ghost
+  height:
+    m: 0.5
+  weight:
+    kg: 161
+- name:
+    en: Mawile
+    ja: クチート
+    ko: 입치트
+  generation: 3
+  type:
+    - Steel
+    - Fairy
+  height:
+    m: 0.6
+  weight:
+    kg: 11.5
+- name:
+    en: Mega Mawile
+    ja: メガクチート
+    ko: 메가입치트
+  generation: 6
+  type:
+    - Steel
+    - Fairy
+  height:
+    m: 1
+  weight:
+    kg: 23.5
+- name:
+    en: Aron
+    ja: ココドラ
+    ko: 가보리
+  generation: 3
+  type:
+    - Steel
+    - Rock
+  height:
+    m: 0.4
+  weight:
+    kg: 60
+- name:
+    en: Lairon
+    ja: コドラ
+    ko: 갱도라
+  generation: 3
+  type:
+    - Steel
+    - Rock
+  height:
+    m: 0.9
+  weight:
+    kg: 120
+- name:
+    en: Aggron
+    ja: ボスゴドラ
+    ko: 보스로라
+  generation: 3
+  type:
+    - Steel
+    - Rock
+  height:
+    m: 2.1
+  weight:
+    kg: 360
+- name:
+    en: Mega Aggron
+    ja: メガボスゴドラ
+    ko: 메가보스로라
+  generation: 6
+  type:
+    - Steel
+  height:
+    m: 2.2
+  weight:
+    kg: 395
+- name:
+    en: Meditite
+    ja: アサナン
+    ko: 요가랑
+  generation: 3
+  type:
+    - Fighting
+    - Psychic
+  height:
+    m: 0.6
+  weight:
+    kg: 11.2
+- name:
+    en: Medicham
+    ja: チャーレム
+    ko: 요가램
+  generation: 3
+  type:
+    - Fighting
+    - Psychic
+  height:
+    m: 1.3
+  weight:
+    kg: 31.5
+- name:
+    en: Mega Medicham
+    ja: メガチャーレム
+    ko: 메가요가램
+  generation: 6
+  type:
+    - Fighting
+    - Psychic
+  height:
+    m: 1.3
+  weight:
+    kg: 31.5
+- name:
+    en: Electrike
+    ja: ラクライ
+    ko: 썬더라이
+  generation: 3
+  type:
+    - Electric
+  height:
+    m: 0.6
+  weight:
+    kg: 15.2
+- name:
+    en: Manectric
+    ja: ライボルト
+    ko: 썬더볼트
+  generation: 3
+  type:
+    - Electric
+  height:
+    m: 1.5
+  weight:
+    kg: 40.2
+- name:
+    en: Mega Manectric
+    ja: メガライボルト
+    ko: 메가썬더볼트
+  generation: 6
+  type:
+    - Electric
+  height:
+    m: 1.8
+  weight:
+    kg: 44
+- name:
+    en: Plusle
+    ja: プラスル
+    ko: 플러시
+  generation: 3
+  type:
+    - Electric
+  height:
+    m: 0.4
+  weight:
+    kg: 4.2
+- name:
+    en: Minun
+    ja: マイナン
+    ko: 마이농
+  generation: 3
+  type:
+    - Electric
+  height:
+    m: 0.4
+  weight:
+    kg: 4.2
+- name:
+    en: Volbeat
+    ja: バルビート
+    ko: 볼비트
+  generation: 3
+  type:
+    - Bug
+  height:
+    m: 0.7
+  weight:
+    kg: 17.7
+- name:
+    en: Illumise
+    ja: イルミーゼ
+    ko: 네오비트
+  generation: 3
+  type:
+    - Bug
+  height:
+    m: 0.6
+  weight:
+    kg: 17.7
+- name:
+    en: Roselia
+    ja: ロゼリア
+    ko: 로젤리아
+  generation: 3
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 0.3
+  weight:
+    kg: 2
+- name:
+    en: Gulpin
+    ja: ゴクリン
+    ko: 꼴깍몬
+  generation: 3
+  type:
+    - Poison
+  height:
+    m: 0.4
+  weight:
+    kg: 10.3
+- name:
+    en: Swalot
+    ja: マルノーム
+    ko: 꿀꺽몬
+  generation: 3
+  type:
+    - Poison
+  height:
+    m: 1.7
+  weight:
+    kg: 80
+- name:
+    en: Carvanha
+    ja: キバニア
+    ko: 샤프니아
+  generation: 3
+  type:
+    - Water
+    - Dark
+  height:
+    m: 0.8
+  weight:
+    kg: 20.8
+- name:
+    en: Sharpedo
+    ja: サメハダー
+    ko: 샤크니아
+  generation: 3
+  type:
+    - Water
+    - Dark
+  height:
+    m: 1.8
+  weight:
+    kg: 88.8
+- name:
+    en: Mega Sharpedo
+    ja: メガサメハダー
+    ko: 메가샤크니아
+  generation: 6
+  type:
+    - Water
+    - Dark
+  height:
+    m: 2.5
+  weight:
+    kg: 130.3
+- name:
+    en: Wailmer
+    ja: ホエルコ
+    ko: 고래왕자
+  generation: 3
+  type:
+    - Water
+  height:
+    m: 2
+  weight:
+    kg: 130
+- name:
+    en: Wailord
+    ja: ホエルオー
+    ko: 고래왕
+  generation: 3
+  type:
+    - Water
+  height:
+    m: 14.5
+  weight:
+    kg: 398
+- name:
+    en: Numel
+    ja: ドンメル
+    ko: 둔타
+  generation: 3
+  type:
+    - Fire
+    - Ground
+  height:
+    m: 0.7
+  weight:
+    kg: 24
+- name:
+    en: Camerupt
+    ja: バクーダ
+    ko: 폭타
+  generation: 3
+  type:
+    - Fire
+    - Ground
+  height:
+    m: 1.9
+  weight:
+    kg: 220
+- name:
+    en: Mega Camerupt
+    ja: メガバクーダ
+    ko: 메가폭타
+  generation: 6
+  type:
+    - Fire
+    - Ground
+  height:
+    m: 2.5
+  weight:
+    kg: 320.5
+- name:
+    en: Torkoal
+    ja: コータス
+    ko: 코터스
+  generation: 3
+  type:
+    - Fire
+  height:
+    m: 0.5
+  weight:
+    kg: 80.4
+- name:
+    en: Spoink
+    ja: バネブー
+    ko: 피그점프
+  generation: 3
+  type:
+    - Psychic
+  height:
+    m: 0.7
+  weight:
+    kg: 30.6
+- name:
+    en: Grumpig
+    ja: ブーピッグ
+    ko: 피그킹
+  generation: 3
+  type:
+    - Psychic
+  height:
+    m: 0.9
+  weight:
+    kg: 71.5
+- name:
+    en: Spinda
+    ja: パッチール
+    ko: 얼루기
+  generation: 3
+  type:
+    - Normal
+  height:
+    m: 1.1
+  weight:
+    kg: 5
+- name:
+    en: Trapinch
+    ja: ナックラー
+    ko: 톱치
+  generation: 3
+  type:
+    - Ground
+  height:
+    m: 0.7
+  weight:
+    kg: 15
+- name:
+    en: Vibrava
+    ja: ビブラーバ
+    ko: 비브라바
+  generation: 3
+  type:
+    - Ground
+    - Dragon
+  height:
+    m: 1.1
+  weight:
+    kg: 15.3
+- name:
+    en: Flygon
+    ja: フライゴン
+    ko: 플라이곤
+  generation: 3
+  type:
+    - Ground
+    - Dragon
+  height:
+    m: 2
+  weight:
+    kg: 82
+- name:
+    en: Cacnea
+    ja: サボネア
+    ko: 선인왕
+  generation: 3
+  type:
+    - Grass
+  height:
+    m: 0.4
+  weight:
+    kg: 51.3
+- name:
+    en: Cacturne
+    ja: ノクタス
+    ko: 밤선인
+  generation: 3
+  type:
+    - Grass
+    - Dark
+  height:
+    m: 1.3
+  weight:
+    kg: 77.4
+- name:
+    en: Swablu
+    ja: チルット
+    ko: 파비코
+  generation: 3
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.4
+  weight:
+    kg: 1.2
+- name:
+    en: Altaria
+    ja: チルタリス
+    ko: 파비코리
+  generation: 3
+  type:
+    - Dragon
+    - Flying
+  height:
+    m: 1.1
+  weight:
+    kg: 20.6
+- name:
+    en: Mega Altaria
+    ja: メガチルタリス
+    ko: 메가파비코리
+  generation: 6
+  type:
+    - Dragon
+    - Fairy
+  height:
+    m: 1.5
+  weight:
+    kg: 20.6
+- name:
+    en: Zangoose
+    ja: ザングース
+    ko: 쟝고
+  generation: 3
+  type:
+    - Normal
+  height:
+    m: 1.3
+  weight:
+    kg: 40.3
+- name:
+    en: Seviper
+    ja: ハブネーク
+    ko: 세비퍼
+  generation: 3
+  type:
+    - Poison
+  height:
+    m: 2.7
+  weight:
+    kg: 52.5
+- name:
+    en: Lunatone
+    ja: ルナトーン
+    ko: 루나톤
+  generation: 3
+  type:
+    - Rock
+    - Psychic
+  height:
+    m: 1
+  weight:
+    kg: 168
+- name:
+    en: Solrock
+    ja: ソルロック
+    ko: 솔록
+  generation: 3
+  type:
+    - Rock
+    - Psychic
+  height:
+    m: 1.2
+  weight:
+    kg: 154
+- name:
+    en: Barboach
+    ja: ドジョッチ
+    ko: 미꾸리
+  generation: 3
+  type:
+    - Water
+    - Ground
+  height:
+    m: 0.4
+  weight:
+    kg: 1.9
+- name:
+    en: Whiscash
+    ja: ナマズン
+    ko: 메깅
+  generation: 3
+  type:
+    - Water
+    - Ground
+  height:
+    m: 0.9
+  weight:
+    kg: 23.6
+- name:
+    en: Corphish
+    ja: ヘイガニ
+    ko: 가재군
+  generation: 3
+  type:
+    - Water
+  height:
+    m: 0.6
+  weight:
+    kg: 11.5
+- name:
+    en: Crawdaunt
+    ja: シザリガー
+    ko: 가재장군
+  generation: 3
+  type:
+    - Water
+    - Dark
+  height:
+    m: 1.1
+  weight:
+    kg: 32.8
+- name:
+    en: Baltoy
+    ja: ヤジロン
+    ko: 오뚝군
+  generation: 3
+  type:
+    - Ground
+    - Psychic
+  height:
+    m: 0.5
+  weight:
+    kg: 21.5
+- name:
+    en: Claydol
+    ja: ネンドール
+    ko: 점토도리
+  generation: 3
+  type:
+    - Ground
+    - Psychic
+  height:
+    m: 1.5
+  weight:
+    kg: 108
+- name:
+    en: Lileep
+    ja: リリーラ
+    ko: 릴링
+  generation: 3
+  type:
+    - Rock
+    - Grass
+  height:
+    m: 1
+  weight:
+    kg: 23.8
+- name:
+    en: Cradily
+    ja: ユレイドル
+    ko: 릴리요
+  generation: 3
+  type:
+    - Rock
+    - Grass
+  height:
+    m: 1.5
+  weight:
+    kg: 60.4
+- name:
+    en: Anorith
+    ja: アノプス
+    ko: 아노딥스
+  generation: 3
+  type:
+    - Rock
+    - Bug
+  height:
+    m: 0.7
+  weight:
+    kg: 12.5
+- name:
+    en: Armaldo
+    ja: アーマルド
+    ko: 아말도
+  generation: 3
+  type:
+    - Rock
+    - Bug
+  height:
+    m: 1.5
+  weight:
+    kg: 68.2
+- name:
+    en: Feebas
+    ja: ヒンバス
+    ko: 빈티나
+  generation: 3
+  type:
+    - Water
+  height:
+    m: 0.6
+  weight:
+    kg: 7.4
+- name:
+    en: Milotic
+    ja: ミロカロス
+    ko: 밀로틱
+  generation: 3
+  type:
+    - Water
+  height:
+    m: 6.2
+  weight:
+    kg: 162
+- name:
+    en: Castform
+    ja: ポワルン
+    ko: 캐스퐁
+  generation: 3
+  type:
+    - Normal
+  height:
+    m: 0.3
+  weight:
+    kg: 0.8
+- name:
+    en: Castform Sunny Form
+    ja: ポワルン たいようのすがた
+    ko: 캐스퐁 태양의 모습
+  generation: 3
+  type:
+    - Fire
+  height:
+    m: 0.3
+  weight:
+    kg: 0.8
+- name:
+    en: Castform Rainy Form
+    ja: ポワルン あまみずのすがた
+    ko: 캐스퐁 빗방울의 모습
+  generation: 3
+  type:
+    - Water
+  height:
+    m: 0.3
+  weight:
+    kg: 0.8
+- name:
+    en: Castform Snowy Form
+    ja: ポワルン ゆきぐものすがた
+    ko: 캐스퐁 설운의 모습
+  generation: 3
+  type:
+    - Ice
+  height:
+    m: 0.3
+  weight:
+    kg: 0.8
+- name:
+    en: Kecleon
+    ja: カクレオン
+    ko: 켈리몬
+  generation: 3
+  type:
+    - Normal
+  height:
+    m: 1
+  weight:
+    kg: 22
+- name:
+    en: Shuppet
+    ja: カゲボウズ
+    ko: 어둠대신
+  generation: 3
+  type:
+    - Ghost
+  height:
+    m: 0.6
+  weight:
+    kg: 2.3
+- name:
+    en: Banette
+    ja: ジュペッタ
+    ko: 다크펫
+  generation: 3
+  type:
+    - Ghost
+  height:
+    m: 1.1
+  weight:
+    kg: 12.5
+- name:
+    en: Mega Banette
+    ja: メガジュペッタ
+    ko: 메가다크펫
+  generation: 6
+  type:
+    - Ghost
+  height:
+    m: 1.2
+  weight:
+    kg: 13
+- name:
+    en: Duskull
+    ja: ヨマワル
+    ko: 해골몽
+  generation: 3
+  type:
+    - Ghost
+  height:
+    m: 0.8
+  weight:
+    kg: 15
+- name:
+    en: Dusclops
+    ja: サマヨール
+    ko: 미라몽
+  generation: 3
+  type:
+    - Ghost
+  height:
+    m: 1.6
+  weight:
+    kg: 30.6
+- name:
+    en: Tropius
+    ja: トロピウス
+    ko: 트로피우스
+  generation: 3
+  type:
+    - Grass
+    - Flying
+  height:
+    m: 2
+  weight:
+    kg: 100
+- name:
+    en: Chimecho
+    ja: チリーン
+    ko: 치렁
+  generation: 3
+  type:
+    - Psychic
+  height:
+    m: 0.6
+  weight:
+    kg: 1
+- name:
+    en: Absol
+    ja: アブソル
+    ko: 앱솔
+  generation: 3
+  type:
+    - Dark
+  height:
+    m: 1.2
+  weight:
+    kg: 47
+- name:
+    en: Mega Absol
+    ja: メガアブソル
+    ko: 메가앱솔
+  generation: 6
+  type:
+    - Dark
+  height:
+    m: 1.2
+  weight:
+    kg: 49
+- name:
+    en: Wynaut
+    ja: ソーナノ
+    ko: 마자
+  generation: 3
+  type:
+    - Psychic
+  height:
+    m: 0.6
+  weight:
+    kg: 14
+- name:
+    en: Snorunt
+    ja: ユキワラシ
+    ko: 눈꼬마
+  generation: 3
+  type:
+    - Ice
+  height:
+    m: 0.7
+  weight:
+    kg: 16.8
+- name:
+    en: Glalie
+    ja: オニゴーリ
+    ko: 얼음귀신
+  generation: 3
+  type:
+    - Ice
+  height:
+    m: 1.5
+  weight:
+    kg: 256.5
+- name:
+    en: Mega Glalie
+    ja: メガオニゴーリ
+    ko: 메가얼음귀신
+  generation: 6
+  type:
+    - Ice
+  height:
+    m: 2.1
+  weight:
+    kg: 350.2
+- name:
+    en: Spheal
+    ja: タマザラシ
+    ko: 대굴레오
+  generation: 3
+  type:
+    - Ice
+    - Water
+  height:
+    m: 0.8
+  weight:
+    kg: 39.5
+- name:
+    en: Sealeo
+    ja: トドグラー
+    ko: 씨레오
+  generation: 3
+  type:
+    - Ice
+    - Water
+  height:
+    m: 1.1
+  weight:
+    kg: 87.6
+- name:
+    en: Walrein
+    ja: トドゼルガ
+    ko: 씨카이저
+  generation: 3
+  type:
+    - Ice
+    - Water
+  height:
+    m: 1.4
+  weight:
+    kg: 150.6
+- name:
+    en: Clamperl
+    ja: パールル
+    ko: 진주몽
+  generation: 3
+  type:
+    - Water
+  height:
+    m: 0.4
+  weight:
+    kg: 52.5
+- name:
+    en: Huntail
+    ja: ハンテール
+    ko: 헌테일
+  generation: 3
+  type:
+    - Water
+  height:
+    m: 1.7
+  weight:
+    kg: 27
+- name:
+    en: Gorebyss
+    ja: サクラビス
+    ko: 분홍장이
+  generation: 3
+  type:
+    - Water
+  height:
+    m: 1.8
+  weight:
+    kg: 22.6
+- name:
+    en: Relicanth
+    ja: ジーランス
+    ko: 시라칸
+  generation: 3
+  type:
+    - Water
+    - Rock
+  height:
+    m: 1
+  weight:
+    kg: 23.4
+- name:
+    en: Luvdisc
+    ja: ラブカス
+    ko: 사랑동이
+  generation: 3
+  type:
+    - Water
+  height:
+    m: 0.6
+  weight:
+    kg: 8.7
+- name:
+    en: Bagon
+    ja: タツベイ
+    ko: 아공이
+  generation: 3
+  type:
+    - Dragon
+  height:
+    m: 0.6
+  weight:
+    kg: 42.1
+- name:
+    en: Shelgon
+    ja: コモルー
+    ko: 쉘곤
+  generation: 3
+  type:
+    - Dragon
+  height:
+    m: 1.1
+  weight:
+    kg: 110.5
+- name:
+    en: Salamence
+    ja: ボーマンダ
+    ko: 보만다
+  generation: 3
+  type:
+    - Dragon
+    - Flying
+  height:
+    m: 1.5
+  weight:
+    kg: 102.6
+- name:
+    en: Mega Salamence
+    ja: メガボーマンダ
+    ko: 메가보만다
+  generation: 6
+  type:
+    - Dragon
+    - Flying
+  height:
+    m: 1.8
+  weight:
+    kg: 112.6
+- name:
+    en: Beldum
+    ja: ダンバル
+    ko: 메탕
+  generation: 3
+  type:
+    - Steel
+    - Psychic
+  height:
+    m: 0.6
+  weight:
+    kg: 95.2
+- name:
+    en: Metang
+    ja: メタング
+    ko: 메탕구
+  generation: 3
+  type:
+    - Steel
+    - Psychic
+  height:
+    m: 1.2
+  weight:
+    kg: 202.5
+- name:
+    en: Metagross
+    ja: メタグロス
+    ko: 메타그로스
+  generation: 3
+  type:
+    - Steel
+    - Psychic
+  height:
+    m: 1.6
+  weight:
+    kg: 550
+- name:
+    en: Mega Metagross
+    ja: メガメタグロス
+    ko: 메가메타그로스
+  generation: 6
+  type:
+    - Steel
+    - Psychic
+  height:
+    m: 2.5
+  weight:
+    kg: 942.9
+- name:
+    en: Regirock
+    ja: レジロック
+    ko: 레지락
+  generation: 3
+  type:
+    - Rock
+  height:
+    m: 1.7
+  weight:
+    kg: 230
+- name:
+    en: Regice
+    ja: レジアイス
+    ko: 레지아이스
+  generation: 3
+  type:
+    - Ice
+  height:
+    m: 1.8
+  weight:
+    kg: 175
+- name:
+    en: Registeel
+    ja: レジスチル
+    ko: 레지스틸
+  generation: 3
+  type:
+    - Steel
+  height:
+    m: 1.9
+  weight:
+    kg: 205
+- name:
+    en: Latias
+    ja: ラティアス
+    ko: 라티아스
+  generation: 3
+  type:
+    - Dragon
+    - Psychic
+  height:
+    m: 1.4
+  weight:
+    kg: 40
+- name:
+    en: Mega Latias
+    ja: メガラティアス
+    ko: 메가라티아스
+  generation: 6
+  type:
+    - Dragon
+    - Psychic
+  height:
+    m: 1.8
+  weight:
+    kg: 52
+- name:
+    en: Latios
+    ja: ラティオス
+    ko: 라티오스
+  generation: 3
+  type:
+    - Dragon
+    - Psychic
+  height:
+    m: 2
+  weight:
+    kg: 60
+- name:
+    en: Mega Latios
+    ja: メガラティオス
+    ko: 메가라티오스
+  generation: 6
+  type:
+    - Dragon
+    - Psychic
+  height:
+    m: 2.3
+  weight:
+    kg: 70
+- name:
+    en: Kyogre
+    ja: カイオーガ
+    ko: 가이오가
+  generation: 3
+  type:
+    - Water
+  height:
+    m: 4.5
+  weight:
+    kg: 352
+- name:
+    en: Primal Kyogre
+    ja: 'ゲンシカイオーガ '
+    ko: 원시가이오가
+  generation: 6
+  type:
+    - Water
+  height:
+    m: 9.8
+  weight:
+    kg: 430
+- name:
+    en: Groudon
+    ja: グラードン
+    ko: 그란돈
+  generation: 3
+  type:
+    - Ground
+  height:
+    m: 3.5
+  weight:
+    kg: 950
+- name:
+    en: Primal Groudon
+    ja: ゲンシグラードン
+    ko: 원시그란돈
+  generation: 6
+  type:
+    - Ground
+    - Fire
+  height:
+    m: 5
+  weight:
+    kg: 999.7
+- name:
+    en: Rayquaza
+    ja: レックウザ
+    ko: 레쿠쟈
+  generation: 3
+  type:
+    - Dragon
+    - Flying
+  height:
+    m: 7
+  weight:
+    kg: 206.5
+- name:
+    en: Mega Rayquaza
+    ja: メガレックウザ
+    ko: 메가레쿠쟈
+  generation: 6
+  type:
+    - Dragon
+    - Flying
+  height:
+    m: 10.8
+  weight:
+    kg: 392
+- name:
+    en: Jirachi
+    ja: ジラーチ
+    ko: 지라치
+  generation: 3
+  type:
+    - Steel
+    - Psychic
+  height:
+    m: 0.3
+  weight:
+    kg: 1.1
+- name:
+    en: Deoxys
+    ja: デオキシス
+    ko: 테오키스
+  generation: 3
+  type:
+    - Psychic
+  height:
+    m: 1.7
+  weight:
+    kg: 60.8
+- name:
+    en: Turtwig
+    ja: ナエトル
+    ko: 모부기
+  generation: 4
+  type:
+    - Grass
+  height:
+    m: 0.4
+  weight:
+    kg: 10.2
+- name:
+    en: Grotle
+    ja: ハヤシガメ
+    ko: 수풀부기
+  generation: 4
+  type:
+    - Grass
+  height:
+    m: 1.1
+  weight:
+    kg: 97
+- name:
+    en: Torterra
+    ja: ドダイトス
+    ko: 토대부기
+  generation: 4
+  type:
+    - Grass
+    - Ground
+  height:
+    m: 2.2
+  weight:
+    kg: 310
+- name:
+    en: Chimchar
+    ja: ヒコザル
+    ko: 불꽃숭이
+  generation: 4
+  type:
+    - Fire
+  height:
+    m: 0.5
+  weight:
+    kg: 6.2
+- name:
+    en: Monferno
+    ja: モウカザル
+    ko: 파이숭이
+  generation: 4
+  type:
+    - Fire
+    - Fighting
+  height:
+    m: 0.9
+  weight:
+    kg: 22
+- name:
+    en: Infernape
+    ja: ゴウカザル
+    ko: 초염몽
+  generation: 4
+  type:
+    - Fire
+    - Fighting
+  height:
+    m: 1.2
+  weight:
+    kg: 55
+- name:
+    en: Piplup
+    ja: ポッチャマ
+    ko: 팽도리
+  generation: 4
+  type:
+    - Water
+  height:
+    m: 0.4
+  weight:
+    kg: 5.2
+- name:
+    en: Prinplup
+    ja: ポッタイシ
+    ko: 팽태자
+  generation: 4
+  type:
+    - Water
+  height:
+    m: 0.8
+  weight:
+    kg: 23
+- name:
+    en: Empoleon
+    ja: エンペルト
+    ko: 엠페르트
+  generation: 4
+  type:
+    - Water
+    - Steel
+  height:
+    m: 1.7
+  weight:
+    kg: 84.5
+- name:
+    en: Starly
+    ja: ムックル
+    ko: 찌르꼬
+  generation: 4
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.3
+  weight:
+    kg: 2
+- name:
+    en: Staravia
+    ja: ムクバード
+    ko: 찌르버드
+  generation: 4
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.6
+  weight:
+    kg: 15.5
+- name:
+    en: Staraptor
+    ja: ムクホーク
+    ko: 찌르호크
+  generation: 4
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 1.2
+  weight:
+    kg: 24.9
+- name:
+    en: Bidoof
+    ja: ビッパ
+    ko: 비버니
+  generation: 4
+  type:
+    - Normal
+  height:
+    m: 0.5
+  weight:
+    kg: 20
+- name:
+    en: Bibarel
+    ja: ビーダル
+    ko: 비버통
+  generation: 4
+  type:
+    - Normal
+    - Water
+  height:
+    m: 1
+  weight:
+    kg: 31.5
+- name:
+    en: Kricketot
+    ja: コロボーシ
+    ko: 귀뚤뚜기
+  generation: 4
+  type:
+    - Bug
+  height:
+    m: 0.3
+  weight:
+    kg: 2.2
+- name:
+    en: Kricketune
+    ja: コロトック
+    ko: 귀뚤톡크
+  generation: 4
+  type:
+    - Bug
+  height:
+    m: 1
+  weight:
+    kg: 25.5
+- name:
+    en: Shinx
+    ja: コリンク
+    ko: 꼬링크
+  generation: 4
+  type:
+    - Electric
+  height:
+    m: 0.5
+  weight:
+    kg: 9.5
+- name:
+    en: Luxio
+    ja: ルクシオ
+    ko: 럭시오
+  generation: 4
+  type:
+    - Electric
+  height:
+    m: 0.9
+  weight:
+    kg: 30.5
+- name:
+    en: Luxray
+    ja: レントラー
+    ko: 렌트라
+  generation: 4
+  type:
+    - Electric
+  height:
+    m: 1.4
+  weight:
+    kg: 42
+- name:
+    en: Budew
+    ja: スボミー
+    ko: 꼬몽울
+  generation: 4
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 0.2
+  weight:
+    kg: 1.2
+- name:
+    en: Roserade
+    ja: ロズレイド
+    ko: 로즈레이드
+  generation: 4
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 0.9
+  weight:
+    kg: 14.5
+- name:
+    en: Cranidos
+    ja: ズガイドス
+    ko: 두개도스
+  generation: 4
+  type:
+    - Rock
+  height:
+    m: 0.9
+  weight:
+    kg: 31.5
+- name:
+    en: Rampardos
+    ja: ラムパルド
+    ko: 램펄드
+  generation: 4
+  type:
+    - Rock
+  height:
+    m: 1.6
+  weight:
+    kg: 102.5
+- name:
+    en: Shieldon
+    ja: タテトプス
+    ko: 방패톱스
+  generation: 4
+  type:
+    - Rock
+    - Steel
+  height:
+    m: 0.5
+  weight:
+    kg: 57
+- name:
+    en: Bastiodon
+    ja: トリデプス
+    ko: 바리톱스
+  generation: 4
+  type:
+    - Rock
+    - Steel
+  height:
+    m: 1.3
+  weight:
+    kg: 149.5
+- name:
+    en: Burmy
+    ja: ミノムッチ
+    ko: 도롱충이
+  generation: 4
+  type:
+    - Bug
+  height:
+    m: 0.2
+  weight:
+    kg: 3.4
+- name:
+    en: Wormadam Plant Cloak
+    ja: ミノムッチ くさきのミノ
+    ko: 도롱마담 초목도롱
+  generation: 4
+  type:
+    - Bug
+    - Grass
+  height:
+    m: 0.5
+  weight:
+    kg: 6.5
+- name:
+    en: Wormadam Sandy Cloak
+    ja: ミノムッチ すなちのミノ
+    ko: 도롱마담 모래땅도롱
+  generation: 4
+  type:
+    - Bug
+    - Ground
+  height:
+    m: 0.5
+  weight:
+    kg: 6.5
+- name:
+    en: Wormadam Trash Cloak
+    ja: ミノムッチ ゴミのミノ
+    ko: 도롱마담 슈레도롱
+  generation: 4
+  type:
+    - Bug
+    - Steel
+  height:
+    m: 0.5
+  weight:
+    kg: 6.5
+- name:
+    en: Mothim
+    ja: ガーメイル
+    ko: 나메일
+  generation: 4
+  type:
+    - Bug
+    - Flying
+  height:
+    m: 0.9
+  weight:
+    kg: 23.3
+- name:
+    en: Combee
+    ja: ミツハニー
+    ko: 세꿀버리
+  generation: 4
+  type:
+    - Bug
+    - Flying
+  height:
+    m: 0.3
+  weight:
+    kg: 5.5
+- name:
+    en: Vespiquen
+    ja: ビークイン
+    ko: 비퀸
+  generation: 4
+  type:
+    - Bug
+    - Flying
+  height:
+    m: 1.2
+  weight:
+    kg: 38.5
+- name:
+    en: Pachirisu
+    ja: パチリス
+    ko: 파치리스
+  generation: 4
+  type:
+    - Electric
+  height:
+    m: 0.4
+  weight:
+    kg: 3.9
+- name:
+    en: Buizel
+    ja: ブイゼル
+    ko: 브이젤
+  generation: 4
+  type:
+    - Water
+  height:
+    m: 0.7
+  weight:
+    kg: 29.5
+- name:
+    en: Floatzel
+    ja: フローゼル
+    ko: 플로젤
+  generation: 4
+  type:
+    - Water
+  height:
+    m: 1.1
+  weight:
+    kg: 33.5
+- name:
+    en: Cherubi
+    ja: チェリンボ
+    ko: 체리버
+  generation: 4
+  type:
+    - Grass
+  height:
+    m: 0.4
+  weight:
+    kg: 3.3
+- name:
+    en: Cherrim
+    ja: チェリム
+    ko: 체리꼬
+  generation: 4
+  type:
+    - Grass
+  height:
+    m: 0.5
+  weight:
+    kg: 9.3
+- name:
+    en: Shellos
+    ja: カラナクシ
+    ko: 깝질무
+  generation: 4
+  type:
+    - Water
+  height:
+    m: 0.3
+  weight:
+    kg: 6.3
+- name:
+    en: Gastrodon
+    ja: トリトドン
+    ko: 트리토돈
+  generation: 4
+  type:
+    - Water
+    - Ground
+  height:
+    m: 0.9
+  weight:
+    kg: 29.9
+- name:
+    en: Ambipom
+    ja: エテボース
+    ko: 겟핸보숭
+  generation: 4
+  type:
+    - Normal
+  height:
+    m: 1.2
+  weight:
+    kg: 20.3
+- name:
+    en: Drifloon
+    ja: フワンテ
+    ko: 흔들풍손
+  generation: 4
+  type:
+    - Ghost
+    - Flying
+  height:
+    m: 0.4
+  weight:
+    kg: 1.2
+- name:
+    en: Drifblim
+    ja: フワライド
+    ko: 둥실라이드
+  generation: 4
+  type:
+    - Ghost
+    - Flying
+  height:
+    m: 1.2
+  weight:
+    kg: 15
+- name:
+    en: Buneary
+    ja: ミミロル
+    ko: 이어롤
+  generation: 4
+  type:
+    - Normal
+  height:
+    m: 0.4
+  weight:
+    kg: 5.5
+- name:
+    en: Lopunny
+    ja: ミミロップ
+    ko: 이어롭
+  generation: 4
+  type:
+    - Normal
+  height:
+    m: 1.2
+  weight:
+    kg: 33.3
+- name:
+    en: Mega Lopunny
+    ja: メガミミロップ
+    ko: 메가이어롭
+  generation: 6
+  type:
+    - Normal
+    - Fighting
+  height:
+    m: 1.3
+  weight:
+    kg: 28.3
+- name:
+    en: Mismagius
+    ja: ムウマージ
+    ko: 무우마직
+  generation: 4
+  type:
+    - Ghost
+  height:
+    m: 0.9
+  weight:
+    kg: 4.4
+- name:
+    en: Honchkrow
+    ja: ドンカラス
+    ko: 돈크로우
+  generation: 4
+  type:
+    - Dark
+    - Flying
+  height:
+    m: 0.9
+  weight:
+    kg: 27.3
+- name:
+    en: Glameow
+    ja: ニャルマー
+    ko: 나옹마
+  generation: 4
+  type:
+    - Normal
+  height:
+    m: 0.5
+  weight:
+    kg: 3.9
+- name:
+    en: Purugly
+    ja: ブニャット
+    ko: 몬냥이
+  generation: 4
+  type:
+    - Normal
+  height:
+    m: 1
+  weight:
+    kg: 43.8
+- name:
+    en: Chingling
+    ja: リーシャン
+    ko: 랑딸랑
+  generation: 4
+  type:
+    - Psychic
+  height:
+    m: 0.2
+  weight:
+    kg: 0.6
+- name:
+    en: Stunky
+    ja: スカンプー
+    ko: 스컹뿡
+  generation: 4
+  type:
+    - Poison
+    - Dark
+  height:
+    m: 0.4
+  weight:
+    kg: 19.2
+- name:
+    en: Skuntank
+    ja: スカタンク
+    ko: 스컹탱크
+  generation: 4
+  type:
+    - Poison
+    - Dark
+  height:
+    m: 1
+  weight:
+    kg: 38
+- name:
+    en: Bronzor
+    ja: ドーミラー
+    ko: 동미러
+  generation: 4
+  type:
+    - Steel
+    - Psychic
+  height:
+    m: 0.5
+  weight:
+    kg: 60.5
+- name:
+    en: Bronzong
+    ja: ドータクン
+    ko: 동탁군
+  generation: 4
+  type:
+    - Steel
+    - Psychic
+  height:
+    m: 1.3
+  weight:
+    kg: 187
+- name:
+    en: Bonsly
+    ja: ウソハチ
+    ko: 꼬지지
+  generation: 4
+  type:
+    - Rock
+  height:
+    m: 0.5
+  weight:
+    kg: 15
+- name:
+    en: Mime Jr.
+    ja: マネネ
+    ko: 흉내내
+  generation: 4
+  type:
+    - Psychic
+    - Fairy
+  height:
+    m: 0.6
+  weight:
+    kg: 13
+- name:
+    en: Happiny
+    ja: ピンプク
+    ko: 핑복
+  generation: 4
+  type:
+    - Normal
+  height:
+    m: 0.6
+  weight:
+    kg: 24.4
+- name:
+    en: Chatot
+    ja: ペラップ
+    ko: 페라페
+  generation: 4
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.5
+  weight:
+    kg: 1.9
+- name:
+    en: Spiritomb
+    ja: ミカルゲ
+    ko: 화강돌
+  generation: 4
+  type:
+    - Ghost
+    - Dark
+  height:
+    m: 1
+  weight:
+    kg: 108
+- name:
+    en: Gible
+    ja: フカマル
+    ko: 딥상어동
+  generation: 4
+  type:
+    - Dragon
+    - Ground
+  height:
+    m: 0.7
+  weight:
+    kg: 20.5
+- name:
+    en: Gabite
+    ja: ガバイト
+    ko: 한바이트
+  generation: 4
+  type:
+    - Dragon
+    - Ground
+  height:
+    m: 1.4
+  weight:
+    kg: 56
+- name:
+    en: Garchomp
+    ja: ガブリアス
+    ko: 한카리아스
+  generation: 4
+  type:
+    - Dragon
+    - Ground
+  height:
+    m: 1.9
+  weight:
+    kg: 95
+- name:
+    en: Mega Garchomp
+    ja: メガガブリアス
+    ko: 메가한카리아스
+  generation: 6
+  type:
+    - Dragon
+    - Ground
+  height:
+    m: 1.9
+  weight:
+    kg: 95
+- name:
+    en: Munchlax
+    ja: ゴンベ
+    ko: 먹고자
+  generation: 4
+  type:
+    - Normal
+  height:
+    m: 0.6
+  weight:
+    kg: 105
+- name:
+    en: Riolu
+    ja: リオル
+    ko: 리오르
+  generation: 4
+  type:
+    - Fighting
+  height:
+    m: 0.7
+  weight:
+    kg: 20.2
+- name:
+    en: Lucario
+    ja: ルカリオ
+    ko: 루카리오
+  generation: 4
+  type:
+    - Fighting
+    - Steel
+  height:
+    m: 1.2
+  weight:
+    kg: 54
+- name:
+    en: Mega Lucario
+    ja: メガルカリオ
+    ko: 메가루카리오
+  generation: 6
+  type:
+    - Fighting
+    - Steel
+  height:
+    m: 1.3
+  weight:
+    kg: 57.5
+- name:
+    en: Hippopotas
+    ja: ヒポポタス
+    ko: 히포포타스
+  generation: 4
+  type:
+    - Ground
+  height:
+    m: 0.8
+  weight:
+    kg: 49.5
+- name:
+    en: Hippowdon
+    ja: カバルドン
+    ko: 하마돈
+  generation: 4
+  type:
+    - Ground
+  height:
+    m: 2
+  weight:
+    kg: 300
+- name:
+    en: Skorupi
+    ja: スコルピ
+    ko: 스콜피
+  generation: 4
+  type:
+    - Poison
+    - Bug
+  height:
+    m: 0.8
+  weight:
+    kg: 12
+- name:
+    en: Drapion
+    ja: ドラピオン
+    ko: 드래피온
+  generation: 4
+  type:
+    - Poison
+    - Dark
+  height:
+    m: 1.3
+  weight:
+    kg: 61.5
+- name:
+    en: Croagunk
+    ja: グレッグル
+    ko: 삐딱구리
+  generation: 4
+  type:
+    - Poison
+    - Fighting
+  height:
+    m: 0.7
+  weight:
+    kg: 23
+- name:
+    en: Toxicroak
+    ja: ドクロッグ
+    ko: 독개굴
+  generation: 4
+  type:
+    - Poison
+    - Fighting
+  height:
+    m: 1.3
+  weight:
+    kg: 44.4
+- name:
+    en: Carnivine
+    ja: マスキッパ
+    ko: 무스틈니
+  generation: 4
+  type:
+    - Grass
+  height:
+    m: 1.4
+  weight:
+    kg: 27
+- name:
+    en: Finneon
+    ja: ケイコウオ
+    ko: 형광어
+  generation: 4
+  type:
+    - Water
+  height:
+    m: 0.4
+  weight:
+    kg: 7
+- name:
+    en: Lumineon
+    ja: ネオラント
+    ko: 네오라이트
+  generation: 4
+  type:
+    - Water
+  height:
+    m: 1.2
+  weight:
+    kg: 24
+- name:
+    en: Mantyke
+    ja: タマンタ
+    ko: 타만타
+  generation: 4
+  type:
+    - Water
+    - Flying
+  height:
+    m: 1
+  weight:
+    kg: 65
+- name:
+    en: Snover
+    ja: ユキカブリ
+    ko: 눈쓰개
+  generation: 4
+  type:
+    - Grass
+    - Ice
+  height:
+    m: 1
+  weight:
+    kg: 50.5
+- name:
+    en: Abomasnow
+    ja: ユキノオー
+    ko: 눈설왕
+  generation: 4
+  type:
+    - Grass
+    - Ice
+  height:
+    m: 2.2
+  weight:
+    kg: 135.5
+- name:
+    en: Mega Abomasnow
+    ja: メガユキノオー
+    ko: 메가눈설왕
+  generation: 6
+  type:
+    - Grass
+    - Ice
+  height:
+    m: 2.7
+  weight:
+    kg: 185
+- name:
+    en: Weavile
+    ja: マニューラ
+    ko: 포푸니라
+  generation: 4
+  type:
+    - Dark
+    - Ice
+  height:
+    m: 1.1
+  weight:
+    kg: 34
+- name:
+    en: Magnezone
+    ja: ジバコイル
+    ko: 자포코일
+  generation: 4
+  type:
+    - Electric
+    - Steel
+  height:
+    m: 1.2
+  weight:
+    kg: 180
+- name:
+    en: Lickilicky
+    ja: ベロベルト
+    ko: 내룸벨트
+  generation: 4
+  type:
+    - Normal
+  height:
+    m: 1.7
+  weight:
+    kg: 140
+- name:
+    en: Rhyperior
+    ja: ドサイドン
+    ko: 거대코뿌리
+  generation: 4
+  type:
+    - Ground
+    - Rock
+  height:
+    m: 2.4
+  weight:
+    kg: 282.8
+- name:
+    en: Tangrowth
+    ja: モジャンボ
+    ko: 덩쿠림보
+  generation: 4
+  type:
+    - Grass
+  height:
+    m: 2
+  weight:
+    kg: 128.6
+- name:
+    en: Electivire
+    ja: エレキブル
+    ko: 에레키블
+  generation: 4
+  type:
+    - Electric
+  height:
+    m: 1.8
+  weight:
+    kg: 138.6
+- name:
+    en: Magmortar
+    ja: ブーバーン
+    ko: 마그마번
+  generation: 4
+  type:
+    - Fire
+  height:
+    m: 1.6
+  weight:
+    kg: 68
+- name:
+    en: Togekiss
+    ja: トゲキッス
+    ko: 토게키스
+  generation: 4
+  type:
+    - Fairy
+    - Flying
+  height:
+    m: 1.5
+  weight:
+    kg: 38
+- name:
+    en: Yanmega
+    ja: メガヤンマ
+    ko: 메가자리
+  generation: 4
+  type:
+    - Bug
+    - Flying
+  height:
+    m: 1.9
+  weight:
+    kg: 51.5
+- name:
+    en: Leafeon
+    ja: リーフィア
+    ko: 리피아
+  generation: 4
+  type:
+    - Grass
+  height:
+    m: 1
+  weight:
+    kg: 25.5
+- name:
+    en: Glaceon
+    ja: グレイシア
+    ko: 글레이시아
+  generation: 4
+  type:
+    - Ice
+  height:
+    m: 0.8
+  weight:
+    kg: 25.9
+- name:
+    en: Gliscor
+    ja: グライオン
+    ko: 글라이온
+  generation: 4
+  type:
+    - Ground
+    - Flying
+  height:
+    m: 2
+  weight:
+    kg: 42.5
+- name:
+    en: Mamoswine
+    ja: マンムー
+    ko: 맘모꾸리
+  generation: 4
+  type:
+    - Ice
+    - Ground
+  height:
+    m: 2.5
+  weight:
+    kg: 291
+- name:
+    en: Porygon-Z
+    ja: ポリゴンZ
+    ko: 폴리곤Z
+  generation: 4
+  type:
+    - Normal
+  height:
+    m: 0.9
+  weight:
+    kg: 34
+- name:
+    en: Gallade
+    ja: エルレイド
+    ko: 엘레이드
+  generation: 4
+  type:
+    - Psychic
+    - Fighting
+  height:
+    m: 1.6
+  weight:
+    kg: 52
+- name:
+    en: Mega Gallade
+    ja: メガエルレイド
+    ko: 메가엘레이드
+  generation: 6
+  type:
+    - Psychic
+    - Fighting
+  height:
+    m: 1.6
+  weight:
+    kg: 56.4
+- name:
+    en: Probopass
+    ja: ダイノーズ
+    ko: 대코파스
+  generation: 4
+  type:
+    - Rock
+    - Steel
+  height:
+    m: 1.4
+  weight:
+    kg: 340
+- name:
+    en: Dusknoir
+    ja: ヨノワール
+    ko: 야느와르몽
+  generation: 4
+  type:
+    - Ghost
+  height:
+    m: 2.2
+  weight:
+    kg: 106.6
+- name:
+    en: Froslass
+    ja: ユキメノコ
+    ko: 눈여아
+  generation: 4
+  type:
+    - Ice
+    - Ghost
+  height:
+    m: 1.3
+  weight:
+    kg: 26.6
+- name:
+    en: Rotom
+    ja: ロトム
+    ko: 로토무
+  generation: 4
+  type:
+    - Electric
+    - Ghost
+  height:
+    m: 0.3
+  weight:
+    kg: 0.3
+- name:
+    en: Heat Rotom
+    ja: ヒートロトム
+    ko: 히트 로토무
+  generation: 4
+  type:
+    - Electric
+    - Fire
+  height:
+    m: 0.3
+  weight:
+    kg: 0.3
+- name:
+    en: Wash Rotom
+    ja: ウォッシュロトム
+    ko: 워시 로토무
+  generation: 4
+  type:
+    - Electric
+    - Water
+  height:
+    m: 0.3
+  weight:
+    kg: 0.3
+- name:
+    en: Frost Rotom
+    ja: フロストロトム
+    ko: 프로스트 로토무
+  generation: 4
+  type:
+    - Electric
+    - Ice
+  height:
+    m: 0.3
+  weight:
+    kg: 0.3
+- name:
+    en: Fan Rotom
+    ja: スピンロトム
+    ko: 스핀 로토무
+  generation: 4
+  type:
+    - Electric
+    - Flying
+  height:
+    m: 0.3
+  weight:
+    kg: 0.3
+- name:
+    en: Mow Rotom
+    ja: カットロトム
+    ko: 커트 로토무
+  generation: 4
+  type:
+    - Electric
+    - Grass
+  height:
+    m: 0.3
+  weight:
+    kg: 0.3
+- name:
+    en: Uxie
+    ja: ユクシー
+    ko: 유크시
+  generation: 4
+  type:
+    - Psychic
+  height:
+    m: 0.3
+  weight:
+    kg: 0.3
+- name:
+    en: Mesprit
+    ja: エムリット
+    ko: 엠라이트
+  generation: 4
+  type:
+    - Psychic
+  height:
+    m: 0.3
+  weight:
+    kg: 0.3
+- name:
+    en: Azelf
+    ja: アグノム
+    ko: 아그놈
+  generation: 4
+  type:
+    - Psychic
+  height:
+    m: 0.3
+  weight:
+    kg: 0.3
+- name:
+    en: Dialga
+    ja: ディアルガ
+    ko: 디아루가
+  generation: 4
+  type:
+    - Steel
+    - Dragon
+  height:
+    m: 5.4
+  weight:
+    kg: 683
+- name:
+    en: Dialga Origin Forme
+    ja: ディアルガ オリジンフォルム
+    ko: 디아루가 오리진폼
+  generation: 8
+  type:
+    - Steel
+    - Dragon
+  height:
+    m: 7
+  weight:
+    kg: 850
+- name:
+    en: Palkia
+    ja: パルキア
+    ko: 펄기아
+  generation: 4
+  type:
+    - Water
+    - Dragon
+  height:
+    m: 4.2
+  weight:
+    kg: 336
+- name:
+    en: Palkia Origin Forme
+    ja: パルキア オリジンフォルム
+    ko: 펄기아 오리진폼
+  generation: 8
+  type:
+    - Water
+    - Dragon
+  height:
+    m: 6.3
+  weight:
+    kg: 660
+- name:
+    en: Heatran
+    ja: ヒードラン
+    ko: 히드런
+  generation: 4
+  type:
+    - Fire
+    - Steel
+  height:
+    m: 1.7
+  weight:
+    kg: 430
+- name:
+    en: Regigigas
+    ja: レジギガス
+    ko: 레지기가스
+  generation: 4
+  type:
+    - Normal
+  height:
+    m: 3.7
+  weight:
+    kg: 420
+- name:
+    en: Giratina Altered Forme
+    ja: ギラティナ アナザーフォルム
+    ko: 기라티나 어나더폼
+  generation: 4
+  type:
+    - Ghost
+    - Dragon
+  height:
+    m: 4.5
+  weight:
+    kg: 750
+- name:
+    en: Giratina Origin Forme
+    ja: ギラティナ オリジンフォルム
+    ko: 기라티나 오리진폼
+  generation: 4
+  type:
+    - Ghost
+    - Dragon
+  height:
+    m: 6.9
+  weight:
+    kg: 650
+- name:
+    en: Cresselia
+    ja: クレセリア
+    ko: 크레세리아
+  generation: 4
+  type:
+    - Psychic
+  height:
+    m: 1.5
+  weight:
+    kg: 85.6
+- name:
+    en: Phione
+    ja: フィオネ
+    ko: 피오네
+  generation: 4
+  type:
+    - Water
+  height:
+    m: 0.4
+  weight:
+    kg: 3.1
+- name:
+    en: Manaphy
+    ja: マナフィ
+    ko: 마나피
+  generation: 4
+  type:
+    - Water
+  height:
+    m: 0.3
+  weight:
+    kg: 1.4
+- name:
+    en: Darkrai
+    ja: ダークライ
+    ko: 다크라이
+  generation: 4
+  type:
+    - Dark
+  height:
+    m: 1.5
+  weight:
+    kg: 50.5
+- name:
+    en: Shaymin Land Forme
+    ja: シェイミ ランドフォルム
+    ko: 쉐이미 랜드폼
+  generation: 4
+  type:
+    - Grass
+  height:
+    m: 0.2
+  weight:
+    kg: 2.1
+- name:
+    en: Shaymin Sky Forme
+    ja: シェイミ スカイフォルム
+    ko: 쉐이미 스카이폼
+  generation: 4
+  type:
+    - Grass
+    - Flying
+  height:
+    m: 0.4
+  weight:
+    kg: 5.2
+- name:
+    en: Arceus
+    ja: アルセウス
+    ko: 아르세우스
+  generation: 4
+  type:
+    - Normal
+  height:
+    m: 3.2
+  weight:
+    kg: 320
+- name:
+    en: Victini
+    ja: ビクティニ
+    ko: 비크티니
+  generation: 5
+  type:
+    - Psychic
+    - Fire
+  height:
+    m: 0.4
+  weight:
+    kg: 4
+- name:
+    en: Snivy
+    ja: ツタージャ
+    ko: 주리비얀
+  generation: 5
+  type:
+    - Grass
+  height:
+    m: 0.6
+  weight:
+    kg: 8.1
+- name:
+    en: Servine
+    ja: ジャノビー
+    ko: 샤비
+  generation: 5
+  type:
+    - Grass
+  height:
+    m: 0.8
+  weight:
+    kg: 16
+- name:
+    en: Serperior
+    ja: ジャローダ
+    ko: 샤로다
+  generation: 5
+  type:
+    - Grass
+  height:
+    m: 3.3
+  weight:
+    kg: 63
+- name:
+    en: Tepig
+    ja: ポカブ
+    ko: 뚜꾸리
+  generation: 5
+  type:
+    - Fire
+  height:
+    m: 0.5
+  weight:
+    kg: 9.9
+- name:
+    en: Pignite
+    ja: チャオブー
+    ko: 차오꿀
+  generation: 5
+  type:
+    - Fire
+    - Fighting
+  height:
+    m: 1
+  weight:
+    kg: 55.5
+- name:
+    en: Emboar
+    ja: エンブオー
+    ko: 염무왕
+  generation: 5
+  type:
+    - Fire
+    - Fighting
+  height:
+    m: 1.6
+  weight:
+    kg: 150
+- name:
+    en: Oshawott
+    ja: ミジュマル
+    ko: 수댕이
+  generation: 5
+  type:
+    - Water
+  height:
+    m: 0.5
+  weight:
+    kg: 5.9
+- name:
+    en: Dewott
+    ja: フタチマル
+    ko: 쌍검자비
+  generation: 5
+  type:
+    - Water
+  height:
+    m: 0.8
+  weight:
+    kg: 24.5
+- name:
+    en: Samurott
+    ja: ダイケンキ
+    ko: 대검귀
+  generation: 5
+  type:
+    - Water
+  height:
+    m: 1.5
+  weight:
+    kg: 94.6
+- name:
+    en: Hisuian Samurott
+    ja: ヒスイダイケンキ
+    ko: 히스이 대검귀
+  generation: 8
+  type:
+    - Water
+    - Dark
+  height:
+    m: 1.5
+  weight:
+    kg: 58.2
+- name:
+    en: Patrat
+    ja: ミネズミ
+    ko: 보르쥐
+  generation: 5
+  type:
+    - Normal
+  height:
+    m: 0.5
+  weight:
+    kg: 11.6
+- name:
+    en: Watchog
+    ja: ミルホッグ
+    ko: 보르그
+  generation: 5
+  type:
+    - Normal
+  height:
+    m: 1.1
+  weight:
+    kg: 27
+- name:
+    en: Lillipup
+    ja: ヨーテリー
+    ko: 요테리
+  generation: 5
+  type:
+    - Normal
+  height:
+    m: 0.4
+  weight:
+    kg: 4.1
+- name:
+    en: Herdier
+    ja: ハーデリア
+    ko: 하데리어
+  generation: 5
+  type:
+    - Normal
+  height:
+    m: 0.9
+  weight:
+    kg: 14.7
+- name:
+    en: Stoutland
+    ja: ムーランド
+    ko: 바랜드
+  generation: 5
+  type:
+    - Normal
+  height:
+    m: 1.2
+  weight:
+    kg: 61
+- name:
+    en: Purrloin
+    ja: チョロネコ
+    ko: 쌔비냥
+  generation: 5
+  type:
+    - Dark
+  height:
+    m: 0.4
+  weight:
+    kg: 10.1
+- name:
+    en: Liepard
+    ja: レパルダス
+    ko: 레파르다스
+  generation: 5
+  type:
+    - Dark
+  height:
+    m: 1.1
+  weight:
+    kg: 37.5
+- name:
+    en: Pansage
+    ja: ヤナップ
+    ko: 야나프
+  generation: 5
+  type:
+    - Grass
+  height:
+    m: 0.6
+  weight:
+    kg: 10.5
+- name:
+    en: Simisage
+    ja: ヤナッキー
+    ko: 야나키
+  generation: 5
+  type:
+    - Grass
+  height:
+    m: 1.1
+  weight:
+    kg: 30.5
+- name:
+    en: Pansear
+    ja: バオップ
+    ko: 바오프
+  generation: 5
+  type:
+    - Fire
+  height:
+    m: 0.6
+  weight:
+    kg: 11
+- name:
+    en: Simisear
+    ja: バオッキー
+    ko: 바오키
+  generation: 5
+  type:
+    - Fire
+  height:
+    m: 1
+  weight:
+    kg: 28
+- name:
+    en: Panpour
+    ja: ヒヤップ
+    ko: 앗차프
+  generation: 5
+  type:
+    - Water
+  height:
+    m: 0.6
+  weight:
+    kg: 13.5
+- name:
+    en: Simipour
+    ja: ヒヤッキー
+    ko: 앗차키
+  generation: 5
+  type:
+    - Water
+  height:
+    m: 1
+  weight:
+    kg: 29
+- name:
+    en: Munna
+    ja: ムンナ
+    ko: 몽나
+  generation: 5
+  type:
+    - Psychic
+  height:
+    m: 0.6
+  weight:
+    kg: 23.3
+- name:
+    en: Musharna
+    ja: ムシャーナ
+    ko: 몽얌나
+  generation: 5
+  type:
+    - Psychic
+  height:
+    m: 1.1
+  weight:
+    kg: 60.5
+- name:
+    en: Pidove
+    ja: マメパト
+    ko: 콩둘기
+  generation: 5
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.3
+  weight:
+    kg: 2.1
+- name:
+    en: Tranquill
+    ja: ハトーボー
+    ko: 유토브
+  generation: 5
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.6
+  weight:
+    kg: 15
+- name:
+    en: Unfezant
+    ja: ケンホロウ
+    ko: 켄호로우
+  generation: 5
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 1.2
+  weight:
+    kg: 29
+- name:
+    en: Blitzle
+    ja: シママ
+    ko: 줄뮤마
+  generation: 5
+  type:
+    - Electric
+  height:
+    m: 0.8
+  weight:
+    kg: 29.8
+- name:
+    en: Zebstrika
+    ja: ゼブライカ
+    ko: 제브라이카
+  generation: 5
+  type:
+    - Electric
+  height:
+    m: 1.6
+  weight:
+    kg: 79.5
+- name:
+    en: Roggenrola
+    ja: ダンゴロ
+    ko: 단굴
+  generation: 5
+  type:
+    - Rock
+  height:
+    m: 0.4
+  weight:
+    kg: 18
+- name:
+    en: Boldore
+    ja: ガントル
+    ko: 암트르
+  generation: 5
+  type:
+    - Rock
+  height:
+    m: 0.9
+  weight:
+    kg: 102
+- name:
+    en: Gigalith
+    ja: ギガイアス
+    ko: 기가이어스
+  generation: 5
+  type:
+    - Rock
+  height:
+    m: 1.7
+  weight:
+    kg: 260
+- name:
+    en: Woobat
+    ja: コロモリ
+    ko: 또르박쥐
+  generation: 5
+  type:
+    - Psychic
+    - Flying
+  height:
+    m: 0.4
+  weight:
+    kg: 2.1
+- name:
+    en: Swoobat
+    ja: ココロモリ
+    ko: 맘박쥐
+  generation: 5
+  type:
+    - Psychic
+    - Flying
+  height:
+    m: 0.9
+  weight:
+    kg: 10.5
+- name:
+    en: Drilbur
+    ja: モグリュー
+    ko: 두더류
+  generation: 5
+  type:
+    - Ground
+  height:
+    m: 0.3
+  weight:
+    kg: 8.5
+- name:
+    en: Excadrill
+    ja: ドリュウズ
+    ko: 몰드류
+  generation: 5
+  type:
+    - Ground
+    - Steel
+  height:
+    m: 0.7
+  weight:
+    kg: 40.4
+- name:
+    en: Audino
+    ja: タブンネ
+    ko: 다부니
+  generation: 5
+  type:
+    - Normal
+  height:
+    m: 1.1
+  weight:
+    kg: 31
+- name:
+    en: Mega Audino
+    ja: メガタブンネ
+    ko: 메가다부니
+  generation: 6
+  type:
+    - Normal
+    - Fairy
+  height:
+    m: 1.5
+  weight:
+    kg: 32
+- name:
+    en: Timburr
+    ja: ドッコラー
+    ko: 으랏차
+  generation: 5
+  type:
+    - Fighting
+  height:
+    m: 0.6
+  weight:
+    kg: 12.5
+- name:
+    en: Gurdurr
+    ja: ドテッコツ
+    ko: 토쇠골
+  generation: 5
+  type:
+    - Fighting
+  height:
+    m: 1.2
+  weight:
+    kg: 40
+- name:
+    en: Conkeldurr
+    ja: ローブシン
+    ko: 노보청
+  generation: 5
+  type:
+    - Fighting
+  height:
+    m: 1.4
+  weight:
+    kg: 87
+- name:
+    en: Tympole
+    ja: オタマロ
+    ko: 동챙이
+  generation: 5
+  type:
+    - Water
+  height:
+    m: 0.5
+  weight:
+    kg: 4.5
+- name:
+    en: Palpitoad
+    ja: ガマガル
+    ko: 두까비
+  generation: 5
+  type:
+    - Water
+    - Ground
+  height:
+    m: 0.8
+  weight:
+    kg: 17
+- name:
+    en: Seismitoad
+    ja: ガマゲロゲ
+    ko: 두빅굴
+  generation: 5
+  type:
+    - Water
+    - Ground
+  height:
+    m: 1.5
+  weight:
+    kg: 62
+- name:
+    en: Throh
+    ja: ナゲキ
+    ko: 던지미
+  generation: 5
+  type:
+    - Fighting
+  height:
+    m: 1.3
+  weight:
+    kg: 55.5
+- name:
+    en: Sawk
+    ja: ダゲキ
+    ko: 타격귀
+  generation: 5
+  type:
+    - Fighting
+  height:
+    m: 1.4
+  weight:
+    kg: 51
+- name:
+    en: Sewaddle
+    ja: クルミル
+    ko: 두르보
+  generation: 5
+  type:
+    - Bug
+    - Grass
+  height:
+    m: 0.3
+  weight:
+    kg: 2.5
+- name:
+    en: Swadloon
+    ja: クルマユ
+    ko: 두르쿤
+  generation: 5
+  type:
+    - Bug
+    - Grass
+  height:
+    m: 0.5
+  weight:
+    kg: 7.3
+- name:
+    en: Leavanny
+    ja: ハハコモリ
+    ko: 모아머
+  generation: 5
+  type:
+    - Bug
+    - Grass
+  height:
+    m: 1.2
+  weight:
+    kg: 20.5
+- name:
+    en: Venipede
+    ja: フシデ
+    ko: 마디네
+  generation: 5
+  type:
+    - Bug
+    - Poison
+  height:
+    m: 0.4
+  weight:
+    kg: 5.3
+- name:
+    en: Whirlipede
+    ja: ホイーガ
+    ko: 휠구
+  generation: 5
+  type:
+    - Bug
+    - Poison
+  height:
+    m: 1.2
+  weight:
+    kg: 58.5
+- name:
+    en: Scolipede
+    ja: ペンドラー
+    ko: 펜드라
+  generation: 5
+  type:
+    - Bug
+    - Poison
+  height:
+    m: 2.5
+  weight:
+    kg: 200.5
+- name:
+    en: Cottonee
+    ja: モンメン
+    ko: 소미안
+  generation: 5
+  type:
+    - Grass
+    - Fairy
+  height:
+    m: 0.3
+  weight:
+    kg: 0.6
+- name:
+    en: Whimsicott
+    ja: エルフーン
+    ko: 엘풍
+  generation: 5
+  type:
+    - Grass
+    - Fairy
+  height:
+    m: 0.7
+  weight:
+    kg: 6.6
+- name:
+    en: Petilil
+    ja: チュリネ
+    ko: 치릴리
+  generation: 5
+  type:
+    - Grass
+  height:
+    m: 0.5
+  weight:
+    kg: 6.6
+- name:
+    en: Lilligant
+    ja: ドレディア
+    ko: 드레디어
+  generation: 5
+  type:
+    - Grass
+  height:
+    m: 1.1
+  weight:
+    kg: 16.3
+- name:
+    en: Hisuian Lilligant
+    ja: ヒスイドレディア
+    ko: 히스이 드레디어
+  generation: 8
+  type:
+    - Grass
+    - Fighting
+  height:
+    m: 1.2
+  weight:
+    kg: 19.2
+- name:
+    en: Basculin
+    ja: バスラオ
+    ko: 배쓰나이
+  generation: 5
+  type:
+    - Water
+  height:
+    m: 1
+  weight:
+    kg: 18
+- name:
+    en: Sandile
+    ja: メグロコ
+    ko: 깜눈크
+  generation: 5
+  type:
+    - Ground
+    - Dark
+  height:
+    m: 0.7
+  weight:
+    kg: 15.2
+- name:
+    en: Krokorok
+    ja: ワルビル
+    ko: 악비르
+  generation: 5
+  type:
+    - Ground
+    - Dark
+  height:
+    m: 1
+  weight:
+    kg: 33.4
+- name:
+    en: Krookodile
+    ja: ワルビアル
+    ko: 악비아르
+  generation: 5
+  type:
+    - Ground
+    - Dark
+  height:
+    m: 1.5
+  weight:
+    kg: 96.3
+- name:
+    en: Darumaka
+    ja: ダルマッカ
+    ko: 달막화
+  generation: 5
+  type:
+    - Fire
+  height:
+    m: 0.6
+  weight:
+    kg: 37.5
+- name:
+    en: Galarian Darumaka
+    ja: ガラルダルマッカ
+    ko: 가라르 달막화
+  generation: 8
+  type:
+    - Ice
+  height:
+    m: 0.7
+  weight:
+    kg: 40
+- name:
+    en: Darmanitan Standard Mode
+    ja: ヒヒダル マノーマルモード
+    ko: 불비달마 노말모드
+  generation: 5
+  type:
+    - Fire
+  height:
+    m: 1.3
+  weight:
+    kg: 92.9
+- name:
+    en: Darmanitan Zen Mode
+    ja: ヒヒダルマ ダルマモード
+    ko: 불비달마 달마모드
+  generation: 5
+  type:
+    - Fire
+    - Psychic
+  height:
+    m: 1.3
+  weight:
+    kg: 92.9
+- name:
+    en: Galarian Darmanitan Standard Mode
+    ja: ガラルヒヒダルマ ノーマルモード
+    ko: 가라르 불비달마 노말모드
+  generation: 8
+  type:
+    - Ice
+  height:
+    m: 1.7
+  weight:
+    kg: 120
+- name:
+    en: Galarian Darmanitan Zen Mode
+    ja: ガラルヒヒダルマ マダルマモード
+    ko: 가라르 불비달마 달마모드
+  generation: 8
+  type:
+    - Ice
+    - Fire
+  height:
+    m: 1.7
+  weight:
+    kg: 120
+- name:
+    en: Maractus
+    ja: マラカッチ
+    ko: 마라카치
+  generation: 5
+  type:
+    - Grass
+  height:
+    m: 1
+  weight:
+    kg: 28
+- name:
+    en: Dwebble
+    ja: イシズマイ
+    ko: 돌살이
+  generation: 5
+  type:
+    - Bug
+    - Rock
+  height:
+    m: 0.3
+  weight:
+    kg: 14.5
+- name:
+    en: Crustle
+    ja: イワパレス
+    ko: 암팰리스
+  generation: 5
+  type:
+    - Bug
+    - Rock
+  height:
+    m: 1.4
+  weight:
+    kg: 200
+- name:
+    en: Scraggy
+    ja: ズルッグ
+    ko: 곤율랭
+  generation: 5
+  type:
+    - Dark
+    - Fighting
+  height:
+    m: 0.6
+  weight:
+    kg: 11.8
+- name:
+    en: Scrafty
+    ja: ズルズキン
+    ko: 곤율거니
+  generation: 5
+  type:
+    - Dark
+    - Fighting
+  height:
+    m: 1.1
+  weight:
+    kg: 30
+- name:
+    en: Sigilyph
+    ja: シンボラー
+    ko: 심보러
+  generation: 5
+  type:
+    - Psychic
+    - Flying
+  height:
+    m: 1.4
+  weight:
+    kg: 14
+- name:
+    en: Yamask
+    ja: デスマス
+    ko: 데스마스
+  generation: 5
+  type:
+    - Ghost
+  height:
+    m: 0.5
+  weight:
+    kg: 1.5
+- name:
+    en: Galarian Yamask
+    ja: ガラル불비달마
+    ko: 가라르 데스마스
+  generation: 8
+  type:
+    - Ground
+    - Ghost
+  height:
+    m: 0.5
+  weight:
+    kg: 1.5
+- name:
+    en: Cofagrigus
+    ja: デスカーン
+    ko: 데스니칸
+  generation: 5
+  type:
+    - Ghost
+  height:
+    m: 1.7
+  weight:
+    kg: 76.5
+- name:
+    en: Tirtouga
+    ja: プロトーガ
+    ko: 프로토가
+  generation: 5
+  type:
+    - Water
+    - Rock
+  height:
+    m: 0.7
+  weight:
+    kg: 16.5
+- name:
+    en: Carracosta
+    ja: アバゴーラ
+    ko: 늑골라
+  generation: 5
+  type:
+    - Water
+    - Rock
+  height:
+    m: 1.2
+  weight:
+    kg: 81
+- name:
+    en: Archen
+    ja: アーケン
+    ko: 아켄
+  generation: 5
+  type:
+    - Rock
+    - Flying
+  height:
+    m: 0.5
+  weight:
+    kg: 9.5
+- name:
+    en: Archeops
+    ja: アーケオス
+    ko: 아케오스
+  generation: 5
+  type:
+    - Rock
+    - Flying
+  height:
+    m: 1.4
+  weight:
+    kg: 32
+- name:
+    en: Trubbish
+    ja: ヤブクロン
+    ko: 깨봉이
+  generation: 5
+  type:
+    - Poison
+  height:
+    m: 0.6
+  weight:
+    kg: 31
+- name:
+    en: Garbodor
+    ja: ダストダス
+    ko: 더스트나
+  generation: 5
+  type:
+    - Poison
+  height:
+    m: 1.9
+  weight:
+    kg: 107.3
+- name:
+    en: Zorua
+    ja: ゾロア
+    ko: 조로아
+  generation: 5
+  type:
+    - Dark
+  height:
+    m: 0.7
+  weight:
+    kg: 12.5
+- name:
+    en: Hisuian Zorua
+    ja: ヒスイゾロア
+    ko: 히스이 조로아
+  generation: 8
+  type:
+    - Normal
+    - Ghost
+  height:
+    m: 0.7
+  weight:
+    kg: 12.5
+- name:
+    en: Zoroark
+    ja: ゾロアーク
+    ko: 조로아크
+  generation: 5
+  type:
+    - Dark
+  height:
+    m: 1.6
+  weight:
+    kg: 81.1
+- name:
+    en: Hisuian Zoroark
+    ja: ヒスイゾロアーク
+    ko: 히스이 조로아크
+  generation: 8
+  type:
+    - Normal
+    - Ghost
+  height:
+    m: 1.6
+  weight:
+    kg: 73
+- name:
+    en: Minccino
+    ja: チラーミィ
+    ko: 치라미
+  generation: 5
+  type:
+    - Normal
+  height:
+    m: 0.4
+  weight:
+    kg: 5.8
+- name:
+    en: Cinccino
+    ja: チラチーノ
+    ko: 치라치노
+  generation: 5
+  type:
+    - Normal
+  height:
+    m: 0.5
+  weight:
+    kg: 7.5
+- name:
+    en: Gothita
+    ja: ゴチム
+    ko: 고디탱
+  generation: 5
+  type:
+    - Psychic
+  height:
+    m: 0.4
+  weight:
+    kg: 5.8
+- name:
+    en: Gothorita
+    ja: ゴチミル
+    ko: 고디보미
+  generation: 5
+  type:
+    - Psychic
+  height:
+    m: 0.7
+  weight:
+    kg: 18
+- name:
+    en: Gothitelle
+    ja: ゴチルゼル
+    ko: 고디모아젤
+  generation: 5
+  type:
+    - Psychic
+  height:
+    m: 1.5
+  weight:
+    kg: 44
+- name:
+    en: Solosis
+    ja: ユニラン
+    ko: 유니란
+  generation: 5
+  type:
+    - Psychic
+  height:
+    m: 0.3
+  weight:
+    kg: 1
+- name:
+    en: Duosion
+    ja: ダブラン
+    ko: 듀란
+  generation: 5
+  type:
+    - Psychic
+  height:
+    m: 0.6
+  weight:
+    kg: 8
+- name:
+    en: Reuniclus
+    ja: ランクルス
+    ko: 란쿨루스
+  generation: 5
+  type:
+    - Psychic
+  height:
+    m: 1
+  weight:
+    kg: 20.1
+- name:
+    en: Ducklett
+    ja: コアルヒー
+    ko: 꼬지보리
+  generation: 5
+  type:
+    - Water
+    - Flying
+  height:
+    m: 0.5
+  weight:
+    kg: 5.5
+- name:
+    en: Swanna
+    ja: スワンナ
+    ko: 스완나
+  generation: 5
+  type:
+    - Water
+    - Flying
+  height:
+    m: 1.3
+  weight:
+    kg: 24.2
+- name:
+    en: Vanillite
+    ja: バニプッチ
+    ko: 바닐프티
+  generation: 5
+  type:
+    - Ice
+  height:
+    m: 0.4
+  weight:
+    kg: 5.7
+- name:
+    en: Vanillish
+    ja: バニリッチ
+    ko: 바닐리치
+  generation: 5
+  type:
+    - Ice
+  height:
+    m: 1.1
+  weight:
+    kg: 41
+- name:
+    en: Vanilluxe
+    ja: バイバニラ
+    ko: 배바닐라
+  generation: 5
+  type:
+    - Ice
+  height:
+    m: 1.3
+  weight:
+    kg: 57.5
+- name:
+    en: Deerling
+    ja: シキジカ
+    ko: 사철록
+  generation: 5
+  type:
+    - Normal
+    - Grass
+  height:
+    m: 0.6
+  weight:
+    kg: 19.5
+- name:
+    en: Sawsbuck
+    ja: メブキジカ
+    ko: 바라철록
+  generation: 5
+  type:
+    - Normal
+    - Grass
+  height:
+    m: 1.9
+  weight:
+    kg: 92.5
+- name:
+    en: Emolga
+    ja: エモンガ
+    ko: 에몽가
+  generation: 5
+  type:
+    - Electric
+    - Flying
+  height:
+    m: 0.4
+  weight:
+    kg: 5
+- name:
+    en: Karrablast
+    ja: カブルモ
+    ko: 딱정곤
+  generation: 5
+  type:
+    - Bug
+  height:
+    m: 0.5
+  weight:
+    kg: 5.9
+- name:
+    en: Escavalier
+    ja: シュバルゴ
+    ko: 슈바르고
+  generation: 5
+  type:
+    - Bug
+    - Steel
+  height:
+    m: 1
+  weight:
+    kg: 33
+- name:
+    en: Foongus
+    ja: タマゲタケ
+    ko: 깜놀버슬
+  generation: 5
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 0.2
+  weight:
+    kg: 1
+- name:
+    en: Amoonguss
+    ja: モロバレル
+    ko: 뽀록나
+  generation: 5
+  type:
+    - Grass
+    - Poison
+  height:
+    m: 0.6
+  weight:
+    kg: 10.5
+- name:
+    en: Frillish
+    ja: プルリル
+    ko: 탱그릴
+  generation: 5
+  type:
+    - Water
+    - Ghost
+  height:
+    m: 1.2
+  weight:
+    kg: 33
+- name:
+    en: Jellicent
+    ja: ブルンゲル
+    ko: 탱탱겔
+  generation: 5
+  type:
+    - Water
+    - Ghost
+  height:
+    m: 2.2
+  weight:
+    kg: 135
+- name:
+    en: Alomomola
+    ja: ママンボウ
+    ko: 맘복치
+  generation: 5
+  type:
+    - Water
+  height:
+    m: 1.2
+  weight:
+    kg: 31.6
+- name:
+    en: Joltik
+    ja: バチュル
+    ko: 파쪼옥
+  generation: 5
+  type:
+    - Bug
+    - Electric
+  height:
+    m: 0.1
+  weight:
+    kg: 0.6
+- name:
+    en: Galvantula
+    ja: デンチュラ
+    ko: 전툴라
+  generation: 5
+  type:
+    - Bug
+    - Electric
+  height:
+    m: 0.8
+  weight:
+    kg: 14.3
+- name:
+    en: Ferroseed
+    ja: テッシード
+    ko: 철시드
+  generation: 5
+  type:
+    - Grass
+    - Steel
+  height:
+    m: 0.6
+  weight:
+    kg: 18.8
+- name:
+    en: Ferrothorn
+    ja: ナットレイ
+    ko: 너트령
+  generation: 5
+  type:
+    - Grass
+    - Steel
+  height:
+    m: 1
+  weight:
+    kg: 110
+- name:
+    en: Klink
+    ja: ギアル
+    ko: 기어르
+  generation: 5
+  type:
+    - Steel
+  height:
+    m: 0.3
+  weight:
+    kg: 21
+- name:
+    en: Klang
+    ja: ギギアル
+    ko: 기기어르
+  generation: 5
+  type:
+    - Steel
+  height:
+    m: 0.6
+  weight:
+    kg: 51
+- name:
+    en: Klinklang
+    ja: ギギギアル
+    ko: 기기기어르
+  generation: 5
+  type:
+    - Steel
+  height:
+    m: 0.6
+  weight:
+    kg: 81
+- name:
+    en: Tynamo
+    ja: シビシラス
+    ko: 저리어
+  generation: 5
+  type:
+    - Electric
+  height:
+    m: 0.2
+  weight:
+    kg: 0.3
+- name:
+    en: Eelektrik
+    ja: シビビール
+    ko: 저리릴
+  generation: 5
+  type:
+    - Electric
+  height:
+    m: 1.2
+  weight:
+    kg: 22
+- name:
+    en: Eelektross
+    ja: シビルドン
+    ko: 저리더프
+  generation: 5
+  type:
+    - Electric
+  height:
+    m: 2.1
+  weight:
+    kg: 80.5
+- name:
+    en: Elgyem
+    ja: リグレー
+    ko: 리그레
+  generation: 5
+  type:
+    - Psychic
+  height:
+    m: 0.5
+  weight:
+    kg: 9
+- name:
+    en: Beheeyem
+    ja: オーベム
+    ko: 벰크
+  generation: 5
+  type:
+    - Psychic
+  height:
+    m: 1
+  weight:
+    kg: 34.5
+- name:
+    en: Litwick
+    ja: ヒトモシ
+    ko: 불켜미
+  generation: 5
+  type:
+    - Ghost
+    - Fire
+  height:
+    m: 0.3
+  weight:
+    kg: 3.1
+- name:
+    en: Lampent
+    ja: ランプラー
+    ko: 램프라
+  generation: 5
+  type:
+    - Ghost
+    - Fire
+  height:
+    m: 0.6
+  weight:
+    kg: 13
+- name:
+    en: Chandelure
+    ja: シャンデラ
+    ko: 샹델라
+  generation: 5
+  type:
+    - Ghost
+    - Fire
+  height:
+    m: 1
+  weight:
+    kg: 34.3
+- name:
+    en: Axew
+    ja: キバゴ
+    ko: 터검니
+  generation: 5
+  type:
+    - Dragon
+  height:
+    m: 0.6
+  weight:
+    kg: 18
+- name:
+    en: Fraxure
+    ja: オノンド
+    ko: 액슨도
+  generation: 5
+  type:
+    - Dragon
+  height:
+    m: 1
+  weight:
+    kg: 36
+- name:
+    en: Haxorus
+    ja: オノノクス
+    ko: 액스라이즈
+  generation: 5
+  type:
+    - Dragon
+  height:
+    m: 1.8
+  weight:
+    kg: 105.5
+- name:
+    en: Cubchoo
+    ja: クマシュン
+    ko: 코고미
+  generation: 5
+  type:
+    - Ice
+  height:
+    m: 0.5
+  weight:
+    kg: 8.5
+- name:
+    en: Beartic
+    ja: ツンベアー
+    ko: 툰베어
+  generation: 5
+  type:
+    - Ice
+  height:
+    m: 2.6
+  weight:
+    kg: 260
+- name:
+    en: Cryogonal
+    ja: フリージオ
+    ko: 프리지오
+  generation: 5
+  type:
+    - Ice
+  height:
+    m: 1.1
+  weight:
+    kg: 148
+- name:
+    en: Shelmet
+    ja: チョボマキ
+    ko: 쪼마리
+  generation: 5
+  type:
+    - Bug
+  height:
+    m: 0.4
+  weight:
+    kg: 7.7
+- name:
+    en: Accelgor
+    ja: アギルダー
+    ko: 어지리더
+  generation: 5
+  type:
+    - Bug
+  height:
+    m: 0.8
+  weight:
+    kg: 25.3
+- name:
+    en: Stunfisk
+    ja: マッギョ
+    ko: 메더
+  generation: 5
+  type:
+    - Ground
+    - Electric
+  height:
+    m: 0.7
+  weight:
+    kg: 11
+- name:
+    en: Galarian Stunfisk
+    ja: ガラルマッギョ
+    ko: 가라르 메더
+  generation: 8
+  type:
+    - Ground
+    - Steel
+  height:
+    m: 0.7
+  weight:
+    kg: 20.5
+- name:
+    en: Mienfoo
+    ja: コジョフー
+    ko: 비조푸
+  generation: 5
+  type:
+    - Fighting
+  height:
+    m: 0.9
+  weight:
+    kg: 20
+- name:
+    en: Mienshao
+    ja: コジョンド
+    ko: 비조도
+  generation: 5
+  type:
+    - Fighting
+  height:
+    m: 1.4
+  weight:
+    kg: 35.5
+- name:
+    en: Druddigon
+    ja: クリムガン
+    ko: 크리만
+  generation: 5
+  type:
+    - Dragon
+  height:
+    m: 1.6
+  weight:
+    kg: 139
+- name:
+    en: Golett
+    ja: ゴビット
+    ko: 골비람
+  generation: 5
+  type:
+    - Ground
+    - Ghost
+  height:
+    m: 1
+  weight:
+    kg: 92
+- name:
+    en: Golurk
+    ja: ゴルーグ
+    ko: 골루그
+  generation: 5
+  type:
+    - Ground
+    - Ghost
+  height:
+    m: 2.8
+  weight:
+    kg: 330
+- name:
+    en: Pawniard
+    ja: コマタナ
+    ko: 자망칼
+  generation: 5
+  type:
+    - Dark
+    - Steel
+  height:
+    m: 0.5
+  weight:
+    kg: 10.2
+- name:
+    en: Bisharp
+    ja: キリキザン
+    ko: 절각참
+  generation: 5
+  type:
+    - Dark
+    - Steel
+  height:
+    m: 1.6
+  weight:
+    kg: 70
+- name:
+    en: Bouffalant
+    ja: バッフロン
+    ko: 버프론
+  generation: 5
+  type:
+    - Normal
+  height:
+    m: 1.6
+  weight:
+    kg: 94.6
+- name:
+    en: Rufflet
+    ja: ワシボン
+    ko: 수리둥보
+  generation: 5
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.5
+  weight:
+    kg: 10.5
+- name:
+    en: Braviary
+    ja: ウォーグル
+    ko: 워글
+  generation: 5
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 1.5
+  weight:
+    kg: 41
+- name:
+    en: Hisuian Braviary
+    ja: ヒスイウォーグル
+    ko: 히스이 워글
+  generation: 8
+  type:
+    - Psychic
+    - Flying
+  height:
+    m: 1.7
+  weight:
+    kg: 43.4
+- name:
+    en: Vullaby
+    ja: バルチャイ
+    ko: 벌차이
+  generation: 5
+  type:
+    - Dark
+    - Flying
+  height:
+    m: 0.5
+  weight:
+    kg: 9
+- name:
+    en: Mandibuzz
+    ja: バルジーナ
+    ko: 버랜지나
+  generation: 5
+  type:
+    - Dark
+    - Flying
+  height:
+    m: 1.2
+  weight:
+    kg: 39.5
+- name:
+    en: Heatmor
+    ja: クイタラン
+    ko: 앤티골
+  generation: 5
+  type:
+    - Fire
+  height:
+    m: 1.4
+  weight:
+    kg: 58
+- name:
+    en: Durant
+    ja: アイアント
+    ko: 아이앤트
+  generation: 5
+  type:
+    - Bug
+    - Steel
+  height:
+    m: 0.3
+  weight:
+    kg: 33
+- name:
+    en: Deino
+    ja: モノズ
+    ko: 모노두
+  generation: 5
+  type:
+    - Dark
+    - Dragon
+  height:
+    m: 0.8
+  weight:
+    kg: 17.3
+- name:
+    en: Zweilous
+    ja: ジヘッド
+    ko: 디헤드
+  generation: 5
+  type:
+    - Dark
+    - Dragon
+  height:
+    m: 1.4
+  weight:
+    kg: 50
+- name:
+    en: Hydreigon
+    ja: サザンドラ
+    ko: 삼삼드래
+  generation: 5
+  type:
+    - Dark
+    - Dragon
+  height:
+    m: 1.8
+  weight:
+    kg: 160
+- name:
+    en: Larvesta
+    ja: メラルバ
+    ko: 활화르바
+  generation: 5
+  type:
+    - Bug
+    - Fire
+  height:
+    m: 1.1
+  weight:
+    kg: 28.8
+- name:
+    en: Volcarona
+    ja: ウルガモス
+    ko: 불카모스
+  generation: 5
+  type:
+    - Bug
+    - Fire
+  height:
+    m: 1.6
+  weight:
+    kg: 46
+- name:
+    en: Cobalion
+    ja: コバルオン
+    ko: 코바르온
+  generation: 5
+  type:
+    - Steel
+    - Fighting
+  height:
+    m: 2.1
+  weight:
+    kg: 250
+- name:
+    en: Terrakion
+    ja: テラキオン
+    ko: 테라키온
+  generation: 5
+  type:
+    - Rock
+    - Fighting
+  height:
+    m: 1.9
+  weight:
+    kg: 260
+- name:
+    en: Virizion
+    ja: ビリジオン
+    ko: 비리디온
+  generation: 5
+  type:
+    - Grass
+    - Fighting
+  height:
+    m: 2
+  weight:
+    kg: 200
+- name:
+    en: Tornadus Incarnate Forme
+    ja: トルネロス けしんフォルム
+    ko: 토네로스 화신폼
+  generation: 5
+  type:
+    - Flying
+  height:
+    m: 1.5
+  weight:
+    kg: 63
+- name:
+    en: Tornadus Therian Forme
+    ja: トルネロス れいじゅうフォルム
+    ko: 토네로스 영물폼
+  generation: 5
+  type:
+    - Flying
+  height:
+    m: 1.4
+  weight:
+    kg: 63
+- name:
+    en: Thundurus Incarnate Forme
+    ja: ボルトロス けしんフォルム
+    ko: 볼트로스 화신폼
+  generation: 5
+  type:
+    - Electric
+    - Flying
+  height:
+    m: 1.5
+  weight:
+    kg: 61
+- name:
+    en: Thundurus Therian Forme
+    ja: ボルトロス れいじゅうフォルム
+    ko: 볼트로스 영물폼
+  generation: 5
+  type:
+    - Electric
+    - Flying
+  height:
+    m: 3
+  weight:
+    kg: 61
+- name:
+    en: Reshiram
+    ja: レシラム
+    ko: 레시라무
+  generation: 5
+  type:
+    - Dragon
+    - Fire
+  height:
+    m: 3.2
+  weight:
+    kg: 330
+- name:
+    en: Zekrom
+    ja: ゼクロム
+    ko: 제크로무
+  generation: 5
+  type:
+    - Dragon
+    - Electric
+  height:
+    m: 2.9
+  weight:
+    kg: 345
+- name:
+    en: Landorus Incarnate Forme
+    ja: ランドロスけしんフォルム
+    ko: 랜드로스 화신폼
+  generation: 5
+  type:
+    - Ground
+    - Flying
+  height:
+    m: 1.5
+  weight:
+    kg: 68
+- name:
+    en: Landorus Therian Forme
+    ja: ランドロスれいじゅうフォルム
+    ko: 랜드로스 영물폼
+  generation: 5
+  type:
+    - Ground
+    - Flying
+  height:
+    m: 1.3
+  weight:
+    kg: 68
+- name:
+    en: Kyurem
+    ja: キュレム
+    ko: 큐레무
+  generation: 5
+  type:
+    - Dragon
+    - Ice
+  height:
+    m: 3
+  weight:
+    kg: 325
+- name:
+    en: Black Kyurem
+    ja: ブラックキュレム
+    ko: 블랙큐레무
+  generation: 5
+  type:
+    - Dragon
+    - Ice
+  height:
+    m: 3.3
+  weight:
+    kg: 325
+- name:
+    en: White Kyurem
+    ja: ホワイトキュレム
+    ko: 화이트큐레무
+  generation: 5
+  type:
+    - Dragon
+    - Ice
+  height:
+    m: 3.6
+  weight:
+    kg: 325
+- name:
+    en: Keldeo
+    ja: ケルディオ
+    ko: 케르디오
+  generation: 5
+  type:
+    - Water
+    - Fighting
+  height:
+    m: 1.4
+  weight:
+    kg: 48.5
+- name:
+    en: Meloetta Aria Forme
+    ja: メロエッタ ボイスフォルム
+    ko: 메로엣타 보이스폼
+  generation: 5
+  type:
+    - Normal
+    - Psychic
+  height:
+    m: 0.6
+  weight:
+    kg: 6.5
+- name:
+    en: Meloetta Pirouette Forme
+    ja: メロエッタ ステップフォルム
+    ko: 메로엣타 스텝폼
+  generation: 5
+  type:
+    - Normal
+    - Fighting
+  height:
+    m: 0.6
+  weight:
+    kg: 6.5
+- name:
+    en: Genesect
+    ja: ゲノセクト
+    ko: 게노세크트
+  generation: 5
+  type:
+    - Bug
+    - Steel
+  height:
+    m: 1.5
+  weight:
+    kg: 82.5
+- name:
+    en: Chespin
+    ja: ハリマロン
+    ko: 도치마론
+  generation: 6
+  type:
+    - Grass
+  height:
+    m: 0.4
+  weight:
+    kg: 9
+- name:
+    en: Quilladin
+    ja: ハリボーグ
+    ko: 도치보구
+  generation: 6
+  type:
+    - Grass
+  height:
+    m: 0.7
+  weight:
+    kg: 29
+- name:
+    en: Chesnaught
+    ja: ブリガロン
+    ko: 브리가론
+  generation: 6
+  type:
+    - Grass
+    - Fighting
+  height:
+    m: 1.6
+  weight:
+    kg: 90
+- name:
+    en: Fennekin
+    ja: フォッコ
+    ko: 푸호꼬
+  generation: 6
+  type:
+    - Fire
+  height:
+    m: 0.4
+  weight:
+    kg: 9.4
+- name:
+    en: Braixen
+    ja: テールナー
+    ko: 테르나
+  generation: 6
+  type:
+    - Fire
+  height:
+    m: 1
+  weight:
+    kg: 14.5
+- name:
+    en: Delphox
+    ja: マフォクシー
+    ko: 마폭시
+  generation: 6
+  type:
+    - Fire
+    - Psychic
+  height:
+    m: 1.5
+  weight:
+    kg: 39
+- name:
+    en: Froakie
+    ja: ケロマツ
+    ko: 개구마르
+  generation: 6
+  type:
+    - Water
+  height:
+    m: 0.3
+  weight:
+    kg: 7
+- name:
+    en: Frogadier
+    ja: ゲコガシラ
+    ko: 개굴반장
+  generation: 6
+  type:
+    - Water
+  height:
+    m: 0.6
+  weight:
+    kg: 10.9
+- name:
+    en: Greninja
+    ja: ゲッコウガ
+    ko: 개굴닌자
+  generation: 6
+  type:
+    - Water
+    - Dark
+  height:
+    m: 1.5
+  weight:
+    kg: 40
+- name:
+    en: Ash-Greninja
+    ja: サトシゲッコウガ
+    ko: 지우개굴닌자
+  generation: 7
+  type:
+    - Water
+    - Dark
+  height:
+    m: 1.5
+  weight:
+    kg: 40
+- name:
+    en: Bunnelby
+    ja: ホルビー
+    ko: 파르빗
+  generation: 6
+  type:
+    - Normal
+  height:
+    m: 0.4
+  weight:
+    kg: 5
+- name:
+    en: Diggersby
+    ja: ホルード
+    ko: 파르토
+  generation: 6
+  type:
+    - Normal
+    - Ground
+  height:
+    m: 1
+  weight:
+    kg: 42.4
+- name:
+    en: Fletchling
+    ja: ヤヤコマ
+    ko: 화살꼬빈
+  generation: 6
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.3
+  weight:
+    kg: 1.7
+- name:
+    en: Fletchinder
+    ja: ヒノヤマコ
+    ko: 불화살빈
+  generation: 6
+  type:
+    - Fire
+    - Flying
+  height:
+    m: 0.7
+  weight:
+    kg: 16
+- name:
+    en: Talonflame
+    ja: ファイアロー
+    ko: 파이어로
+  generation: 6
+  type:
+    - Fire
+    - Flying
+  height:
+    m: 1.2
+  weight:
+    kg: 24.5
+- name:
+    en: Scatterbug
+    ja: コフキムシ
+    ko: 분이벌레
+  generation: 6
+  type:
+    - Bug
+  height:
+    m: 0.3
+  weight:
+    kg: 2.5
+- name:
+    en: Spewpa
+    ja: コフーライ
+    ko: 분떠도리
+  generation: 6
+  type:
+    - Bug
+  height:
+    m: 0.3
+  weight:
+    kg: 8.4
+- name:
+    en: Vivillon
+    ja: ビビヨン
+    ko: 비비용
+  generation: 6
+  type:
+    - Bug
+    - Flying
+  height:
+    m: 1.2
+  weight:
+    kg: 17
+- name:
+    en: Litleo
+    ja: シシコ
+    ko: 레오꼬
+  generation: 6
+  type:
+    - Fire
+    - Normal
+  height:
+    m: 0.6
+  weight:
+    kg: 13.5
+- name:
+    en: Pyroar
+    ja: カエンジシ
+    ko: 화염레오
+  generation: 6
+  type:
+    - Fire
+    - Normal
+  height:
+    m: 1.5
+  weight:
+    kg: 81.5
+- name:
+    en: Flabébé
+    ja: フラベベ
+    ko: 플라베베
+  generation: 6
+  type:
+    - Fairy
+  height:
+    m: 0.1
+  weight:
+    kg: 0.1
+- name:
+    en: Floette
+    ja: フラエッテ
+    ko: 플라엣테
+  generation: 6
+  type:
+    - Fairy
+  height:
+    m: 0.2
+  weight:
+    kg: 0.9
+- name:
+    en: Florges
+    ja: フラージェス
+    ko: 플라제스
+  generation: 6
+  type:
+    - Fairy
+  height:
+    m: 1.1
+  weight:
+    kg: 10
+- name:
+    en: Skiddo
+    ja: メエークル
+    ko: 메이클
+  generation: 6
+  type:
+    - Grass
+  height:
+    m: 0.9
+  weight:
+    kg: 31
+- name:
+    en: Gogoat
+    ja: ゴーゴート
+    ko: 고고트
+  generation: 6
+  type:
+    - Grass
+  height:
+    m: 1.7
+  weight:
+    kg: 91
+- name:
+    en: Pancham
+    ja: ヤンチャム
+    ko: 판짱
+  generation: 6
+  type:
+    - Fighting
+  height:
+    m: 0.6
+  weight:
+    kg: 8
+- name:
+    en: Pangoro
+    ja: ゴロンダ
+    ko: 부란다
+  generation: 6
+  type:
+    - Fighting
+    - Dark
+  height:
+    m: 2.1
+  weight:
+    kg: 136
+- name:
+    en: Furfrou
+    ja: トリミアン
+    ko: 트리미앙
+  generation: 6
+  type:
+    - Normal
+  height:
+    m: 1.2
+  weight:
+    kg: 28
+- name:
+    en: Espurr
+    ja: ニャスパー
+    ko: 냐스퍼
+  generation: 6
+  type:
+    - Psychic
+  height:
+    m: 0.3
+  weight:
+    kg: 3.5
+- name:
+    en: Meowstic
+    ja: ニャオニクス
+    ko: 냐오닉스
+  generation: 6
+  type:
+    - Psychic
+  height:
+    m: 0.6
+  weight:
+    kg: 8.5
+- name:
+    en: Honedge
+    ja: ヒトツキ
+    ko: 단칼빙
+  generation: 6
+  type:
+    - Steel
+    - Ghost
+  height:
+    m: 0.8
+  weight:
+    kg: 2
+- name:
+    en: Doublade
+    ja: ニダンギル
+    ko: 쌍검킬
+  generation: 6
+  type:
+    - Steel
+    - Ghost
+  height:
+    m: 0.8
+  weight:
+    kg: 4.5
+- name:
+    en: Aegislash
+    ja: ギルガルド
+    ko: 킬가르도
+  generation: 6
+  type:
+    - Steel
+    - Ghost
+  height:
+    m: 1.7
+  weight:
+    kg: 53
+- name:
+    en: Spritzee
+    ja: シュシュプ
+    ko: 슈쁘
+  generation: 6
+  type:
+    - Fairy
+  height:
+    m: 0.2
+  weight:
+    kg: 0.5
+- name:
+    en: Aromatisse
+    ja: フレフワン
+    ko: 프레프티르
+  generation: 6
+  type:
+    - Fairy
+  height:
+    m: 0.8
+  weight:
+    kg: 15.5
+- name:
+    en: Swirlix
+    ja: ペロッパフ
+    ko: 나룸퍼프
+  generation: 6
+  type:
+    - Fairy
+  height:
+    m: 0.4
+  weight:
+    kg: 3.5
+- name:
+    en: Slurpuff
+    ja: ペロリーム
+    ko: 나루림
+  generation: 6
+  type:
+    - Fairy
+  height:
+    m: 0.8
+  weight:
+    kg: 5
+- name:
+    en: Inkay
+    ja: マーイーカ
+    ko: 오케이징
+  generation: 6
+  type:
+    - Dark
+    - Psychic
+  height:
+    m: 0.4
+  weight:
+    kg: 3.5
+- name:
+    en: Malamar
+    ja: カラマネロ
+    ko: 칼라마네로
+  generation: 6
+  type:
+    - Dark
+    - Psychic
+  height:
+    m: 1.5
+  weight:
+    kg: 47
+- name:
+    en: Binacle
+    ja: カメテテ
+    ko: 거북손손
+  generation: 6
+  type:
+    - Rock
+    - Water
+  height:
+    m: 0.5
+  weight:
+    kg: 31
+- name:
+    en: Barbaracle
+    ja: ガメノデス
+    ko: 거북손데스
+  generation: 6
+  type:
+    - Rock
+    - Water
+  height:
+    m: 1.3
+  weight:
+    kg: 96
+- name:
+    en: Skrelp
+    ja: クズモー
+    ko: 수레기
+  generation: 6
+  type:
+    - Poison
+    - Water
+  height:
+    m: 0.5
+  weight:
+    kg: 7.3
+- name:
+    en: Dragalge
+    ja: ドラミドロ
+    ko: 드래캄
+  generation: 6
+  type:
+    - Poison
+    - Dragon
+  height:
+    m: 1.8
+  weight:
+    kg: 81.5
+- name:
+    en: Clauncher
+    ja: ウデッポウ
+    ko: 완철포
+  generation: 6
+  type:
+    - Water
+  height:
+    m: 0.5
+  weight:
+    kg: 8.3
+- name:
+    en: Clawitzer
+    ja: ブロスター
+    ko: 블로스터
+  generation: 6
+  type:
+    - Water
+  height:
+    m: 1.3
+  weight:
+    kg: 35.3
+- name:
+    en: Helioptile
+    ja: エリキテル
+    ko: 목도리키텔
+  generation: 6
+  type:
+    - Electric
+    - Normal
+  height:
+    m: 0.5
+  weight:
+    kg: 6
+- name:
+    en: Heliolisk
+    ja: エレザード
+    ko: 일레도리자드
+  generation: 6
+  type:
+    - Electric
+    - Normal
+  height:
+    m: 1
+  weight:
+    kg: 21
+- name:
+    en: Tyrunt
+    ja: チゴラス
+    ko: 티고라스
+  generation: 6
+  type:
+    - Rock
+    - Dragon
+  height:
+    m: 0.8
+  weight:
+    kg: 26
+- name:
+    en: Tyrantrum
+    ja: ガチゴラス
+    ko: 견고라스
+  generation: 6
+  type:
+    - Rock
+    - Dragon
+  height:
+    m: 2.5
+  weight:
+    kg: 270
+- name:
+    en: Amaura
+    ja: アマルス
+    ko: 아마루스
+  generation: 6
+  type:
+    - Rock
+    - Ice
+  height:
+    m: 1.3
+  weight:
+    kg: 25.2
+- name:
+    en: Aurorus
+    ja: アマルルガ
+    ko: 아마루르가
+  generation: 6
+  type:
+    - Rock
+    - Ice
+  height:
+    m: 2.7
+  weight:
+    kg: 225
+- name:
+    en: Sylveon
+    ja: ニンフィア
+    ko: 님피아
+  generation: 6
+  type:
+    - Fairy
+  height:
+    m: 1
+  weight:
+    kg: 23.5
+- name:
+    en: Hawlucha
+    ja: ルチャブル
+    ko: 루차불
+  generation: 6
+  type:
+    - Fighting
+    - Flying
+  height:
+    m: 0.8
+  weight:
+    kg: 21.5
+- name:
+    en: Dedenne
+    ja: デデンネ
+    ko: 데덴네
+  generation: 6
+  type:
+    - Electric
+    - Fairy
+  height:
+    m: 0.2
+  weight:
+    kg: 2.2
+- name:
+    en: Carbink
+    ja: メレシー
+    ko: 멜리시
+  generation: 6
+  type:
+    - Rock
+    - Fairy
+  height:
+    m: 0.3
+  weight:
+    kg: 5.7
+- name:
+    en: Goomy
+    ja: ヌメラ
+    ko: 미끄메라
+  generation: 6
+  type:
+    - Dragon
+  height:
+    m: 0.3
+  weight:
+    kg: 2.8
+- name:
+    en: Sliggoo
+    ja: ヌメイル
+    ko: 미끄네일
+  generation: 6
+  type:
+    - Dragon
+  height:
+    m: 0.8
+  weight:
+    kg: 17.5
+- name:
+    en: Hisuian Sliggoo
+    ja: ヒスイヌメイル
+    ko: 히스이 미끄네일
+  generation: 8
+  type:
+    - Steel
+    - Dragon
+  height:
+    m: 0.7
+  weight:
+    kg: 68.5
+- name:
+    en: Goodra
+    ja: ヌメルゴン
+    ko: 미끄래곤
+  generation: 6
+  type:
+    - Dragon
+  height:
+    m: 2
+  weight:
+    kg: 150.5
+- name:
+    en: Hisuian Goodra
+    ja: ヒスイヌメルゴン
+    ko: 히스이 미끄래곤
+  generation: 8
+  type:
+    - Steel
+    - Dragon
+  height:
+    m: 1.7
+  weight:
+    kg: 334.1
+- name:
+    en: Klefki
+    ja: クレッフィ
+    ko: 클레피
+  generation: 6
+  type:
+    - Steel
+    - Fairy
+  height:
+    m: 0.2
+  weight:
+    kg: 3
+- name:
+    en: Phantump
+    ja: ボクレー
+    ko: 나목령
+  generation: 6
+  type:
+    - Ghost
+    - Grass
+  height:
+    m: 0.4
+  weight:
+    kg: 7
+- name:
+    en: Trevenant
+    ja: オーロット
+    ko: 대로트
+  generation: 6
+  type:
+    - Ghost
+    - Grass
+  height:
+    m: 1.5
+  weight:
+    kg: 71
+- name:
+    en: Pumpkaboo
+    ja: バケッチャ
+    ko: 호바귀
+  generation: 6
+  type:
+    - Ghost
+    - Grass
+  height:
+    m: 0.4
+  weight:
+    kg: 5
+- name:
+    en: Gourgeist
+    ja: パンプジン
+    ko: 펌킨인
+  generation: 6
+  type:
+    - Ghost
+    - Grass
+  height:
+    m: 0.9
+  weight:
+    kg: 12.5
+- name:
+    en: Bergmite
+    ja: カチコール
+    ko: 꽁어름
+  generation: 6
+  type:
+    - Ice
+  height:
+    m: 1
+  weight:
+    kg: 99.5
+- name:
+    en: Avalugg
+    ja: クレベース
+    ko: 크레베이스
+  generation: 6
+  type:
+    - Ice
+  height:
+    m: 2
+  weight:
+    kg: 505
+- name:
+    en: Hisuian Avalugg
+    ja: ヒスイクレベース
+    ko: 히스이 크레베이스
+  generation: 8
+  type:
+    - Ice
+    - Rock
+  height:
+    m: 1.4
+  weight:
+    kg: 262.4
+- name:
+    en: Noibat
+    ja: オンバット
+    ko: 음뱃
+  generation: 6
+  type:
+    - Flying
+    - Dragon
+  height:
+    m: 0.5
+  weight:
+    kg: 8
+- name:
+    en: Noivern
+    ja: オンバーン
+    ko: 음번
+  generation: 6
+  type:
+    - Flying
+    - Dragon
+  height:
+    m: 1.5
+  weight:
+    kg: 85
+- name:
+    en: Xerneas
+    ja: ゼルネアス
+    ko: 제르네아스
+  generation: 6
+  type:
+    - Fairy
+  height:
+    m: 3
+  weight:
+    kg: 215
+- name:
+    en: Yveltal
+    ja: イベルタル
+    ko: 이벨타르
+  generation: 6
+  type:
+    - Dark
+    - Flying
+  height:
+    m: 5.8
+  weight:
+    kg: 203
+- name:
+    en: Zygarde 50% Forme
+    ja: ジガルデ 50%フォルム
+    ko: 지가르데 50%폼
+  generation: 6
+  type:
+    - Dragon
+    - Ground
+  height:
+    m: 5
+  weight:
+    kg: 305
+- name:
+    en: Zygarde 10% Forme
+    ja: ジガルデ 10%フォルム
+    ko: 지가르데 10%폼
+  generation: 7
+  type:
+    - Dragon
+    - Ground
+  height:
+    m: 1.2
+  weight:
+    kg: 33.5
+- name:
+    en: Zygarde Complete Forme
+    ja: ジガルデ パーフェクトフォルム
+    ko: 지가르데 퍼펙트폼
+  generation: 7
+  type:
+    - Dragon
+    - Ground
+  height:
+    m: 4.5
+  weight:
+    kg: 610
+- name:
+    en: Diancie
+    ja: ディアンシー
+    ko: 디안시
+  generation: 6
+  type:
+    - Rock
+    - Fairy
+  height:
+    m: 0.7
+  weight:
+    kg: 8.8
+- name:
+    en: Mega Diancie
+    ja: メガディアンシー
+    ko: 메가디안시
+  generation: 6
+  type:
+    - Rock
+    - Fairy
+  height:
+    m: 1.1
+  weight:
+    kg: 27.8
+- name:
+    en: Hoopa Confined
+    ja: いましめられしフーパ
+    ko: 굴레에 빠진 후파
+  generation: 6
+  type:
+    - Psychic
+    - Ghost
+  height:
+    m: 0.5
+  weight:
+    kg: 9
+- name:
+    en: Hoopa Unbound
+    ja: ときはなたれしフーパ
+    ko: 굴레를 벗어난 후파
+  generation: 6
+  type:
+    - Psychic
+    - Dark
+  height:
+    m: 6.5
+  weight:
+    kg: 490
+- name:
+    en: Volcanion
+    ja: ボルケニオン
+    ko: 볼케니온
+  generation: 6
+  type:
+    - Fire
+    - Water
+  height:
+    m: 1.7
+  weight:
+    kg: 195
+- name:
+    en: Rowlet
+    ja: モクロー
+    ko: 나몰빼미
+  generation: 7
+  type:
+    - Grass
+    - Flying
+  height:
+    m: 0.3
+  weight:
+    kg: 1.5
+- name:
+    en: Dartrix
+    ja: フクスロー
+    ko: 빼미스로우
+  generation: 7
+  type:
+    - Grass
+    - Flying
+  height:
+    m: 0.7
+  weight:
+    kg: 16
+- name:
+    en: Decidueye
+    ja: ジュナイパー
+    ko: 모크나이퍼
+  generation: 7
+  type:
+    - Grass
+    - Ghost
+  height:
+    m: 1.6
+  weight:
+    kg: 36.6
+- name:
+    en: Hisuian Decidueye
+    ja: ヒスイジュナイパー
+    ko: 히스이 모크나이퍼
+  generation: 8
+  type:
+    - Grass
+    - Fighting
+  height:
+    m: 1.6
+  weight:
+    kg: 37
+- name:
+    en: Litten
+    ja: ニャビー
+    ko: 냐오불
+  generation: 7
+  type:
+    - Fire
+  height:
+    m: 0.4
+  weight:
+    kg: 4.3
+- name:
+    en: Torracat
+    ja: ニャヒート
+    ko: 냐오히트
+  generation: 7
+  type:
+    - Fire
+  height:
+    m: 0.7
+  weight:
+    kg: 25
+- name:
+    en: Incineroar
+    ja: ガオガエン
+    ko: 어흥염
+  generation: 7
+  type:
+    - Fire
+    - Dark
+  height:
+    m: 1.8
+  weight:
+    kg: 83
+- name:
+    en: Popplio
+    ja: アシマリ
+    ko: 누리공
+  generation: 7
+  type:
+    - Water
+  height:
+    m: 0.4
+  weight:
+    kg: 7.5
+- name:
+    en: Brionne
+    ja: オシャマリ
+    ko: 키요공
+  generation: 7
+  type:
+    - Water
+  height:
+    m: 0.6
+  weight:
+    kg: 17.5
+- name:
+    en: Primarina
+    ja: アシレーヌ
+    ko: 누리레느
+  generation: 7
+  type:
+    - Water
+    - Fairy
+  height:
+    m: 1.8
+  weight:
+    kg: 44
+- name:
+    en: Pikipek
+    ja: ツツケラ
+    ko: 콕코구리
+  generation: 7
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.3
+  weight:
+    kg: 1.2
+- name:
+    en: Trumbeak
+    ja: ケララッパ
+    ko: 크라파
+  generation: 7
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 0.6
+  weight:
+    kg: 14.8
+- name:
+    en: Toucannon
+    ja: ドデカバシ
+    ko: 왕큰부리
+  generation: 7
+  type:
+    - Normal
+    - Flying
+  height:
+    m: 1.1
+  weight:
+    kg: 26
+- name:
+    en: Yungoos
+    ja: ヤングース
+    ko: 영구스
+  generation: 7
+  type:
+    - Normal
+  height:
+    m: 0.4
+  weight:
+    kg: 6
+- name:
+    en: Gumshoos
+    ja: デカグース
+    ko: 형사구스
+  generation: 7
+  type:
+    - Normal
+  height:
+    m: 0.7
+  weight:
+    kg: 14.2
+- name:
+    en: Grubbin
+    ja: アゴジムシ
+    ko: 턱지충이
+  generation: 7
+  type:
+    - Bug
+  height:
+    m: 0.4
+  weight:
+    kg: 4.4
+- name:
+    en: Charjabug
+    ja: デンヂムシ
+    ko: 전지충이
+  generation: 7
+  type:
+    - Bug
+    - Electric
+  height:
+    m: 0.5
+  weight:
+    kg: 10.5
+- name:
+    en: Vikavolt
+    ja: クワガノン
+    ko: 투구뿌논
+  generation: 7
+  type:
+    - Bug
+    - Electric
+  height:
+    m: 1.5
+  weight:
+    kg: 45
+- name:
+    en: Crabrawler
+    ja: マケンカニ
+    ko: 오기지게
+  generation: 7
+  type:
+    - Fighting
+  height:
+    m: 0.6
+  weight:
+    kg: 7
+- name:
+    en: Crabominable
+    ja: ケケンカニ
+    ko: 모단단게
+  generation: 7
+  type:
+    - Fighting
+    - Ice
+  height:
+    m: 1.7
+  weight:
+    kg: 180
+- name:
+    en: Oricorio Baile Style
+    ja: オドリドリ めらめらスタイル
+    ko: 춤추새 이글이글 스타일
+  generation: 7
+  type:
+    - Fire
+    - Flying
+  height:
+    m: 0.6
+  weight:
+    kg: 3.4
+- name:
+    en: Oricorio Pom-Pom Style
+    ja: オドリドリ ぱちぱちスタイル
+    ko: 춤추새 파칙파칙 스타일
+  generation: 7
+  type:
+    - Electric
+    - Flying
+  height:
+    m: 0.6
+  weight:
+    kg: 3.4
+- name:
+    en: Oricorio Pa'u Style
+    ja: オドリドリ ふらふらスタイル
+    ko: 춤추새 훌라훌라 스타일
+  generation: 7
+  type:
+    - Psychic
+    - Flying
+  height:
+    m: 0.6
+  weight:
+    kg: 3.4
+- name:
+    en: Oricorio Sensu Style
+    ja: オドリドリ まいまいスタイル
+    ko: 춤추새 하늘하늘 스타일
+  generation: 7
+  type:
+    - Ghost
+    - Flying
+  height:
+    m: 0.6
+  weight:
+    kg: 3.4
+- name:
+    en: Cutiefly
+    ja: アブリー
+    ko: 에블리
+  generation: 7
+  type:
+    - Bug
+    - Fairy
+  height:
+    m: 0.1
+  weight:
+    kg: 0.2
+- name:
+    en: Ribombee
+    ja: 'アブリボン '
+    ko: 에리본
+  generation: 7
+  type:
+    - Bug
+    - Fairy
+  height:
+    m: 0.2
+  weight:
+    kg: 0.5
+- name:
+    en: Rockruff
+    ja: イワンコ
+    ko: 암멍이
+  generation: 7
+  type:
+    - Rock
+  height:
+    m: 0.5
+  weight:
+    kg: 9.2
+- name:
+    en: Lycanroc Midday Form
+    ja: ルガルガン まひるのすがた
+    ko: 루가루암 한낮의 모습
+  generation: 7
+  type:
+    - Rock
+  height:
+    m: 0.8
+  weight:
+    kg: 25
+- name:
+    en: Lycanroc Midnight Form
+    ja: ルガルガン まよなかのすがた
+    ko: 루가루암 한밤중의 모습
+  generation: 7
+  type:
+    - Rock
+  height:
+    m: 1.1
+  weight:
+    kg: 25
+- name:
+    en: Lycanroc Dusk Form
+    ja: ルガルガン たそがれのすがた
+    ko: 루가루암 황혼의 모습
+  generation: 7
+  type:
+    - Rock
+  height:
+    m: 0.8
+  weight:
+    kg: 25
+- name:
+    en: Wishiwashi Solo Form
+    ja: ヨワシ たんどくのすがた
+    ko: 약어리 단독의 모습
+  generation: 7
+  type:
+    - Water
+  height:
+    m: 0.2
+  weight:
+    kg: 0.3
+- name:
+    en: Wishiwashi School Form
+    ja: ヨワシ むれたすがた
+    ko: 약어리 군집의 모습
+  generation: 7
+  type:
+    - Water
+  height:
+    m: 8.2
+  weight:
+    kg: 78.6
+- name:
+    en: Mareanie
+    ja: ヒドイデ
+    ko: 시마사리
+  generation: 7
+  type:
+    - Poison
+    - Water
+  height:
+    m: 0.4
+  weight:
+    kg: 8
+- name:
+    en: Toxapex
+    ja: ドヒドイデ
+    ko: 더시마사리
+  generation: 7
+  type:
+    - Poison
+    - Water
+  height:
+    m: 0.7
+  weight:
+    kg: 14.5
+- name:
+    en: Mudbray
+    ja: ドロバンコ
+    ko: 머드나기
+  generation: 7
+  type:
+    - Ground
+  height:
+    m: 1
+  weight:
+    kg: 110
+- name:
+    en: Mudsdale
+    ja: バンバドロ
+    ko: 만마드
+  generation: 7
+  type:
+    - Ground
+  height:
+    m: 2.5
+  weight:
+    kg: 920
+- name:
+    en: Dewpider
+    ja: シズクモ
+    ko: 물거미
+  generation: 7
+  type:
+    - Water
+    - Bug
+  height:
+    m: 0.3
+  weight:
+    kg: 4
+- name:
+    en: Araquanid
+    ja: オニシズクモ
+    ko: 깨비물거미
+  generation: 7
+  type:
+    - Water
+    - Bug
+  height:
+    m: 1.8
+  weight:
+    kg: 82
+- name:
+    en: Fomantis
+    ja: カリキリ
+    ko: 짜랑랑
+  generation: 7
+  type:
+    - Grass
+  height:
+    m: 0.3
+  weight:
+    kg: 1.5
+- name:
+    en: Lurantis
+    ja: ラランテス
+    ko: 라란티스
+  generation: 7
+  type:
+    - Grass
+  height:
+    m: 0.9
+  weight:
+    kg: 18.5
+- name:
+    en: Morelull
+    ja: ネマシュ
+    ko: 자마슈
+  generation: 7
+  type:
+    - Grass
+    - Fairy
+  height:
+    m: 0.2
+  weight:
+    kg: 1.5
+- name:
+    en: Shiinotic
+    ja: マシェード
+    ko: 마셰이드
+  generation: 7
+  type:
+    - Grass
+    - Fairy
+  height:
+    m: 1
+  weight:
+    kg: 11.5
+- name:
+    en: Salandit
+    ja: ヤトウモリ
+    ko: 야도뇽
+  generation: 7
+  type:
+    - Poison
+    - Fire
+  height:
+    m: 0.6
+  weight:
+    kg: 4.8
+- name:
+    en: Salazzle
+    ja: エンニュート
+    ko: 염뉴트
+  generation: 7
+  type:
+    - Poison
+    - Fire
+  height:
+    m: 1.2
+  weight:
+    kg: 22.2
+- name:
+    en: Stufful
+    ja: ヌイコグマ
+    ko: 포곰곰
+  generation: 7
+  type:
+    - Normal
+    - Fighting
+  height:
+    m: 0.5
+  weight:
+    kg: 6.8
+- name:
+    en: Bewear
+    ja: キテルグマ
+    ko: 이븐곰
+  generation: 7
+  type:
+    - Normal
+    - Fighting
+  height:
+    m: 2.1
+  weight:
+    kg: 135
+- name:
+    en: Bounsweet
+    ja: アマカジ
+    ko: 달콤아
+  generation: 7
+  type:
+    - Grass
+  height:
+    m: 0.3
+  weight:
+    kg: 3.2
+- name:
+    en: Steenee
+    ja: アママイコ
+    ko: 달무리나
+  generation: 7
+  type:
+    - Grass
+  height:
+    m: 0.7
+  weight:
+    kg: 8.2
+- name:
+    en: Tsareena
+    ja: アマージョ
+    ko: 달코퀸
+  generation: 7
+  type:
+    - Grass
+  height:
+    m: 1.2
+  weight:
+    kg: 21.4
+- name:
+    en: Comfey
+    ja: キュワワー
+    ko: 큐아링
+  generation: 7
+  type:
+    - Fairy
+  height:
+    m: 0.1
+  weight:
+    kg: 0.3
+- name:
+    en: Oranguru
+    ja: ヤレユータン
+    ko: 하랑우탄
+  generation: 7
+  type:
+    - Normal
+    - Psychic
+  height:
+    m: 1.5
+  weight:
+    kg: 76
+- name:
+    en: Passimian
+    ja: ナゲツケサル
+    ko: 내던숭이
+  generation: 7
+  type:
+    - Fighting
+  height:
+    m: 2
+  weight:
+    kg: 82.8
+- name:
+    en: Wimpod
+    ja: コソクムシ
+    ko: 꼬시레
+  generation: 7
+  type:
+    - Bug
+    - Water
+  height:
+    m: 0.5
+  weight:
+    kg: 12
+- name:
+    en: Golisopod
+    ja: グソクムシャ
+    ko: 갑주무사
+  generation: 7
+  type:
+    - Bug
+    - Water
+  height:
+    m: 2
+  weight:
+    kg: 108
+- name:
+    en: Sandygast
+    ja: スナバァ
+    ko: 모래꿍
+  generation: 7
+  type:
+    - Ghost
+    - Ground
+  height:
+    m: 0.5
+  weight:
+    kg: 70
+- name:
+    en: Palossand
+    ja: シロデスナ
+    ko: 모래성이당
+  generation: 7
+  type:
+    - Ghost
+    - Ground
+  height:
+    m: 1.3
+  weight:
+    kg: 250
+- name:
+    en: Pyukumuku
+    ja: ナマコブシ
+    ko: 해무기
+  generation: 7
+  type:
+    - Water
+  height:
+    m: 0.3
+  weight:
+    kg: 1.2
+- name:
+    en: 'Type: Null'
+    ja: タイプ：ヌル
+    ko: 타입:널
+  generation: 7
+  type:
+    - Normal
+  height:
+    m: 1.9
+  weight:
+    kg: 120.5
+- name:
+    en: Silvally
+    ja: シルヴァディ
+    ko: 실버디
+  generation: 7
+  type:
+    - Normal
+  height:
+    m: 2.3
+  weight:
+    kg: 100.5
+- name:
+    en: Minior Meteor Form
+    ja: メテノ りゅうせいのすがた
+    ko: 메테노 유성의 모습
+  generation: 7
+  type:
+    - Rock
+    - Flying
+  height:
+    m: 0.3
+  weight:
+    kg: 40
+- name:
+    en: Minior Core Form
+    ja: メテノ あかいろのコア
+    ko: 메테노 코어의 모습
+  generation: 7
+  type:
+    - Rock
+    - Flying
+  height:
+    m: 0.3
+  weight:
+    kg: 0.3
+- name:
+    en: Komala
+    ja: ネッコアラ
+    ko: 자말라
+  generation: 7
+  type:
+    - Normal
+  height:
+    m: 0.4
+  weight:
+    kg: 19.9
+- name:
+    en: Turtonator
+    ja: バクガメス
+    ko: 폭거북스
+  generation: 7
+  type:
+    - Fire
+    - Dragon
+  height:
+    m: 2
+  weight:
+    kg: 212
+- name:
+    en: Togedemaru
+    ja: トゲデマル
+    ko: 토게데마루
+  generation: 7
+  type:
+    - Electric
+    - Steel
+  height:
+    m: 0.3
+  weight:
+    kg: 3.3
+- name:
+    en: Mimikyu
+    ja: ミミッキュ
+    ko: 따라큐
+  generation: 7
+  type:
+    - Ghost
+    - Fairy
+  height:
+    m: 0.2
+  weight:
+    kg: 0.7
+- name:
+    en: Bruxish
+    ja: ハギギシリ
+    ko: 치갈기
+  generation: 7
+  type:
+    - Water
+    - Psychic
+  height:
+    m: 0.9
+  weight:
+    kg: 19
+- name:
+    en: Drampa
+    ja: ジジーロン
+    ko: 할비롱
+  generation: 7
+  type:
+    - Normal
+    - Dragon
+  height:
+    m: 3
+  weight:
+    kg: 185
+- name:
+    en: Dhelmise
+    ja: ダダリン
+    ko: 타타륜
+  generation: 7
+  type:
+    - Ghost
+    - Grass
+  height:
+    m: 3.9
+  weight:
+    kg: 210
+- name:
+    en: Jangmo-o
+    ja: ジャラコ
+    ko: 짜랑꼬
+  generation: 7
+  type:
+    - Dragon
+  height:
+    m: 0.6
+  weight:
+    kg: 29.7
+- name:
+    en: Hakamo-o
+    ja: ジャランゴ
+    ko: 짜랑고우
+  generation: 7
+  type:
+    - Dragon
+    - Fighting
+  height:
+    m: 1.2
+  weight:
+    kg: 47
+- name:
+    en: Kommo-o
+    ja: ジャラランガ
+    ko: 짜랑고우거
+  generation: 7
+  type:
+    - Dragon
+    - Fighting
+  height:
+    m: 1.6
+  weight:
+    kg: 78.2
+- name:
+    en: Tapu Koko
+    ja: カプ・コケコ
+    ko: 카푸꼬꼬꼭
+  generation: 7
+  type:
+    - Electric
+    - Fairy
+  height:
+    m: 1.8
+  weight:
+    kg: 20.5
+- name:
+    en: Tapu Lele
+    ja: カプ・テテフ
+    ko: 카푸나비나
+  generation: 7
+  type:
+    - Psychic
+    - Fairy
+  height:
+    m: 1.2
+  weight:
+    kg: 18.6
+- name:
+    en: Tapu Bulu
+    ja: 'カプ・ブルル '
+    ko: 카푸브루루
+  generation: 7
+  type:
+    - Grass
+    - Fairy
+  height:
+    m: 1.9
+  weight:
+    kg: 45.5
+- name:
+    en: Tapu Fini
+    ja: カプ・レヒレ
+    ko: 카푸느지느
+  generation: 7
+  type:
+    - Water
+    - Fairy
+  height:
+    m: 1.3
+  weight:
+    kg: 21.2
+- name:
+    en: Cosmog
+    ja: コスモッグ
+    ko: 코스모그
+  generation: 7
+  type:
+    - Psychic
+  height:
+    m: 0.2
+  weight:
+    kg: 0.1
+- name:
+    en: Cosmoem
+    ja: コスモウム
+    ko: 코스모움
+  generation: 7
+  type:
+    - Psychic
+  height:
+    m: 0.1
+  weight:
+    kg: 999.9
+- name:
+    en: Solgaleo
+    ja: ソルガレオ
+    ko: 솔가레오
+  generation: 7
+  type:
+    - Psychic
+    - Steel
+  height:
+    m: 3.4
+  weight:
+    kg: 230
+- name:
+    en: Lunala
+    ja: ルナアーラ
+    ko: 루나아라
+  generation: 7
+  type:
+    - Psychic
+    - Ghost
+  height:
+    m: 4
+  weight:
+    kg: 120
+- name:
+    en: Nihilego
+    ja: ウツロイド
+    ko: 텅비드
+  generation: 7
+  type:
+    - Rock
+    - Poison
+  height:
+    m: 1.2
+  weight:
+    kg: 55.5
+- name:
+    en: Buzzwole
+    ja: マッシブーン
+    ko: 매시붕
+  generation: 7
+  type:
+    - Bug
+    - Fighting
+  height:
+    m: 2.4
+  weight:
+    kg: 333.6
+- name:
+    en: Pheromosa
+    ja: フェローチェ
+    ko: 페로코체
+  generation: 7
+  type:
+    - Bug
+    - Fighting
+  height:
+    m: 1.8
+  weight:
+    kg: 25
+- name:
+    en: Xurkitree
+    ja: デンジュモク
+    ko: 전수목
+  generation: 7
+  type:
+    - Electric
+  height:
+    m: 3.8
+  weight:
+    kg: 100
+- name:
+    en: Celesteela
+    ja: テッカグヤ
+    ko: 철화구야
+  generation: 7
+  type:
+    - Steel
+    - Flying
+  height:
+    m: 9.2
+  weight:
+    kg: 999.9
+- name:
+    en: Kartana
+    ja: カミツルギ
+    ko: 종이신도
+  generation: 7
+  type:
+    - Grass
+    - Steel
+  height:
+    m: 0.3
+  weight:
+    kg: 0.1
+- name:
+    en: Guzzlord
+    ja: アクジキング
+    ko: 악식킹
+  generation: 7
+  type:
+    - Dark
+    - Dragon
+  height:
+    m: 5.5
+  weight:
+    kg: 888
+- name:
+    en: Necrozma
+    ja: ネクロズマ
+    ko: 네크로즈마
+  generation: 7
+  type:
+    - Psychic
+  height:
+    m: 2.4
+  weight:
+    kg: 230
+- name:
+    en: Dusk Mane Necrozma
+    ja: ネクロズマ たそがれのたてがみ
+    ko: 황혼의 갈기 네크로즈마
+  generation: 7
+  type:
+    - Psychic
+    - Steel
+  height:
+    m: 3.8
+  weight:
+    kg: 460
+- name:
+    en: Dawn Wings Necrozma
+    ja: ネクロズマ あかつきのつばさ
+    ko: 새벽의 날개 네크로즈마
+  generation: 7
+  type:
+    - Psychic
+    - Ghost
+  height:
+    m: 4.2
+  weight:
+    kg: 350
+- name:
+    en: Ultra Necrozma
+    ja: ウルトラネクロズマ
+    ko: 울트라네크로즈마
+  generation: 7
+  type:
+    - Psychic
+    - Dragon
+  height:
+    m: 7.5
+  weight:
+    kg: 230
+- name:
+    en: Magearna
+    ja: マギアナ
+    ko: 마기아나
+  generation: 7
+  type:
+    - Steel
+    - Fairy
+  height:
+    m: 1
+  weight:
+    kg: 80.5
+- name:
+    en: Marshadow
+    ja: マーシャドー
+    ko: 마샤도
+  generation: 7
+  type:
+    - Fighting
+    - Ghost
+  height:
+    m: 0.7
+  weight:
+    kg: 22.2
+- name:
+    en: Poipole
+    ja: ベベノム
+    ko: 베베놈
+  generation: 7
+  type:
+    - Poison
+  height:
+    m: 0.6
+  weight:
+    kg: 1.8
+- name:
+    en: Naganadel
+    ja: アーゴヨン
+    ko: 아고용
+  generation: 7
+  type:
+    - Poison
+    - Dragon
+  height:
+    m: 3.6
+  weight:
+    kg: 150
+- name:
+    en: Stakataka
+    ja: ツンデツンデ
+    ko: 차곡차곡
+  generation: 7
+  type:
+    - Rock
+    - Steel
+  height:
+    m: 5.5
+  weight:
+    kg: 820
+- name:
+    en: Blacephalon
+    ja: ズガドーン
+    ko: 두파팡
+  generation: 7
+  type:
+    - Fire
+    - Ghost
+  height:
+    m: 1.8
+  weight:
+    kg: 13
+- name:
+    en: Zeraora
+    ja: ゼラオラ
+    ko: 제라오라
+  generation: 7
+  type:
+    - Electric
+  height:
+    m: 1.5
+  weight:
+    kg: 44.5
+- name:
+    en: Meltan
+    ja: メルタン
+    ko: 멜탄
+  generation: 7
+  type:
+    - Steel
+  height:
+    m: 0.2
+  weight:
+    kg: 8
+- name:
+    en: Melmetal
+    ja: メルメタル
+    ko: 멜메탈
+  generation: 7
+  type:
+    - Steel
+  height:
+    m: 2.5
+  weight:
+    kg: 800
+- name:
+    en: Grookey
+    ja: サルノリ
+    ko: 흥나숭
+  generation: 8
+  type:
+    - Grass
+  height:
+    m: 0.3
+  weight:
+    kg: 5
+- name:
+    en: Thwackey
+    ja: バチンキー
+    ko: 채키몽
+  generation: 8
+  type:
+    - Grass
+  height:
+    m: 0.7
+  weight:
+    kg: 14
+- name:
+    en: Rillaboom
+    ja: ゴリランダー
+    ko: 고릴타
+  generation: 8
+  type:
+    - Grass
+  height:
+    m: 2.1
+  weight:
+    kg: 90
+- name:
+    en: Scorbunny
+    ja: ヒバニー
+    ko: 염버니
+  generation: 8
+  type:
+    - Fire
+  height:
+    m: 0.3
+  weight:
+    kg: 4.5
+- name:
+    en: Raboot
+    ja: ラビフット
+    ko: 래비풋
+  generation: 8
+  type:
+    - Fire
+  height:
+    m: 0.6
+  weight:
+    kg: 9
+- name:
+    en: Cinderace
+    ja: エースバーン
+    ko: 에이스번
+  generation: 8
+  type:
+    - Fire
+  height:
+    m: 1.4
+  weight:
+    kg: 33
+- name:
+    en: Sobble
+    ja: メッソン
+    ko: 울머기
+  generation: 8
+  type:
+    - Water
+  height:
+    m: 0.3
+  weight:
+    kg: 4
+- name:
+    en: Drizzile
+    ja: ジメレオン
+    ko: 누겔레온
+  generation: 8
+  type:
+    - Water
+  height:
+    m: 0.7
+  weight:
+    kg: 11.5
+- name:
+    en: Inteleon
+    ja: インテレオン
+    ko: 인텔리레온
+  generation: 8
+  type:
+    - Water
+  height:
+    m: 1.9
+  weight:
+    kg: 45.2
+- name:
+    en: Skwovet
+    ja: ホシガリス
+    ko: 탐리스
+  generation: 8
+  type:
+    - Normal
+  height:
+    m: 0.3
+  weight:
+    kg: 2.5
+- name:
+    en: Greedent
+    ja: ヨクバリス
+    ko: 요씽리스
+  generation: 8
+  type:
+    - Normal
+  height:
+    m: 0.6
+  weight:
+    kg: 6
+- name:
+    en: Rookidee
+    ja: ココガラ
+    ko: 파라꼬
+  generation: 8
+  type:
+    - Flying
+  height:
+    m: 0.2
+  weight:
+    kg: 1.8
+- name:
+    en: Corvisquire
+    ja: アオガラス
+    ko: 파크로우
+  generation: 8
+  type:
+    - Flying
+  height:
+    m: 0.8
+  weight:
+    kg: 16
+- name:
+    en: Corviknight
+    ja: アーマーガア
+    ko: 아머까오
+  generation: 8
+  type:
+    - Flying
+    - Steel
+  height:
+    m: 2.2
+  weight:
+    kg: 75
+- name:
+    en: Blipbug
+    ja: サッチムシ
+    ko: 두루지벌레
+  generation: 8
+  type:
+    - Bug
+  height:
+    m: 0.4
+  weight:
+    kg: 8
+- name:
+    en: Dottler
+    ja: レドームシ
+    ko: 레돔벌레
+  generation: 8
+  type:
+    - Bug
+    - Psychic
+  height:
+    m: 0.4
+  weight:
+    kg: 19.5
+- name:
+    en: Orbeetle
+    ja: イオルブ
+    ko: 이올브
+  generation: 8
+  type:
+    - Bug
+    - Psychic
+  height:
+    m: 0.4
+  weight:
+    kg: 40.8
+- name:
+    en: Nickit
+    ja: クスネ
+    ko: 훔처우
+  generation: 8
+  type:
+    - Dark
+  height:
+    m: 0.6
+  weight:
+    kg: 8.9
+- name:
+    en: Thievul
+    ja: フォクスライ
+    ko: 폭슬라이
+  generation: 8
+  type:
+    - Dark
+  height:
+    m: 1.2
+  weight:
+    kg: 19.9
+- name:
+    en: Gossifleur
+    ja: ヒメンカ
+    ko: 꼬모카
+  generation: 8
+  type:
+    - Grass
+  height:
+    m: 0.4
+  weight:
+    kg: 2.2
+- name:
+    en: Eldegoss
+    ja: ワタシラガ
+    ko: 백솜모카
+  generation: 8
+  type:
+    - Grass
+  height:
+    m: 0.5
+  weight:
+    kg: 2.5
+- name:
+    en: Wooloo
+    ja: ウールー
+    ko: 우르
+  generation: 8
+  type:
+    - Normal
+  height:
+    m: 0.6
+  weight:
+    kg: 6
+- name:
+    en: Dubwool
+    ja: バイウールー
+    ko: 배우르
+  generation: 8
+  type:
+    - Normal
+  height:
+    m: 1.3
+  weight:
+    kg: 43
+- name:
+    en: Chewtle
+    ja: カムカメ
+    ko: 깨물부기
+  generation: 8
+  type:
+    - Water
+  height:
+    m: 0.3
+  weight:
+    kg: 8.5
+- name:
+    en: Drednaw
+    ja: カジリガメ
+    ko: 갈가부기
+  generation: 8
+  type:
+    - Water
+    - Rock
+  height:
+    m: 1
+  weight:
+    kg: 115.5
+- name:
+    en: Yamper
+    ja: ワンパチ
+    ko: 멍파치
+  generation: 8
+  type:
+    - Electric
+  height:
+    m: 0.3
+  weight:
+    kg: 13.5
+- name:
+    en: Boltund
+    ja: パルスワン
+    ko: 펄스멍
+  generation: 8
+  type:
+    - Electric
+  height:
+    m: 1
+  weight:
+    kg: 34
+- name:
+    en: Rolycoly
+    ja: タンドン
+    ko: 탄동
+  generation: 8
+  type:
+    - Rock
+  height:
+    m: 0.3
+  weight:
+    kg: 12
+- name:
+    en: Carkol
+    ja: トロッゴン
+    ko: 탄차곤
+  generation: 8
+  type:
+    - Rock
+    - Fire
+  height:
+    m: 1.1
+  weight:
+    kg: 78
+- name:
+    en: Coalossal
+    ja: セキタンザン
+    ko: 석탄산
+  generation: 8
+  type:
+    - Rock
+    - Fire
+  height:
+    m: 2.8
+  weight:
+    kg: 310.5
+- name:
+    en: Applin
+    ja: カジッチュ
+    ko: 과사삭벌레
+  generation: 8
+  type:
+    - Grass
+    - Dragon
+  height:
+    m: 0.2
+  weight:
+    kg: 0.5
+- name:
+    en: Flapple
+    ja: アップリュー
+    ko: 애프룡
+  generation: 8
+  type:
+    - Grass
+    - Dragon
+  height:
+    m: 0.3
+  weight:
+    kg: 1
+- name:
+    en: Appletun
+    ja: タルップル
+    ko: 단지래플
+  generation: 8
+  type:
+    - Grass
+    - Dragon
+  height:
+    m: 0.4
+  weight:
+    kg: 13
+- name:
+    en: Silicobra
+    ja: スナヘビ
+    ko: 모래뱀
+  generation: 8
+  type:
+    - Ground
+  height:
+    m: 2.2
+  weight:
+    kg: 7.6
+- name:
+    en: Sandaconda
+    ja: サダイジャ
+    ko: 사다이사
+  generation: 8
+  type:
+    - Ground
+  height:
+    m: 3.8
+  weight:
+    kg: 65.5
+- name:
+    en: Cramorant
+    ja: ウッウ
+    ko: 윽우지
+  generation: 8
+  type:
+    - Flying
+    - Water
+  height:
+    m: 0.8
+  weight:
+    kg: 18
+- name:
+    en: Arrokuda
+    ja: サシカマス
+    ko: 찌로꼬치
+  generation: 8
+  type:
+    - Water
+  height:
+    m: 0.5
+  weight:
+    kg: 1
+- name:
+    en: Barraskewda
+    ja: カマスジョー
+    ko: 꼬치조
+  generation: 8
+  type:
+    - Water
+  height:
+    m: 1.3
+  weight:
+    kg: 30
+- name:
+    en: Toxel
+    ja: エレズン
+    ko: 일레즌
+  generation: 8
+  type:
+    - Electric
+    - Poison
+  height:
+    m: 0.4
+  weight:
+    kg: 11
+- name:
+    en: Toxtricity
+    ja: ストリンダー
+    ko: 스트린더
+  generation: 8
+  type:
+    - Electric
+    - Poison
+  height:
+    m: 1.6
+  weight:
+    kg: 40
+- name:
+    en: Sizzlipede
+    ja: ヤクデ
+    ko: 태우지네
+  generation: 8
+  type:
+    - Fire
+    - Bug
+  height:
+    m: 0.7
+  weight:
+    kg: 1
+- name:
+    en: Centiskorch
+    ja: マルヤクデ
+    ko: 다태우지네
+  generation: 8
+  type:
+    - Fire
+    - Bug
+  height:
+    m: 3
+  weight:
+    kg: 120
+- name:
+    en: Clobbopus
+    ja: タタッコ
+    ko: 때때무노
+  generation: 8
+  type:
+    - Fighting
+  height:
+    m: 0.6
+  weight:
+    kg: 4
+- name:
+    en: Grapploct
+    ja: オトスパス
+    ko: 케오퍼스
+  generation: 8
+  type:
+    - Fighting
+  height:
+    m: 1.6
+  weight:
+    kg: 39
+- name:
+    en: Sinistea
+    ja: ヤバチャ
+    ko: 데인차
+  generation: 8
+  type:
+    - Ghost
+  height:
+    m: 0.1
+  weight:
+    kg: 0.2
+- name:
+    en: Polteageist
+    ja: ポットデス
+    ko: 포트데스
+  generation: 8
+  type:
+    - Ghost
+  height:
+    m: 0.2
+  weight:
+    kg: 0.4
+- name:
+    en: Hatenna
+    ja: ミブリム
+    ko: 몸지브림
+  generation: 8
+  type:
+    - Psychic
+  height:
+    m: 0.4
+  weight:
+    kg: 3.4
+- name:
+    en: Hattrem
+    ja: テブリム
+    ko: 손지브림
+  generation: 8
+  type:
+    - Psychic
+  height:
+    m: 0.6
+  weight:
+    kg: 4.8
+- name:
+    en: Hatterene
+    ja: ブリムオン
+    ko: 브리무음
+  generation: 8
+  type:
+    - Psychic
+    - Fairy
+  height:
+    m: 2.1
+  weight:
+    kg: 5
+- name:
+    en: Impidimp
+    ja: ベロバー
+    ko: 메롱꿍
+  generation: 8
+  type:
+    - Dark
+    - Fairy
+  height:
+    m: 0.4
+  weight:
+    kg: 5.5
+- name:
+    en: Morgrem
+    ja: ギモー
+    ko: 쏘겨모
+  generation: 8
+  type:
+    - Dark
+    - Fairy
+  height:
+    m: 0.8
+  weight:
+    kg: 12.5
+- name:
+    en: Grimmsnarl
+    ja: オーロンゲ
+    ko: 오롱털
+  generation: 8
+  type:
+    - Dark
+    - Fairy
+  height:
+    m: 1.5
+  weight:
+    kg: 61
+- name:
+    en: Obstagoon
+    ja: タチフサグマ
+    ko: 가로막구리
+  generation: 8
+  type:
+    - Dark
+    - Normal
+  height:
+    m: 1.6
+  weight:
+    kg: 46
+- name:
+    en: Perrserker
+    ja: ニャイキング
+    ko: 나이킹
+  generation: 8
+  type:
+    - Steel
+  height:
+    m: 0.8
+  weight:
+    kg: 28
+- name:
+    en: Cursola
+    ja: サニゴーン
+    ko: 산호르곤
+  generation: 8
+  type:
+    - Ghost
+  height:
+    m: 1
+  weight:
+    kg: 0.4
+- name:
+    en: Sirfetch'd
+    ja: ネギガナイト
+    ko: 창파나이트
+  generation: 8
+  type:
+    - Fighting
+  height:
+    m: 0.8
+  weight:
+    kg: 117
+- name:
+    en: Mr. Rime
+    ja: バリコオル
+    ko: 마임꽁꽁
+  generation: 8
+  type:
+    - Ice
+    - Psychic
+  height:
+    m: 1.5
+  weight:
+    kg: 58.2
+- name:
+    en: Runerigus
+    ja: デスバーン
+    ko: 데스판
+  generation: 8
+  type:
+    - Ground
+    - Ghost
+  height:
+    m: 1.6
+  weight:
+    kg: 66.6
+- name:
+    en: Milcery
+    ja: マホミル
+    ko: 마빌크
+  generation: 8
+  type:
+    - Fairy
+  height:
+    m: 0.2
+  weight:
+    kg: 0.3
+- name:
+    en: Alcremie
+    ja: マホイップ
+    ko: 마휘핑
+  generation: 8
+  type:
+    - Fairy
+  height:
+    m: 0.3
+  weight:
+    kg: 0.5
+- name:
+    en: Falinks
+    ja: タイレーツ
+    ko: 대여르
+  generation: 8
+  type:
+    - Fighting
+  height:
+    m: 3
+  weight:
+    kg: 62
+- name:
+    en: Pincurchin
+    ja: バチンウニ
+    ko: 찌르성게
+  generation: 8
+  type:
+    - Electric
+  height:
+    m: 0.3
+  weight:
+    kg: 1
+- name:
+    en: Snom
+    ja: ユキハミ
+    ko: 누니머기
+  generation: 8
+  type:
+    - Ice
+    - Bug
+  height:
+    m: 0.3
+  weight:
+    kg: 3.8
+- name:
+    en: Frosmoth
+    ja: モスノウ
+    ko: 모스노우
+  generation: 8
+  type:
+    - Ice
+    - Bug
+  height:
+    m: 1.3
+  weight:
+    kg: 42
+- name:
+    en: Stonjourner
+    ja: イシヘンジン
+    ko: 돌헨진
+  generation: 8
+  type:
+    - Rock
+  height:
+    m: 2.5
+  weight:
+    kg: 520
+- name:
+    en: Eiscue
+    ja: コオリッポ
+    ko: 빙큐보
+  generation: 8
+  type:
+    - Ice
+  height:
+    m: 1.4
+  weight:
+    kg: 89
+- name:
+    en: Indeedee
+    ja: イエッサン
+    ko: 에써르
+  generation: 8
+  type:
+    - Psychic
+    - Normal
+  height:
+    m: 0.9
+  weight:
+    kg: 28
+- name:
+    en: Morpeko
+    ja: モルペコ
+    ko: 모르페코
+  generation: 8
+  type:
+    - Electric
+    - Dark
+  height:
+    m: 0.3
+  weight:
+    kg: 3
+- name:
+    en: Cufant
+    ja: ゾウドウ
+    ko: 끼리동
+  generation: 8
+  type:
+    - Steel
+  height:
+    m: 1.2
+  weight:
+    kg: 100
+- name:
+    en: Copperajah
+    ja: ダイオウドウ
+    ko: 대왕끼리동
+  generation: 8
+  type:
+    - Steel
+  height:
+    m: 3
+  weight:
+    kg: 650
+- name:
+    en: Dracozolt
+    ja: パッチラゴン
+    ko: 파치래곤
+  generation: 8
+  type:
+    - Electric
+    - Dragon
+  height:
+    m: 1.8
+  weight:
+    kg: 190
+- name:
+    en: Arctozolt
+    ja: パッチルドン
+    ko: 파치르돈
+  generation: 8
+  type:
+    - Electric
+    - Ice
+  height:
+    m: 2.3
+  weight:
+    kg: 150
+- name:
+    en: Dracovish
+    ja: ウオノラゴン
+    ko: 어래곤
+  generation: 8
+  type:
+    - Water
+    - Dragon
+  height:
+    m: 2.3
+  weight:
+    kg: 215
+- name:
+    en: Arctovish
+    ja: ウオチルドン
+    ko: 어치르돈
+  generation: 8
+  type:
+    - Water
+    - Ice
+  height:
+    m: 2
+  weight:
+    kg: 175
+- name:
+    en: Duraludon
+    ja: ジュラルドン
+    ko: 두랄루돈
+  generation: 8
+  type:
+    - Steel
+    - Dragon
+  height:
+    m: 1.8
+  weight:
+    kg: 40
+- name:
+    en: Dreepy
+    ja: ドラメシヤ
+    ko: 드라꼰
+  generation: 8
+  type:
+    - Dragon
+    - Ghost
+  height:
+    m: 0.5
+  weight:
+    kg: 2
+- name:
+    en: Drakloak
+    ja: ドロンチ
+    ko: 드래런치
+  generation: 8
+  type:
+    - Dragon
+    - Ghost
+  height:
+    m: 1.4
+  weight:
+    kg: 11
+- name:
+    en: Dragapult
+    ja: ドラパルト
+    ko: 드래펄트
+  generation: 8
+  type:
+    - Dragon
+    - Ghost
+  height:
+    m: 3
+  weight:
+    kg: 50
+- name:
+    en: Zacian Crowned Sword
+    ja: ザシアン れきせんのゆうしゃ
+    ko: 자시안 역전의 용사
+  generation: 8
+  type:
+    - Fairy
+    - Steel
+  height:
+    m: 2.8
+  weight:
+    kg: 355
+- name:
+    en: Zacian Hero of Many Battles
+    ja: ザシアン けんのおう
+    ko: 자시안 검왕
+  generation: 8
+  type:
+    - Fairy
+  height:
+    m: 2.8
+  weight:
+    kg: 110
+- name:
+    en: Zamazenta Crowned Shield
+    ja: ザマゼンタ れきせんのゆうしゃ
+    ko: 자마젠타 역전의 용사
+  generation: 8
+  type:
+    - Fighting
+    - Steel
+  height:
+    m: 2.9
+  weight:
+    kg: 785
+- name:
+    en: Zamazenta Hero of Many Battles
+    ja: ザマゼンタ たてのおう
+    ko: 자마젠타 방패왕
+  generation: 8
+  type:
+    - Fighting
+  height:
+    m: 2.9
+  weight:
+    kg: 210
+- name:
+    en: Eternatus
+    ja: ムゲンダイナ
+    ko: 무한다이노
+  generation: 8
+  type:
+    - Poison
+    - Dragon
+  height:
+    m: 20
+  weight:
+    kg: 950
+- name:
+    en: Kubfu
+    ja: ダクマ
+    ko: 치고마
+  generation: 8
+  type:
+    - Fighting
+  height:
+    m: 0.6
+  weight:
+    kg: 12
+- name:
+    en: Urshifu Single Strike Style
+    ja: ウーラオス いちげきのかた
+    ko: 우라오스 일격의 태세
+  generation: 8
+  type:
+    - Fighting
+    - Dark
+  height:
+    m: 1.9
+  weight:
+    kg: 105
+- name:
+    en: Urshifu Rapid Strike Style
+    ja: ウーラオス れんげきのかた
+    ko: 우라오스 연격의 태세
+  generation: 8
+  type:
+    - Fighting
+    - Water
+  height:
+    m: 1.9
+  weight:
+    kg: 105
+- name:
+    en: Zarude
+    ja: ザルード
+    ko: 자루도
+  generation: 8
+  type:
+    - Dark
+    - Grass
+  height:
+    m: 1.8
+  weight:
+    kg: 70
+- name:
+    en: Regieleki
+    ja: レジエレキ
+    ko: 레지에레키
+  generation: 8
+  type:
+    - Electric
+  height:
+    m: 1.2
+  weight:
+    kg: 145
+- name:
+    en: Regidrago
+    ja: レジドラゴ
+    ko: 레지드래고
+  generation: 8
+  type:
+    - Dragon
+  height:
+    m: 2.1
+  weight:
+    kg: 200
+- name:
+    en: Glastrier
+    ja: ブリザポス
+    ko: 블리자포스
+  generation: 8
+  type:
+    - Ice
+  height:
+    m: 2.2
+  weight:
+    kg: 800
+- name:
+    en: Spectrier
+    ja: レイスポス
+    ko: 레이스포스
+  generation: 8
+  type:
+    - Ghost
+  height:
+    m: 2
+  weight:
+    kg: 44.5
+- name:
+    en: Calyrex
+    ja: バドレックス
+    ko: 버드렉스
+  generation: 8
+  type:
+    - Psychic
+    - Grass
+  height:
+    m: 1.1
+  weight:
+    kg: 7.7
+- name:
+    en: Calyrex Ice Rider
+    ja: バドレックス はくばじょうのすがた
+    ko: 버드렉스 백마 탄 모습
+  generation: 8
+  type:
+    - Psychic
+    - Ice
+  height:
+    m: 2.4
+  weight:
+    kg: 809.1
+- name:
+    en: Calyrex Shadow Rider
+    ja: バドレックス こくばじょうのすがた
+    ko: 버드렉스 흑마 탄 모습
+  generation: 8
+  type:
+    - Psychic
+    - Ghost
+  height:
+    m: 2.4
+  weight:
+    kg: 53.6
+- name:
+    en: Wyrdeer
+    ja: アヤシシ
+    ko: 신비록
+  generation: 8
+  type:
+    - Normal
+    - Psychic
+  height:
+    m: 1.8
+  weight:
+    kg: 95.1
+- name:
+    en: Kleavor
+    ja: バサギリ
+    ko: 사마자르
+  generation: 8
+  type:
+    - Bug
+    - Rock
+  height:
+    m: 1.8
+  weight:
+    kg: 89
+- name:
+    en: Ursaluna
+    ja: ガチグマ
+    ko: 다투곰
+  generation: 8
+  type:
+    - Ground
+    - Normal
+  height:
+    m: 2.4
+  weight:
+    kg: 290
+- name:
+    en: Basculegion
+    ja: イダイトウ
+    ko: 대쓰여너
+  generation: 8
+  type:
+    - Water
+    - Ghost
+  height:
+    m: 3
+  weight:
+    kg: 110
+- name:
+    en: Sneasler
+    ja: オオニューラ
+    ko: 포푸니크
+  generation: 8
+  type:
+    - Fighting
+    - Poison
+  height:
+    m: 1.3
+  weight:
+    kg: 43
+- name:
+    en: Overqwil
+    ja: ハリーマン
+    ko: 장침바루
+  generation: 8
+  type:
+    - Dark
+    - Poison
+  height:
+    m: 2.5
+  weight:
+    kg: 60.5
+- name:
+    en: Enamorus Incarnate Forme
+    ja: ラブトロス けしんフォルム
+    ko: 러브로스 화신폼
+  generation: 8
+  type:
+    - Fairy
+    - Flying
+  height:
+    m: 1.6
+  weight:
+    kg: 48
+- name:
+    en: Enamorus Therian Forme
+    ja: ラブトロス れいじゅうフォルム
+    ko: 러브로스 영물폼
+  generation: 8
+  type:
+    - Fairy
+    - Flying
+  height:
+    m: 1.6
+  weight:
+    kg: 48

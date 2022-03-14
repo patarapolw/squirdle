@@ -292,6 +292,7 @@ function updateGen(n: number, opts: {
   }
 
   dst.value = n
+  guesses.value = []
 }
 
 function ime(ev: Event) {
@@ -475,12 +476,12 @@ watch(props, () => {
 
 watch(genMax, () => {
   storage.genMax.set(genMax.value)
-  updateGuess({ isInit: true, isNew: true })
+  updateGuess({ isInit: true })
 })
 
 watch(genMin, () => {
   storage.genMin.set(genMin.value)
-  updateGuess({ isInit: true, isNew: true })
+  updateGuess({ isInit: true })
 })
 
 watch(lang, () => {

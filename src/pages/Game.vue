@@ -155,6 +155,7 @@ function updateGuess(opts: {
     } else {
       if (opts.isNew) {
         secretPokemon.value = elligible.value[Math.floor(Math.random() * elligible.value.length)]
+        guesses.value = []
       } else {
         genMin.value = storage.genMin.get() || genMin.value
         genMax.value = storage.genMax.get() || genMax.value

@@ -579,52 +579,72 @@ const vGenRange = (() => {
     </div>
   </section>
   <section class="guesses" v-if="guesses.length">
-    <div class="row row-header">
-      <div class="column">
-        <p class="hint">{{ t('Gen') }}</p>
-      </div>
-      <div class="column">
-        <p class="hint">{{ t('Type') }}1</p>
-      </div>
-      <div class="column">
-        <p class="hint">{{ t('Type') }}2</p>
-      </div>
-      <div class="column">
-        <p class="hint">{{ t('Height') }}</p>
-      </div>
-      <div class="column">
-        <p class="hint">{{ t('Weight') }}</p>
-      </div>
-    </div>
-    <div class="row" v-for="g in guesses" :key="g.name[lang]">
-      <div v-for="h in g.hints" :key="h">
-        <img class="emoji" :src="h" />
-      </div>
-      <div class="column">
-        <img :src="getImage(g, 'gen').src" :alt="getImage(g, 'gen').alt" class="emoji" />
-      </div>
-      <div class="column">
-        <img :src="getImage(g, 'type1').src" :alt="getImage(g, 'type1').alt" class="emoji" />
-      </div>
-      <div class="column">
-        <img :src="getImage(g, 'type2').src" :alt="getImage(g, 'type2').alt" class="emoji" />
-      </div>
-      <div class="column">
-        <img :src="getImage(g, 'height').src" :alt="getImage(g, 'height').alt" class="emoji" />
-      </div>
-      <div class="column">
-        <img :src="getImage(g, 'weight').src" :alt="getImage(g, 'weight').alt" class="emoji" />
-      </div>
-      <div class="column">
-        <div class="tooltip">
-          <p class="guess">{{ g.name[lang] }}</p>
-          <div class="tooltiptext">
-            <a :href="refLink(g)" target="_blank" rel="noopener noreferrer">{{ g.name[lang] }}</a>
-            <pre>{{ g.info() }}</pre>
+    <table>
+      <tr>
+        <th>
+          <p>{{ t('Gen') }}</p>
+        </th>
+        <th>
+          <p>{{ t('Type') }}1</p>
+        </th>
+        <th>
+          <p>{{ t('Type') }}2</p>
+        </th>
+        <th>
+          <p>{{ t('Height') }}</p>
+        </th>
+        <th>
+          <p>{{ t('Weight') }}</p>
+        </th>
+      </tr>
+
+      <tr v-for="g in guesses" :key="g.name[lang]">
+        <td>
+          <img
+            :src="getImage(g, 'gen').src"
+            :alt="`Gen: ${g.gen} (${getImage(g, 'gen').alt})`"
+            class="emoji"
+          />
+        </td>
+        <td>
+          <img
+            :src="getImage(g, 'type1').src"
+            :alt="`Type 1: ${g.type1} (${getImage(g, 'type1').alt})`"
+            class="emoji"
+          />
+        </td>
+        <td>
+          <img
+            :src="getImage(g, 'type2').src"
+            :alt="`Type 2: ${g.type2 || 'null'} (${getImage(g, 'type2').alt})`"
+            class="emoji"
+          />
+        </td>
+        <td>
+          <img
+            :src="getImage(g, 'height').src"
+            :alt="`Height: ${g.height.toFixed(1)} m (${getImage(g, 'height').alt})`"
+            class="emoji"
+          />
+        </td>
+        <td>
+          <img
+            :src="getImage(g, 'weight').src"
+            :alt="`Weight: ${g.weight.toFixed(1)} kg (${getImage(g, 'weight').alt})`"
+            class="emoji"
+          />
+        </td>
+        <td>
+          <div class="tooltip">
+            <p class="guess">{{ g.name[lang] }}</p>
+            <div class="tooltiptext">
+              <a :href="refLink(g)" target="_blank" rel="noopener noreferrer">{{ g.name[lang] }}</a>
+              <pre>{{ g.info() }}</pre>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </td>
+      </tr>
+    </table>
   </section>
 
   <section class="error" v-if="isNotFound">{{ t('PokemonNotFound') }}</section>

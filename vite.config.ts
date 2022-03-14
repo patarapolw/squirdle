@@ -3,9 +3,9 @@ import * as fs from 'fs'
 import vue from '@vitejs/plugin-vue'
 import * as yaml from 'js-yaml'
 import { defineConfig } from 'vite'
-import CSV from 'vite-plugin-csv'
 import { createHtmlPlugin } from 'vite-plugin-html'
 
+// @ts-ignore
 import { checkPokedex } from './src/types'
 
 const LANG: string = process.env.SQ_LANG || 'ja'
@@ -37,7 +37,6 @@ const pokedexPlugin = () => {
 export default defineConfig({
   plugins: [
     vue(),
-    CSV(),
     pokedexPlugin(),
     createHtmlPlugin({
       minify: true,

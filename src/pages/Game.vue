@@ -3,7 +3,7 @@ import { ref, onMounted, watch, nextTick, onUnmounted } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 import ClipboardJS from 'clipboard'
 
-import { IPokedexEntry, pokedex, defaultMinGen, defaultMaxGen, lang, t, dailyJSON, LinkBuilder, linkTemplate, shuffle } from '../assets'
+import { pokedex, defaultMinGen, defaultMaxGen, lang, t, dailyJSON, LinkBuilder, linkTemplate, shuffle } from '../assets'
 import { guessLimit } from '../assets/defaults'
 
 const props = defineProps<{
@@ -117,6 +117,32 @@ const storage: {
     }
   },
 }
+
+Object.assign(window, {
+  setSecret(i: number) {
+    if (props.daily) return null
+
+    const v = elligible.value[i]
+    if (v) {
+      secretPokemon.value = v
+    }
+    return v
+  },
+  getSecret() {
+    return secretPokemon.value
+  },
+  getSecretList() {
+    return elligible.value
+  },
+  findSecret(fn: (v: IPokedexEntry) => boolean) {
+    const out: number[] = []
+    elligible.value.map((v, i) => {
+      if (fn(v)) out.push(i)
+    })
+
+    return out
+  }
+})
 
 function updateGuess(opts: {
   entry?: IPokedexEntry
@@ -253,7 +279,7 @@ function updateGuess(opts: {
             return '⬛'
           }
 
-          return `${e('gen')}${e('type1')}${e('type2')}${e('height')}${e('weight')}${withName ? ' ' + g.name[lang.value] : ''}`
+          return `${e('gen')}${e('type_1')}${e('type_2')}${e('height_m')}${e('weight_kg')}${withName ? ' ' + g.name[lang.value] : ''}`
         }),
         ...((withName && !isWon.value) ? [secretPokemon.value?.name[lang.value]] : [])
       ].join('\n')
@@ -373,20 +399,6 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
   const c = d[k]
   const c0 = secretPokemon.value[k]
 
-  if (!c0) {
-    if (d.type1 === secretPokemon.value.type1) {
-      return {
-        src: '/wrongpos.png',
-        alt: 'almost'
-      }
-    } else {
-      return {
-        src: '/wrong.png',
-        alt: 'wrong'
-      }
-    }
-  }
-
   if (c) {
     if (typeof c === 'number' && typeof c0 === 'number') {
       if (c < c0 * 0.9) {
@@ -415,19 +427,24 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
         alt: 'correct'
       }
     }
+  } else if (k === 'type_2' && !secretPokemon.value.type_2) {
+    return {
+      src: '/correct.png',
+      alt: 'correct'
+    }
   }
 
   switch (k) {
-    case 'type1':
-      if (d.type1 === secretPokemon.value.type2) {
+    case 'type_1':
+      if (d.type_1 === secretPokemon.value.type_2) {
         return {
           src: '/wrongpos.png',
           alt: 'almost'
         }
       }
       break
-    case 'type2':
-      if (d.type2 === secretPokemon.value.type1) {
+    case 'type_2':
+      if (d.type_2 === secretPokemon.value.type_1) {
         return {
           src: '/wrongpos.png',
           alt: 'almost'
@@ -608,29 +625,29 @@ const vGenRange = (() => {
         </td>
         <td>
           <img
-            :src="getImage(g, 'type1').src"
-            :alt="`Type 1: ${g.type1} (${getImage(g, 'type1').alt})`"
+            :src="getImage(g, 'type_1').src"
+            :alt="`Type 1: ${g.type_1} (${getImage(g, 'type_1').alt})`"
             class="emoji"
           />
         </td>
         <td>
           <img
-            :src="getImage(g, 'type2').src"
-            :alt="`Type 2: ${g.type2 || 'null'} (${getImage(g, 'type2').alt})`"
+            :src="getImage(g, 'type_2').src"
+            :alt="`Type 2: ${g.type_2 || 'null'} (${getImage(g, 'type_2').alt})`"
             class="emoji"
           />
         </td>
         <td>
           <img
-            :src="getImage(g, 'height').src"
-            :alt="`Height: ${g.height.toFixed(1)} m (${getImage(g, 'height').alt})`"
+            :src="getImage(g, 'height_m').src"
+            :alt="`Height: ${g.height_m.toFixed(1)} m (${getImage(g, 'height_m').alt})`"
             class="emoji"
           />
         </td>
         <td>
           <img
-            :src="getImage(g, 'weight').src"
-            :alt="`Weight: ${g.weight.toFixed(1)} kg (${getImage(g, 'weight').alt})`"
+            :src="getImage(g, 'weight_kg').src"
+            :alt="`Weight: ${g.weight_kg.toFixed(1)} kg (${getImage(g, 'weight_kg').alt})`"
             class="emoji"
           />
         </td>

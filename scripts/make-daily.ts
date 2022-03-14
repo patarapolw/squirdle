@@ -1,19 +1,16 @@
 import fs from 'fs'
 import path from 'path'
 
+import { readPokedex } from './convert-pokedex'
+
 export function doMakeDaily(
   lang: string,
   startingDate: string,
   names?: string[]
 ) {
   if (!names) {
-    const lines = fs
-      .readFileSync('pokedex.csv', 'utf-8')
-      .split('\n')
-      .map((r) => r.trim().split(','))
-    const header = lines.splice(0, 1)[0]
-
-    names = shuffle(lines.map((r) => r[0]))
+    const pokedex = readPokedex()
+    names = shuffle(pokedex.map((r) => r.name.en))
   }
 
   const dstFolder = path.resolve('generated', lang)

@@ -3,7 +3,7 @@ import fs from 'fs'
 import yaml from 'js-yaml'
 import S from 'jsonschema-definer'
 
-import { IPokedexEntry, checkPokedex, pokeTypes } from '../vite.config'
+import { checkPokedex, pokeTypes } from '../src/types'
 
 const sPokedexCsv = S.shape({
   name: S.string(),
@@ -24,7 +24,7 @@ async function main() {
     .map((r) => r.trim().split(','))
   const ks = lines.splice(0, 1)[0]
 
-  const newPokedex: IPokedexEntry[] = []
+  const newPokedex: Parameters<typeof checkPokedex>[0] = []
 
   S.list(sPokedexCsv)
     .ensure(
@@ -37,29 +37,27 @@ async function main() {
       }) as any
     )
     .map((r) => {
-      const type = [r.type_1]
-      if (r.type_2) {
-        type.push(r.type_2)
-      }
-
       newPokedex.push({
         name: {
           en: r.name,
           ja: r.name_ja,
           ko: r.name_ko
         },
-        generation: Number(r.generation),
-        type,
-        height: {
-          m: Number(r.height_m)
-        },
-        weight: {
-          kg: Number(r.weight_kg)
-        }
+        gen: Number(r.generation),
+        type_1: r.type_1,
+        type_2: r.type_2 || null,
+        height_m: Number(r.height_m),
+        weight_kg: Number(r.weight_kg)
       })
     })
 
   fs.writeFileSync('pokedex.yaml', yaml.dump(checkPokedex(newPokedex)))
+}
+
+export function readPokedex() {
+  return yaml.load(fs.readFileSync('pokedex.yaml', 'utf-8')) as ReturnType<
+    typeof checkPokedex
+  >
 }
 
 if (require.main === module) {

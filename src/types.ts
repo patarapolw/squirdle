@@ -25,29 +25,32 @@ export const pokeTypes = Object.keys(jaPokeTypes)
 
 const sPositiveNumber = S.number().custom((n) => n > 0)
 
-const sPokedexEntry = S.shape({
+export const sPokedexEntry = S.shape({
   name: S.shape({
     en: S.string(),
     ja: S.string(),
     ko: S.string()
   }),
-  generation: S.integer().minimum(1).maximum(9),
-  type: S.list(S.string().enum(...pokeTypes)),
-  height: S.shape({
-    m: sPositiveNumber
-  }),
-  weight: S.shape({
-    kg: sPositiveNumber
-  })
+  gen: S.integer().minimum(1).maximum(9),
+  type_1: S.string().enum(...pokeTypes),
+  type_2: S.anyOf(S.string().enum(...pokeTypes), S.null()),
+  height_m: sPositiveNumber,
+  weight_kg: sPositiveNumber
 })
 
-declare type IPokedexEntry = typeof sPokedexEntry.type
-
 export function checkPokedex(items: IPokedexEntry[]) {
+  items = S.list(sPokedexEntry).ensure(items) as any[]
+  const langs = new Set(items.flatMap((it) => Object.keys(it.name)))
+
   const nameMap = new Map<string, Set<string>>()
 
   for (const it of items) {
-    for (const [lang, v] of Object.entries(sPokedexEntry.ensure(it).name)) {
+    for (const lang of langs) {
+      const v: string = (it.name as any)[lang]
+      if (!v) {
+        throw new Error(`LANG: (${lang}) is missing for: (${it.name.en})`)
+      }
+
       const vs = nameMap.get(lang) || new Set()
 
       if (vs.has(v)) {

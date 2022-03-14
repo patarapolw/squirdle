@@ -4,50 +4,14 @@ import { URL } from 'url'
 import axios from 'axios'
 import cheerio from 'cheerio'
 
+import { readPokedex } from './convert-pokedex'
+
 export interface IPokedexEntry {
   name: {
     en: string
     ja: string
     ko: string
   }
-}
-
-export function makePokedex(): IPokedexEntry[] {
-  const lines = fs
-    .readFileSync('pokedex.csv', 'utf-8')
-    .trimEnd()
-    .split('\n')
-    .map((r) => r.trimEnd().split(','))
-  const [h] = lines.splice(0, 1)
-
-  const entries: IPokedexEntry[] = []
-
-  lines.map((rs) => {
-    const entry: IPokedexEntry = {
-      name: {
-        en: '',
-        ja: '',
-        ko: ''
-      }
-    }
-
-    rs.map((v, i) => {
-      switch (h[i]) {
-        case 'name':
-          entry.name.en = v
-          break
-        case 'name_ja':
-          entry.name.ja = v
-          break
-        case 'name_ko':
-          entry.name.ko = v
-      }
-    })
-
-    entries.push(entry)
-  })
-
-  return entries
 }
 
 class LinkBuilder {
@@ -108,7 +72,7 @@ async function checkRef(lang: 'en' | 'ja' | 'ko', cases?: string[]) {
       }
     }))
   } else {
-    pokedex = makePokedex()
+    pokedex = readPokedex()
   }
 
   pokedex.map((p) => {

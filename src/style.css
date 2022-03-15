@@ -15,12 +15,18 @@ body.daily {
   background-color: rgb(78, 0, 0);
 }
 
-[lang='ja'] {
-  font-family: 'Noto Sans JP';
+[lang='ja'],
+[lang='ja'] strong {
+  font-family: 'Noto Sans CJK JP';
 }
 
-[lang='ko'] {
-  font-family: 'Noto Sans KR';
+[lang='ko'],
+[lang='ko'] strong {
+  font-family: 'Noto Sans CJK KR';
+}
+
+strong {
+  font-weight: 900;
 }
 
 a {

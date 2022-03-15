@@ -169,3 +169,7 @@ export function shuffle<T>(a: T[]) {
   }
   return a
 }
+
+export function clone<T>(o: T): T {
+  return JSON.parse(JSON.stringify(o))
+}

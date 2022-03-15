@@ -8,7 +8,7 @@ Featured on [Kotaku](https://kotaku.com/wordle-squirdle-daily-puzzle-word-game-f
 
 <img src="https://i.imgur.com/nbHjRow.png" width=465px>
 
-Pokémon data based on [Mario Tormo Romero's Pokemon dataset](https://www.kaggle.com/mariotormo/complete-pokemon-dataset-updated-090420).
+Modified from [Mario Tormo Romero's Pokemon dataset](https://www.kaggle.com/mariotormo/complete-pokemon-dataset-updated-090420).
 
 ## Other languages
 

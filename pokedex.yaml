@@ -4036,7 +4036,7 @@
   forms:
     - name:
         en: Primal Kyogre
-        ja: 'ゲンシカイオーガ '
+        ja: ゲンシカイオーガ
         ko: 원시가이오가
       gen: 6
       type_1: Water
@@ -7629,7 +7629,7 @@
   weight_kg: 0.2
 - name:
     en: Ribombee
-    ja: 'アブリボン '
+    ja: アブリボン
     ko: 에리본
   gen: 7
   type_1: Bug
@@ -8056,7 +8056,7 @@
   weight_kg: 18.6
 - name:
     en: Tapu Bulu
-    ja: 'カプ・ブルル '
+    ja: カプ・ブルル
     ko: 카푸브루루
   gen: 7
   type_1: Grass

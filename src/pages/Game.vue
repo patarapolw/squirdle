@@ -3,7 +3,7 @@ import { ref, onMounted, watch, nextTick, onUnmounted } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 import ClipboardJS from 'clipboard'
 
-import { pokedex, defaultMinGen, defaultMaxGen, lang, t, dailyJSON, LinkBuilder, linkTemplate, shuffle } from '../assets'
+import { pokedex, defaultMinGen, defaultMaxGen, lang, t, dailyJSON, LinkBuilder, linkTemplate, shuffle, clone } from '../assets'
 import { guessLimit, marginOfError } from '../assets/defaults'
 
 const props = defineProps<{
@@ -126,18 +126,18 @@ const storage: {
 Object.assign(window, {
   setSecret(i: number) {
     if (props.daily) return null
-
     const v = elligible.value[i]
     if (v) {
       secretPokemon.value = v
     }
-    return v
+    return clone(v)
   },
   getSecret() {
-    return secretPokemon.value
+    if (props.daily) return null
+    return clone(secretPokemon.value)
   },
   getSecretList() {
-    return elligible.value
+    return clone(elligible.value)
   },
   findSecret(fn: (v: IPokedexEntry) => boolean) {
     const out: number[] = []
@@ -324,6 +324,7 @@ function updateGen(n: number, opts: {
 
   dst.value = n
   guesses.value = []
+  storage.guesses.set([])
 }
 
 function ime(ev: Event) {
@@ -723,9 +724,9 @@ const vGenRange = (() => {
             :class="{ 'autocomplete-active': i === autocompleteFocus, 'autocomplete-item': true }"
             @click="updateGuess({ entry: r })"
           >
-            <span>{{ r.name[lang].substring(0, r.highlight.from) }}</span>
-            <strong>{{ r.name[lang].substring(r.highlight.from, r.highlight.to) }}</strong>
-            <span>{{ r.name[lang].substring(r.highlight.to) }}</span>
+            <span :lang="lang">{{ r.name[lang].substring(0, r.highlight.from) }}</span>
+            <strong :lang="lang">{{ r.name[lang].substring(r.highlight.from, r.highlight.to) }}</strong>
+            <span :lang="lang">{{ r.name[lang].substring(r.highlight.to) }}</span>
           </div>
         </div>
       </div>

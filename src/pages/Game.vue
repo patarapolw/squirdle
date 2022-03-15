@@ -4,7 +4,7 @@ import { onClickOutside } from '@vueuse/core'
 import ClipboardJS from 'clipboard'
 
 import { pokedex, defaultMinGen, defaultMaxGen, lang, t, dailyJSON, LinkBuilder, linkTemplate, shuffle } from '../assets'
-import { guessLimit } from '../assets/defaults'
+import { guessLimit, marginOfError } from '../assets/defaults'
 
 const props = defineProps<{
   daily: boolean
@@ -35,7 +35,12 @@ const actualGuess = ref<IPokedexEntry | null>(null)
 
 const autocompleteEl = ref(null)
 const autocompleteFocus = ref(-1)
-const autocompleteList = ref<IPokedexEntry[]>([])
+const autocompleteList = ref<(IPokedexEntry & {
+  highlight: {
+    from: number
+    to: number
+  }
+})[]>([])
 const elligible = ref<IPokedexEntry[]>([])
 
 const shareWithoutNames = ref('')
@@ -159,7 +164,7 @@ function updateGuess(opts: {
         return min + timeOffset.value * 60
       })()
 
-      currentDate.value = new Date(nowMin * 1000 * 60).toISOString().substring(0, 10)
+      currentDate.value = new Date(nowMin * 1000 * 60).toISOString().split('T')[0]
       dayNumber.value = Math.floor((+new Date(currentDate.value) - +new Date(dailyJSON.value.startingDate)) / (1000 * 60 * 60 * 24))
 
       elligible.value = shuffle(Object.values(pokedex.value))
@@ -365,7 +370,35 @@ function autocompleteInput(ev: KeyboardEvent) {
       return
     }
 
-    autocompleteList.value = elligible.value.filter((p) => normalizeInput(p.name[lang.value]).startsWith(normalizeInput(qGuess.value)))
+    const autocompleteGuess = normalizeInput(qGuess.value)
+    autocompleteList.value = elligible.value.map((p) => {
+      let isValid = false
+
+      let from = normalizeInput(p.name[lang.value]).indexOf(autocompleteGuess)
+      let to = from + autocompleteGuess.length
+
+      if (from === 0) {
+        isValid = true
+      } else if (p.base && normalizeInput(p.base).startsWith(autocompleteGuess)) {
+        isValid = true
+        if (from < 0) {
+          from = 0
+          to = 0
+        }
+      }
+
+      if (isValid) {
+        return {
+          ...p,
+          highlight: {
+            from,
+            to
+          }
+        }
+      }
+
+      return null as unknown as typeof autocompleteList.value[0]
+    }).filter((s) => s)
 
     if (!isDefault && autocompleteList.value.length) {
       if (autocompleteFocus.value < 0) {
@@ -401,14 +434,14 @@ function getImage(d: IPokedexEntry, k: keyof IPokedexEntry): {
 
   if (c) {
     if (typeof c === 'number' && typeof c0 === 'number') {
-      if (c < c0 * 0.9) {
+      if (c < c0 * (1 - marginOfError)) {
         return {
           src: '/up.png',
           alt: 'too low'
         }
       }
 
-      if (c > c0 * 1.1) {
+      if (c > c0 * (1 + marginOfError)) {
         return {
           src: '/down.png',
           alt: 'too high'
@@ -690,8 +723,9 @@ const vGenRange = (() => {
             :class="{ 'autocomplete-active': i === autocompleteFocus, 'autocomplete-item': true }"
             @click="updateGuess({ entry: r })"
           >
-            <strong>{{ r.name[lang].substring(0, qGuess.length) }}</strong>
-            <span>{{ r.name[lang].substring(qGuess.length) }}</span>
+            <span>{{ r.name[lang].substring(0, r.highlight.from) }}</span>
+            <strong>{{ r.name[lang].substring(r.highlight.from, r.highlight.to) }}</strong>
+            <span>{{ r.name[lang].substring(r.highlight.to) }}</span>
           </div>
         </div>
       </div>

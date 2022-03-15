@@ -51,13 +51,14 @@ async function main() {
       })
     })
 
-  fs.writeFileSync('pokedex.yaml', yaml.dump(checkPokedex(newPokedex)))
+  checkPokedex(newPokedex)
+  fs.writeFileSync('pokedex.yaml', yaml.dump(newPokedex))
 }
 
 export function readPokedex() {
-  return yaml.load(fs.readFileSync('pokedex.yaml', 'utf-8')) as ReturnType<
+  return yaml.load(fs.readFileSync('pokedex.yaml', 'utf-8')) as Parameters<
     typeof checkPokedex
-  >
+  >[0]
 }
 
 if (require.main === module) {

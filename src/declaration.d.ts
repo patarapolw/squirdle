@@ -13,10 +13,11 @@ declare module '*.csv' {
 
 declare type IPokedexEntry =
   typeof import('./types')['sPokedexEntry']['type'] & {
+    base: string
     info(): string
   }
 
 declare module '@pokedex' {
-  const pokedex: IPokedexEntry[]
+  const pokedex: typeof import('./types')['sPokedex']['type']
   export default pokedex
 }

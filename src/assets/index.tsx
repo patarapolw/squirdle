@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { VNode, createElementVNode, ref } from 'vue'
 
 import enRef from '../../translation/en-ref.json'
 import enTrans from '../../translation/en.json'
@@ -20,34 +20,97 @@ export interface IPokedex {
 }
 export const pokedex = ref<IPokedex>({})
 
+export function makeNode<R = string>(
+  s: string,
+  def?: R
+): ((repl: Record<string, string>) => VNode) & {
+  value: R
+} {
+  let v: R | undefined
+  let ln = lang.value
+
+  v = translation.value[s]
+  if (!v) {
+    v = (enTrans as any)[s]
+    if (v) {
+      ln = 'en'
+    } else {
+      v = def || (s as any)
+    }
+  }
+
+  const fn = (repl?: Record<string, string>) => {
+    let v0 = v
+
+    // if (repl) {
+    //   Object.entries(repl).map(([k, v]) => {
+    //     let i: number | null = null
+    //     if (typeof v0 === 'string') {
+    //       const idx = v0.indexOf(k)
+    //       if (idx !== -1) {
+    //         i = idx
+    //       }
+    //     }
+    //     return { k, v, i: i! }
+    //   }).filter(({ i }) => i !== null).sort(({ i: i1 }, { i: i2 }) => i1 - i2).map(({ k, v, i }) = {
+
+    //   })
+    // }
+
+    return <span lang={ln}>${v0}</span>
+  }
+
+  return Object.assign(fn, { value: v as any })
+}
+
 export function t<R = string>(s: string, def?: R): R {
-  return translation.value[s] || (enTrans as any)[s] || def || s
+  return makeNode(s, def).value
 }
 
 export async function initPokedex() {
-  const pokedexData = await import('@pokedex').then((r) => r.default)
+  const pokedexData = await import('@pokedex').then(
+    (r) => r.default as IPokedexEntry[]
+  )
   const pk: IPokedex = {}
 
+  const makeInfo = (p: IPokedexEntry) => {
+    return [
+      `${t('Gen')}: ${p.gen}`,
+      ...(p.type_2
+        ? [`${t('Type')} 1: ${t(p.type_1)}`, `${t('Type')} 2: ${t(p.type_2)}`]
+        : [`${t('Type')}: ${t(p.type_1)}`]),
+      `${t('Height')}: ${p.height_m} m`,
+      `${t('Weight')}: ${p.weight_kg} kg`
+    ].join('\n')
+  }
+
   const gens = pokedexData.map((p) => {
-    pk[p.name.en] = {
-      ...p,
-      info() {
-        return [
-          `${t('Gen')}: ${this.gen}`,
-          ...(this.type_2
-            ? [
-                `${t('Type')} 1: ${t(this.type_1)}`,
-                `${t('Type')} 2: ${t(this.type_2)}`
-              ]
-            : [`${t('Type')}: ${t(this.type_1)}`]),
-          `${t('Height')}: ${this.height_m} m`,
-          `${t('Weight')}: ${this.weight_kg} kg`
-        ].join('\n')
+    const base = p.name[lang.value]
+
+    if (p.gen) {
+      pk[p.name.en] = {
+        ...p,
+        info() {
+          return makeInfo(p)
+        }
       }
     }
 
-    pokedex.value = pk
+    const forms = (p as any).forms as IPokedexEntry[]
 
+    if (forms) {
+      forms.map((p) => {
+        pk[p.name.en] = {
+          ...p,
+          base,
+          info() {
+            return makeInfo(p)
+          }
+        }
+      })
+    }
+
+    pokedex.value = pk
     return p.gen
   })
 

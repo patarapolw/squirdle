@@ -23,11 +23,15 @@ const pokedexPlugin = () => {
     },
     load(id: string) {
       if (id === resolveModuleId) {
-        return `export default ${JSON.stringify(
-          checkPokedex(
-            yaml.load(fs.readFileSync('pokedex.yaml', 'utf-8')) as any
-          )
-        )}`
+        const pokedex = yaml.load(fs.readFileSync('pokedex.yaml', 'utf-8'))
+        try {
+          checkPokedex(pokedex as any)
+          return `export default ${JSON.stringify(pokedex)}`
+        } catch (e) {
+          console.log(pokedex[416])
+          console.error(e)
+          throw e
+        }
       }
     }
   }

@@ -15,6 +15,14 @@ body.daily {
   background-color: rgb(78, 0, 0);
 }
 
+[lang='ja'] {
+  font-family: 'Noto Sans JP';
+}
+
+[lang='ko'] {
+  font-family: 'Noto Sans KR';
+}
+
 a {
   color: palevioletred;
 }

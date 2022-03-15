@@ -22,44 +22,74 @@ const jaPokeTypes = {
 }
 
 export const pokeTypes = Object.keys(jaPokeTypes)
+const sPokeTypes = S.string().enum(...pokeTypes)
 
 const sPositiveNumber = S.number().custom((n) => n > 0)
 
-export const sPokedexEntry = S.shape({
+const oPokedexBase = {
   name: S.shape({
     en: S.string(),
     ja: S.string(),
     ko: S.string()
-  }),
+  })
+}
+
+const oPokedexEntry = {
+  ...oPokedexBase,
   gen: S.integer().minimum(1).maximum(9),
-  type_1: S.string().enum(...pokeTypes),
-  type_2: S.anyOf(S.string().enum(...pokeTypes), S.null()),
+  type_1: sPokeTypes,
+  type_2: sPokeTypes.optional(),
   height_m: sPositiveNumber,
   weight_kg: sPositiveNumber
-})
+}
+
+export const sPokedexEntry = S.shape(oPokedexEntry)
+
+export const sPokedex = S.list(
+  S.anyOf(
+    S.shape({
+      ...oPokedexBase,
+      forms: S.list(sPokedexEntry).optional()
+    }),
+    S.shape({
+      ...oPokedexEntry,
+      forms: S.list(sPokedexEntry).optional()
+    })
+  )
+)
 
 export function checkPokedex(items: IPokedexEntry[]) {
-  items = S.list(sPokedexEntry).ensure(items) as any[]
+  items = sPokedex.ensure(items) as any[]
   const langs = new Set(items.flatMap((it) => Object.keys(it.name)))
 
-  const nameMap = new Map<string, Set<string>>()
+  const langNameMap: {
+    [lang: string]: Set<string>
+  } = {}
 
   for (const it of items) {
-    for (const lang of langs) {
-      const v: string = (it.name as any)[lang]
-      if (!v) {
-        throw new Error(`LANG: (${lang}) is missing for: (${it.name.en})`)
-      }
-
-      const vs = nameMap.get(lang) || new Set()
-
-      if (vs.has(v)) {
-        throw new Error(`LANG: (${lang}) has duplicate: (${v})`)
-      }
-      vs.add(v)
-      nameMap.set(lang, vs)
+    const forms: IPokedexEntry[] = []
+    if (it.gen) {
+      forms.push(it)
     }
+    forms.push(...((it as any).forms || []))
+
+    forms.map((it) => {
+      for (const lang of langs) {
+        const v: string = (it.name as any)[lang]
+        if (!v) {
+          console.warn(`LANG: (${lang}) is missing for: (${it.name.en})`)
+        } else {
+          const vs = langNameMap[lang] || new Set()
+
+          if (vs.has(v)) {
+            throw new Error(`LANG: (${lang}) has duplicate: (${v})`)
+          }
+          vs.add(v)
+          langNameMap[lang] = vs
+        }
+      }
+    })
   }
 
-  return items
+  return langNameMap
 }

@@ -1,8 +1,8 @@
 {
   "HTML_DESCRIPTION": "Squirdleらしいポケモン版のワードル",
   "OriginalCredit": "ポケモン和名と計測を推定するゲーム。{{_Fireblend}}から修正されました。",
-  "IntroDaily": "今日のポケモンを推定しよう。今、{{_AttemptsLeft}}回のトライが残ります。",
-  "IntroFree": "秘密のポケモンを推定しよう。今、{{_AttemptsLeft}}回のトライが残ります。",
+  "IntroDaily": "今日のポケモンを推定しましょう。今、{{_AttemptsLeft}}回のトライが残ります。",
+  "IntroFree": "秘密のポケモンを推定しましょう。今、{{_AttemptsLeft}}回のトライが残ります。",
   "IntroEndedDaily": "今日のゲームは終わりました。明日も遊んでください〜😁",
   "IntroEndedFree": "ゲームは終わりました。{{NewGame}}ボタンを押しなら、ニューゲームがあります。",
   "UpdatesAt": "(ニューゲームは　00:00 {{TIMEZONE}})",
@@ -10,9 +10,9 @@
   "GenRange": "第{{_GEN_MIN}}〜{{_GEN_MAX}}世代から推定したい。",
   "PokemonNotFound": "このポケモンはありません！",
   "IsWin": "勝利しました！",
-  "IsLose": "負けしまった！",
-  "ComeBackTomorrow": "ニューゲームはあるから、明日も帰ってください！",
-  "CopySuccess": "クリップボードにコピーした！",
-  "LangNotFound": "言語: {{LANG}} ありません。",
-  "404": "４０４見つかりません"
+  "IsLose": "負けしまいました！",
+  "ComeBackTomorrow": "明日はニューゲームはあるから、明日も帰ってください！",
+  "CopySuccess": "クリップボードにコピーしました！",
+  "LangNotFound": "言語: {{LANG}} はありません。",
+  "404": "404見つかりません。"
 }
